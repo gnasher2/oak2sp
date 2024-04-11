@@ -1,0 +1,21 @@
+﻿
+
+	##### NAVAL UNITS #####
+	### METRPOLITAN FRANCE ###
+
+			
+
+
+
+
+
+#########################
+## STARTING PRODUCTION ##
+#########################
+
+air_wings = {
+	"Béarn"  = {
+		cv_fighter_equipment_1934 = { owner = "FRA" amount = 15 }
+		cv_nav_bomber_equipment_1936 = { owner = "FRA" amount = 15 }
+	}
+}
