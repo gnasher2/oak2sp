@@ -1,0 +1,25 @@
+state = {
+	id = 813
+	name = "STATE_820"
+	provinces = {
+		8073   1923  5037 12883   2033 
+	}
+	history = {
+		owner = ENG
+		
+		buildings = {
+			
+			air_base = 10
+			infrastructure = 5
+		
+			1923 = {
+				naval_base = 3
+			}
+		}
+
+	}
+
+	manpower = 55000
+	buildings_max_level_factor = 1.000
+	state_category = rural
+}

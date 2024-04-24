@@ -1,5 +1,422 @@
 
 PAR_instant_effect_decisions = {
+	PAR_saarbrucken_offensive_too_far = {
+		allowed = { tag = PAR }
+		ai_will_do = {
+			base = 1000			
+		}
+		available = {
+			FRA = {
+				has_capitulated = no
+			}
+			date < 1941.9.1
+			GER = {
+				casualties_inflicted_by = {
+					opponent = FRA
+					thousands > 80 	
+				}
+			}
+			GER = { 
+				NOT = {
+					has_war_with = BEL
+				}
+			}
+			OR = {
+				AND = {
+					OR = {
+						ENG = {
+							controls_province = 3423
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_province = 3423
+						}
+					}
+					OR = {
+						ENG = {
+							controls_province = 11547
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_province = 11547
+						}
+					}
+				}
+				AND = {
+					OR = {
+						ENG = {
+							controls_province = 3558
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_province = 3558
+						}
+					}
+					OR = {
+						ENG = {
+							controls_province = 11547
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_province = 11547
+						}
+					}
+				}
+				AND = {
+					OR = {
+						ENG = {
+							controls_province = 3423
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_province = 3423
+						}
+					}
+					OR = {
+						ENG = {
+							controls_province = 11470
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_province = 11470
+						}
+					}
+				}
+				AND = {
+					OR = {
+						ENG = {
+							controls_province = 11547
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_province = 11547
+						}
+					}
+					OR = {
+						ENG = {
+							controls_province = 11470
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_province = 11470
+						}
+					}
+				}
+				AND = {
+					OR = {
+						ENG = {
+							controls_province = 3423
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_province = 3423
+						}
+					}
+					OR = {
+						ENG = {
+							controls_province = 11435
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_province = 11435
+						}
+					}
+				}
+				AND = {
+					OR = {
+						ENG = {
+							controls_province = 11547
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_province = 11547
+						}
+					}
+					OR = {
+						ENG = {
+							controls_province = 11435
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_province = 11435
+						}
+					}
+				}
+				AND = {
+					OR = {
+						ENG = {
+							controls_province = 3530
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_province = 3530
+						}
+					}
+					OR = {
+						ENG = {
+							controls_province = 519
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_province = 519
+						}
+					}
+				}
+				AND = {
+					OR = {
+						ENG = {
+							controls_province = 6568
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_province = 6568
+						}
+					}
+					OR = {
+						ENG = {
+							controls_province = 11486
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_province = 11486
+						}
+					}
+				}
+				OR = {
+					ENG = {
+						controls_province = 9517
+					}
+					any_other_country = {
+						is_in_faction_with = ENG
+						controls_province = 9517
+					}
+				}
+			}
+			
+		}
+		fire_only_once = yes
+
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_global_flag = FRA_phoney_war_is_over_flag
+					}
+				}
+				set_global_flag = FRA_phoney_war_is_over_flag
+			}
+			FRA = {
+				set_country_flag = FRA_no_bonus_for_around_maginot_flag
+			}
+			if = {
+				limit = {
+					FRA = {
+						NOT = {
+							has_completed_focus = FRA_phoney_war
+						}
+					}
+				}
+				FRA = {
+					complete_national_focus = FRA_phoney_war
+				}
+			}
+			if = {
+				limit = {
+					FRA = {
+						NOT = {
+							has_completed_focus = FRA_help_the_low_countries
+						}
+					}
+				}
+				FRA = {
+					complete_national_focus = FRA_help_the_low_countries
+				}
+			}
+			
+		}	
+	}
+	PAR_ast_regained_papua_singapore = {
+		allowed = { tag = PAR }
+		ai_will_do = {
+			base = 1000			
+		}
+		available = {
+			AST = {
+				NOT = {
+					has_idea = AST_fortress_ast
+					has_idea = AST_fortress_ast_2
+				}
+				
+			}
+			OR = {
+				OR = {
+					AND = {
+						AST = {
+							has_completed_focus = ast_singapore_strategy
+						}
+						OR = {
+							AST = {
+								controls_state = 523
+							}
+							any_other_country = {
+								is_in_faction_with = ENG
+								controls_state = 523
+							}
+						}
+					}
+					AND = {
+						AST = {
+							has_completed_focus = ast_singapore_strategy
+						}
+						OR = {
+							RAJ = {
+								controls_state = 336
+							}
+							any_other_country = {
+								is_in_faction_with = ENG
+								controls_state = 336
+							}
+						}
+					}
+					AND = {
+						AST = {
+							NOT = {
+								has_completed_focus = ast_singapore_strategy
+							}
+						}
+						OR = {
+							AST = {
+								controls_state = 523
+							}
+							any_other_country = {
+								is_in_faction_with = ENG
+								controls_state = 523
+							}
+						}
+					}
+				}
+			}
+		}
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = {
+					AST = {
+						NOT = {
+							has_completed_focus = ast_singapore_strategy
+						}
+					}
+				}
+				AST = {
+					add_ideas = AST_fortress_ast
+				}
+			}
+			else_if = {
+				limit = {
+					AST = {
+						has_completed_focus = ast_singapore_strategy
+					}
+				}
+				AST = {
+					add_ideas = AST_fortress_ast_2
+				}
+			}
+			
+			NZL = { 
+				add_ideas = NZL_fortress_ast
+			}
+		}	
+	}
+	PAR_ast_lost_papua_singapore = {
+		allowed = { tag = PAR }
+		ai_will_do = {
+			base = 1000			
+		}
+		available = {
+			AST = {
+				OR = {
+					has_idea = AST_fortress_ast
+					has_idea = AST_fortress_ast_2
+				}
+				
+			}
+			OR = {
+				AND = {
+					AST = {
+						has_completed_focus = ast_singapore_strategy
+						
+					}
+					OR = {
+						JAP = {
+							controls_state = 523
+						}
+						any_other_country = {
+							is_in_faction_with = JAP
+							controls_state = 523
+						}
+					}
+					OR = {
+						JAP = {
+							controls_state = 336
+						}
+						any_other_country = {
+							is_in_faction_with = JAP
+							controls_state = 336
+						}
+					}
+				}
+				AND = {
+					AST = {
+						NOT = {
+							has_completed_focus = ast_singapore_strategy
+						}
+					}
+					OR = {
+						JAP = {
+							controls_state = 523
+						}
+						any_other_country = {
+							is_in_faction_with = JAP
+							controls_state = 523
+						}
+					}
+				}
+
+			}
+			
+		}
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = {
+					AST = {
+						NOT = {
+							has_completed_focus = ast_singapore_strategy
+						}
+					}
+				}
+				AST = {
+					remove_ideas = AST_fortress_ast
+				}
+			}
+			else_if = {
+				limit = {
+					AST = {
+						has_completed_focus = ast_singapore_strategy
+					}
+				}
+				AST = {
+					remove_ideas = AST_fortress_ast_2
+				}
+			}
+			
+			NZL = { 
+				remove_ideas = NZL_fortress_ast
+			}
+		}
+	}
 	PAR_give_back_indochina_state_from_china = {
 		allowed = { tag = PAR }
 		ai_will_do = {
@@ -713,7 +1130,7 @@ PAR_instant_effect_decisions = {
 					controls_state = 142	
 					controls_state = 814
 					controls_state = 143
-					controls_state = 819
+					#controls_state = 819
 
 				}
 			}
@@ -4825,7 +5242,9 @@ PAR_instant_effect_decisions = {
 			GER = {
 				OR = {
 					has_idea = GER_atlanticc_wall_5
+					has_idea = GER_atlanticc_wall_5a
 					has_idea = GER_atlanticc_wall_6
+					has_idea = GER_atlanticc_wall_6a
 					has_idea = GER_atlanticc_wall_7
 					has_idea = GER_atlanticc_wall_8
 					has_idea = GER_atlanticc_wall_9
@@ -5067,41 +5486,7 @@ PAR_instant_effect_decisions = {
 			base = 1000			
 		}
 	}
-			GER_give_GER_mils = {
-		icon = generic_megaphone
-   
-		allowed = {
-		   tag = GER
-		}
-		priority = 10
-		fire_only_once = yes
-		visible = {
-			GER = {
-				is_ai = yes
-			}
-		}
-		available = {
-			
-			GER = {
-				is_ai = yes
-			}
-		}
 
-		cost = 0
-
-
-
-		complete_effect = {
-        	GER = {
-				add_offsite_building = { type = arms_factory level = 48 }
-				add_offsite_building = { type = industrial_complex level = 28 }
-			}			
-		}
-
-		ai_will_do = {
-			base = 1000			
-		}
-	}
 
 	SP_givecRAJmils = {
 		icon = generic_megaphone
@@ -7747,9 +8132,368 @@ PAR_instant_effect_decisions = {
 			base = 1000
 			
 		}
+	}
+	
+	POL_one = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+
+		available = {
+			POL = {
+				has_war = yes
+				has_completed_focus = POL_preemptive_mobilization
+
+			}
+		}
+		complete_effect = {
+			POL = {
+				custom_effect_tooltip = POL_slini_zwarci_tt
+				add_to_variable = { var = POL_initial_war_euthasium_army_core_attack_factor_modifier value = 0.05 }
+				add_to_variable = { var = POL_initial_war_euthasium_army_core_defence_factor_modifier value = 0.05 }
+			}
+		}
+
+		cost = 0
+
+
+		ai_will_do = {
+			base = 1000
+			
+		}
+	}
+	
+	POL_two = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		
+		available = {
+			POL = {
+				NOT = {
+					controls_state = 86
+				}
+
+
+			}
+		}
+		complete_effect = {
+			POL = {
+				custom_effect_tooltip = POL_slabiutki_tt
+				add_to_variable = { var = POL_initial_war_euthasium_army_core_attack_factor_modifier value = -0.05 }
+				add_to_variable = { var = POL_initial_war_euthasium_army_core_defence_factor_modifier value = -0.05 }
+				add_to_variable = { var = POL_initial_war_euthasium_air_ground_attack_modifier value = -0.05 }
+			}
+		}
+
+		cost = 0
+
+
+		ai_will_do = {
+			base = 1000
+			
+		}
+	}	
+
+	POL_three = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		
+		available = {
+			POL = {
+				NOT = {
+					controls_state = 85
+				}
+
+
+			}
+		}
+		complete_effect = {
+			POL = {
+				custom_effect_tooltip = POL_slabiutki_tt
+				add_to_variable = { var = POL_initial_war_euthasium_army_core_attack_factor_modifier value = -0.05 }
+				add_to_variable = { var = POL_initial_war_euthasium_army_core_defence_factor_modifier value = -0.05 }
+				add_to_variable = { var = POL_initial_war_euthasium_air_ground_attack_modifier value = -0.05 }
+			}
+		}
+
+		cost = 0
+
+
+		ai_will_do = {
+			base = 1000
+			
+		}
+	}	
+
+	POL_four = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		
+		available = {
+			POL = {
+				NOT = {
+					controls_state = 88
+				}
+
+
+			}
+		}
+		complete_effect = {
+			POL = {
+				custom_effect_tooltip = POL_slabiutki_tt
+				add_to_variable = { var = POL_initial_war_euthasium_army_core_attack_factor_modifier value = -0.05 }
+				add_to_variable = { var = POL_initial_war_euthasium_army_core_defence_factor_modifier value = -0.05 }
+				add_to_variable = { var = POL_initial_war_euthasium_air_ground_attack_modifier value = -0.05 }
+			}
+		}
+
+		cost = 0
+
+
+		ai_will_do = {
+			base = 1000
+			
+		}
 	}	
 
 
+	POL_five = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		
+		available = {
+			POL = {
+				NOT = {
+					controls_state = 87
+				}
+
+
+			}
+		}
+		complete_effect = {
+			POL = {
+				custom_effect_tooltip = POL_slabiutki_tt
+				add_to_variable = { var = POL_initial_war_euthasium_army_core_attack_factor_modifier value = -0.05 }
+				add_to_variable = { var = POL_initial_war_euthasium_army_core_defence_factor_modifier value = -0.05 }
+				add_to_variable = { var = POL_initial_war_euthasium_air_ground_attack_modifier value = -0.05 }
+			}
+		}
+
+		cost = 0
+
+
+		ai_will_do = {
+			base = 1000
+			
+		}
+	}	
+
+	POL_six = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		
+		available = {
+			POL = {
+				NOT = {
+					controls_province = 13352
+				}
+			}
+		}
+		complete_effect = {
+			POL = {
+				custom_effect_tooltip = POL_slabiutkihel_tt
+				add_to_variable = { var = POL_initial_war_euthasium_army_core_attack_factor_modifier value = -0.1 }
+				add_to_variable = { var = POL_initial_war_euthasium_army_core_defence_factor_modifier value = -0.1 }
+				add_to_variable = { var = POL_initial_war_euthasium_air_ground_attack_modifier value = -0.1 }
+			}
+		}
+
+		cost = 0
+
+
+		ai_will_do = {
+			base = 1000
+			
+		}
+	}	
+
+	POL_seven = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		
+		available = {
+			POL = {
+				NOT = {
+					controls_state = 96
+				}
+			}
+		}
+		complete_effect = {
+			POL = {
+				custom_effect_tooltip = POL_17wrzesnia1939_tt
+				add_to_variable = { var = POL_initial_war_euthasium_army_core_attack_factor_modifier value = -0.1 }
+				add_to_variable = { var = POL_initial_war_euthasium_army_core_defence_factor_modifier value = -0.1 }
+			}
+		}
+
+		cost = 0
+
+
+		ai_will_do = {
+			base = 1000
+			
+		}
+	}	
+
+	POL_eight = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		
+		available = {
+			POL = {
+				NOT = {
+					controls_state = 10
+				}
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = POL_halohalo_tt
+			POL = {
+				add_to_variable = { var = POL_max_surrender_limit_offset_modifier value = -1 }
+
+			}
+		}
+
+		cost = 0
+
+
+		ai_will_do = {
+			base = 8000
+			
+		}
+	}
+	
+	POL_nine = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		
+		available = {
+			date > 1943.7.3
+
+		}
+		complete_effect = {
+			POL = {
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Stanisław Mikołajczyk"
+					desc = "STANISŁAW_MIKOŁAJCZYK_DESC"
+					picture = "portrait_POL_stanislaw_mikolajczyk.dds"
+					expire = "1965.1.1"
+					ideology = Conservatism
+					traits = {
+					}
+				}
+				retire_character = POL_wladyslaw_sikorski
+				add_ideas = POL_kazimierz_sosnkowski
+				POL_kazimierz_sosnkowski = {
+					promote_leader = yes
+				}
+				set_global_flag = POL_sosnkowskichuj
+				
+
+			}
+			news_event = news.525
+		}
+
+		cost = 0
+
+
+		ai_will_do = {
+			base = 1000
+			
+		}
+	}	
+
+	POL_ten = {
+		fire_only_once = yes
+		
+		icon = generic_megaphone
+   
+		allowed = {
+		   tag = PAR
+		}
+		
+		available = {
+			date > 1944.11.28
+
+		}
+		complete_effect = {
+			POL = {
+				retire_country_leader = yes
+				create_country_leader = {
+					name = "Tomasz Arciszewski"
+					desc = "TOMASZ_ARCISZEWSKI_DESC"
+					picture = "Portrait_Tomasz_Arciszewski.dds"
+					expire = "1965.1.1"
+					ideology = socialism
+					traits = {
+					}
+				}
+			}
+		}
+
+		cost = 0
+
+
+		ai_will_do = {
+			base = 1000
+			
+		}
+	}	
 	PAR_RAJ_2 = {
 		fire_only_once = yes
 		

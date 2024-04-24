@@ -104,7 +104,11 @@ focus_tree = {
 				var = USA_voter_var
 				value = 0.25
 			}
-			add_stability = USA_voter_var
+				add_to_variable = {
+				var = USA_stability_factor_var
+				value = 0.15
+				tooltip = stability_factor_tooltip
+			}
 			
 		}
 	}
@@ -291,6 +295,7 @@ focus_tree = {
 		y = 3
 		prerequisite = { focus = USA_new_government }
 		relative_position_id = USA_1
+		mutually_exclusive = {focus = USA_6 } 
 		ai_will_do = {
 			factor = 100 
 		}
@@ -549,7 +554,7 @@ focus_tree = {
 			focus = USA_40
 		}
 		completion_reward = {
-		custom_effect_tooltip = USA_infra_arsenal_tt
+			custom_effect_tooltip = USA_infra_arsenal_tt
 			hidden_effect = {
 			every_state = {
 				limit = {
@@ -1019,13 +1024,105 @@ focus_tree = {
 		}
 		completion_reward = {
 			hidden_effect = {
-				
+				if = {
+					 
+					limit = {
+						CAN = {
+							NOT = {
+								has_completed_focus = CAN_trade_agreements_with_UK
+				 
+							}
+						}
+					}
+					CAN = {
+						complete_national_focus = CAN_trade_agreements_with_UK
+					}
+												 
+					
+				}
+				if = {
+					limit = {
+						AST = {
+							NOT = {
+								has_completed_focus = ast_commonwealth_ties
+							}
+	   
+						}
+					}
+			
+					
+												  
+												 
+		
+	  
+			
+					
+												  
+												 
+		
+	  
+			
+					
+												  
+												 
+		
+	  
+			
+					
+												  
+												 
+		
+	  
+			
+					
+												  
+												 
+		
+	  
+					AST = {
+					
+						complete_national_focus = ast_commonwealth_ties
+												 
+		
+					}
+					
+					
+												  
+												 
+		
+	  
+			
+					
+												  
+												 
+		
+	  
+			
+					
+												  
+												 
+		
+	  
+			
+					
+												  
+												 
+		
+	  
+			
+					
+												  
+												 
+		
+	  
+				}
 				every_country = {
 					limit = {
 						NOT = {
 							OR = {
 								tag = ENG
 								tag = CAN
+								tag = AST
 							}
 						}
 						is_in_faction_with = ENG
@@ -1033,158 +1130,76 @@ focus_tree = {
 					add_ideas = USA_cash_and_carry_foreign_idea 
 					
 				}
-				if = {
-					limit = {
-						CAN = {
-							NOT = {
-								has_completed_focus = CAN_trade_agreements_with_UK
-							}
-							
-						}
-					}
-					CAN = {
-						swap_ideas = {
-							remove_idea = ENG_commonwealth_trading_idea
-							add_idea = ENG_commonwealth_trading_idea_3
-						}	
-					}
-					ENG = {
-						swap_ideas = {
-							remove_idea = ENG_commonwealth_trading_idea
-							add_idea = ENG_commonwealth_trading_idea_3
-						}	
-					}
-					IRE = {
-						swap_ideas = {
-							remove_idea = ENG_commonwealth_trading_idea
-							add_idea = ENG_commonwealth_trading_idea_3
-						}	
-					}
-					BRA = {
-						swap_ideas = {
-							remove_idea = ENG_commonwealth_trading_idea
-							add_idea = ENG_commonwealth_trading_idea_3
-						}	
-					}
-					MEX = {
-						swap_ideas = {
-							remove_idea = ENG_commonwealth_trading_idea
-							add_idea = ENG_commonwealth_trading_idea_3
-						}	
-					}
-					AST = {
-						swap_ideas = {
-							remove_idea = ENG_commonwealth_trading_idea
-							add_idea = ENG_commonwealth_trading_idea_3
-						}	
-					}
-					RAJ = {
-						swap_ideas = {
-							remove_idea = RAJ_commonwealth_trading_idea
-							add_idea = RAJ_commonwealth_trading_idea_3
-						}	
-					}
-					NZL = {
-						swap_ideas = {
-							remove_idea = ENG_commonwealth_trading_idea
-							add_idea = ENG_commonwealth_trading_idea_3
-						}	
-					}
-					POL = {
-						swap_ideas = {
-							remove_idea = ENG_commonwealth_trading_idea
-							add_idea = ENG_commonwealth_trading_idea_3
-						}	
-					}
-					SAF = {
-						swap_ideas = {
-							remove_idea = ENG_commonwealth_trading_idea
-							add_idea = ENG_commonwealth_trading_idea_3
-						}	
-					}
-					FRA = {
-						swap_ideas = {
-							remove_idea = ENG_commonwealth_trading_idea
-							add_idea = ENG_commonwealth_trading_idea_3
-						}	
-					}
+				
+				
+				CAN = {
+					swap_ideas = {
+						remove_idea = ENG_commonwealth_trading_idea_2
+						add_idea = ENG_commonwealth_trading_idea_3
+					}	
 				}
-				if = {
-					limit = {
-						CAN = {
-							
-							has_completed_focus = CAN_trade_agreements_with_UK
-							
-							
-						}
-					}
-					CAN = {
-						swap_ideas = {
-							remove_idea = ENG_commonwealth_trading_idea_2
-							add_idea = ENG_commonwealth_trading_idea_3
-						}	
-					}
-					ENG = {
-						swap_ideas = {
-							remove_idea = ENG_commonwealth_trading_idea_2
-							add_idea = ENG_commonwealth_trading_idea_3
-						}	
-					}
-					IRE = {
-						swap_ideas = {
-							remove_idea = ENG_commonwealth_trading_idea_2
-							add_idea = ENG_commonwealth_trading_idea_3
-						}	
-					}
-					BRA = {
-						swap_ideas = {
-							remove_idea = ENG_commonwealth_trading_idea_2
-							add_idea = ENG_commonwealth_trading_idea_3
-						}	
-					}
-					MEX = {
-						swap_ideas = {
-							remove_idea = ENG_commonwealth_trading_idea_2
-							add_idea = ENG_commonwealth_trading_idea_3
-						}	
-					}
-					AST = {
-						swap_ideas = {
-							remove_idea = ENG_commonwealth_trading_idea_2
-							add_idea = ENG_commonwealth_trading_idea_3
-						}	
-					}
-					RAJ = {
-						swap_ideas = {
-							remove_idea = RAJ_commonwealth_trading_idea_2
-							add_idea = RAJ_commonwealth_trading_idea_3
-						}	
-					}
-					NZL = {
-						swap_ideas = {
-							remove_idea = ENG_commonwealth_trading_idea_2
-							add_idea = ENG_commonwealth_trading_idea_3
-						}	
-					}
-					POL = {
-						swap_ideas = {
-							remove_idea = ENG_commonwealth_trading_idea_2
-							add_idea = ENG_commonwealth_trading_idea_3
-						}	
-					}
-					SAF = {
-						swap_ideas = {
-							remove_idea = ENG_commonwealth_trading_idea_2
-							add_idea = ENG_commonwealth_trading_idea_3
-						}	
-					}
-					FRA = {
-						swap_ideas = {
-							remove_idea = ENG_commonwealth_trading_idea_2
-							add_idea = ENG_commonwealth_trading_idea_3
-						}	
-					}
+				ENG = {
+					swap_ideas = {
+						remove_idea = ENG_commonwealth_trading_idea_2
+						add_idea = ENG_commonwealth_trading_idea_3
+					}	
 				}
+				IRE = {
+					swap_ideas = {
+						remove_idea = ENG_commonwealth_trading_idea_2
+						add_idea = ENG_commonwealth_trading_idea_3
+					}	
+				}
+				BRA = {
+					swap_ideas = {
+						remove_idea = ENG_commonwealth_trading_idea_2
+						add_idea = ENG_commonwealth_trading_idea_3
+					}	
+				}
+				MEX = {
+					swap_ideas = {
+						remove_idea = ENG_commonwealth_trading_idea_2
+						add_idea = ENG_commonwealth_trading_idea_3
+					}	
+				}
+				AST = {
+					swap_ideas = {
+						remove_idea = ENG_commonwealth_trading_idea_2
+						add_idea = ENG_commonwealth_trading_idea_3
+					}	
+				}
+				RAJ = {
+					swap_ideas = {
+						remove_idea = RAJ_commonwealth_trading_idea_2
+						add_idea = RAJ_commonwealth_trading_idea_3
+					}	
+				}
+				NZL = {
+					swap_ideas = {
+						remove_idea = ENG_commonwealth_trading_idea_2
+						add_idea = ENG_commonwealth_trading_idea_3
+					}	
+				}
+				POL = {
+					swap_ideas = {
+						remove_idea = ENG_commonwealth_trading_idea_2
+						add_idea = ENG_commonwealth_trading_idea_3
+					}	
+				}
+				SAF = {
+					swap_ideas = {
+						remove_idea = ENG_commonwealth_trading_idea_2
+						add_idea = ENG_commonwealth_trading_idea_3
+					}	
+				}
+				FRA = {
+					swap_ideas = {
+						remove_idea = ENG_commonwealth_trading_idea_2
+						add_idea = ENG_commonwealth_trading_idea_3
+		
+					}	
+				}
+				
 			}
 			custom_effect_tooltip = USA_give_all_allies_buff_tt
 			
@@ -1218,7 +1233,21 @@ focus_tree = {
 					CAN_industrial_capacity_factory_var = 0.05
 				}
 			}
-		
+				AST = {
+				
+				add_to_variable = {
+					AST2_production_factory_max_efficiency_factor_var = 0.025
+				}
+				add_to_variable = {
+					AST2_political_power_cost_var = 0.25
+				}
+				add_to_variable = {
+					AST2_consumer_goods_factor_var = 0.02
+				}
+				add_to_variable = {
+					AST2_industrial_capacity_factory_var = 0.05
+				}
+			}
 			add_to_variable = {
 				var = USA_political_power_gain_var
 				value = 0.25
@@ -1304,6 +1333,21 @@ focus = {
 				}
 				add_to_variable = {
 					CAN_industrial_capacity_factory_var = 0.05
+				}
+			}
+				AST = {
+				
+				add_to_variable = {
+					AST2_production_factory_max_efficiency_factor_var = 0.025
+				}
+				add_to_variable = {
+					AST2_political_power_cost_var = 0.25
+				}
+				add_to_variable = {
+					AST2_consumer_goods_factor_var = 0.02
+				}
+				add_to_variable = {
+					AST2_industrial_capacity_factory_var = 0.05
 				}
 			}
 			
@@ -2956,7 +3000,7 @@ custom_effect_tooltip = USA_islandhop_iceberg_tt
 				}
 				add_equipment_to_stockpile = {
 					type = special_equipment_1
-					amount = 1000
+					amount = 3000
 				}
 			}
 			add_resource = {
@@ -3472,10 +3516,12 @@ custom_effect_tooltip = USA_islandhop_iceberg_tt
 		available_if_capitulated = yes		
 		
 		available = { 
+			OR = {
 				date > 1941.1.1
-				has_war = yes
+				has_completed_focus = USA_embargo_japan
 				
-			
+			}
+			has_army_experience < 100
 		}
 
 		bypass = {
@@ -3484,7 +3530,7 @@ custom_effect_tooltip = USA_islandhop_iceberg_tt
 		completion_reward = {
 			
 			
-			remove_ideas = USA_the_poor_command_post_2 
+											  
 			add_command_power = 100 
 			army_experience = 150
 			custom_effect_tooltip = USA_command_post_modification_intro
@@ -3975,7 +4021,11 @@ custom_effect_tooltip = USA_islandhop_iceberg_tt
 			custom_effect_tooltip = USA_voter_support_5_tt
 			
 
-			add_stability = 0.1
+			add_to_variable = {
+				var = USA_stability_factor_var
+				value = 0.1
+				tooltip = stability_factor_tooltip
+			}
 			add_political_power = 150
 
 		
@@ -6533,6 +6583,7 @@ NOT = {
 			459={is_controlled_by_ROOT_or_ally=yes}
 		}
 		completion_reward = {
+		
 			
 			459 = {
 				set_building_level = {
@@ -6598,13 +6649,19 @@ NOT = {
 			every_country = {
 				limit = {
 					is_in_faction_with = ENG
+					NOT = {
+						tag = USA
+					}
 				}
 				add_stability = 0.1 
 			}
+			add_to_variable = {
+				var = USA_stability_factor_var
+				value = 0.1
+				tooltip = stability_factor_tooltip
+			}
 		}
 	}
-
-
 	focus = {
 		id = USA_the_weak_underbelly
 		x = 4
@@ -6898,13 +6955,19 @@ NOT = {
 			every_country = {
 				limit = {
 					is_in_faction_with = ENG
+					NOT = {
+						tag = USA
+					}
 				}
 				add_stability = 0.1 
 			}
+			add_to_variable = {
+				var = USA_stability_factor_var
+				value = 0.1
+				tooltip = stability_factor_tooltip
+			}
 		}
 	}
-
-
 	focus = {
 		id = USA_operation_overlord
 		cost = 3

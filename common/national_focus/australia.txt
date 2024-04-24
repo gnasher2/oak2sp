@@ -152,7 +152,7 @@ focus_tree = {
 		icon = GFX_goal_generic_radio_development_2
 		x = -5
 		y = 1
-		cost = 10
+		cost = 7.2
 		ai_will_do = {
 			factor = 200			
 		}
@@ -180,7 +180,7 @@ focus_tree = {
 		icon = GFX_goal_generic_control_the_radio
 		x = 0
 		y = 1
-		cost = 10
+		cost = 7.2
 		ai_will_do = {
 			factor = 200			
 		}
@@ -190,7 +190,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			custom_effect_tooltip = ast_underwater_cable_connections_tt2
+			custom_effect_tooltip = ast_underwater_cable_connections_tt
 			add_tech_bonus = {
 				name = AST_electronics_1
 				bonus = 0.5
@@ -284,7 +284,7 @@ focus_tree = {
 				}
 			    custom_effect_tooltip = AST_modify_dep_tt
 				add_to_variable = {
-					AST_industrial_capacity_factory_var = 0.35
+					AST_industrial_capacity_factory_var = 0.4
 					tooltip = industrial_capacity_factory_tooltip
 				}
 				add_to_variable = {
@@ -415,12 +415,12 @@ focus_tree = {
 			factor = 200			
 		}
 		available = {
-			has_political_power > 75
+			has_political_power > 50
 		}
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			add_political_power = -75
+			add_political_power = -50
 			523 = {
 				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
@@ -873,7 +873,7 @@ focus_tree = {
 		icon = GFX_AST_war_council
 		x = 2
 		y = 1
-		cost = 7.2
+		cost = 5
 		ai_will_do = {
 			factor = 200			
 		}
@@ -923,7 +923,7 @@ focus_tree = {
 		icon = GFX_AST_rationing
 		x = 1
 		y = 1
-		cost = 7.2
+		cost = 5
 		ai_will_do = {
 			factor = 200			
 		}
@@ -975,7 +975,7 @@ focus_tree = {
 		icon = GFX_AST_speed_up
 		x = 0
 		y = 2
-		cost = 7.2
+		cost = 5
 		ai_will_do = {
 			factor = 200			
 		}
@@ -1001,7 +1001,7 @@ focus_tree = {
 		icon = GFX_AST_civil_construction
 		x = -2
 		y = 1
-		cost = 7.2
+		cost = 5
 		ai_will_do = {
 			factor = 200			
 		}
@@ -1027,7 +1027,7 @@ focus_tree = {
 		icon = GFX_AST_home_guard
 		x = -1
 		y = 1
-		cost = 7.2
+		cost = 5
 		ai_will_do = {
 			factor = 200			
 		}
@@ -1161,7 +1161,7 @@ focus_tree = {
 		icon = GFX_AST_allied_works
 		x = 0
 		y = 2
-		cost = 7.2
+		cost = 5
 		ai_will_do = {
 			factor = 200			
 		}
@@ -1244,7 +1244,7 @@ focus_tree = {
 		icon = GFX_AST_fight
 		x = 0
 		y = 1
-		cost = 7.2
+		cost = 2.9
 		ai_will_do = {
 			factor = 200			
 		}
@@ -1269,7 +1269,7 @@ focus_tree = {
 		icon = GFX_AST_jungle_warfare
 		x = 3
 		y = 1
-		cost = 7.2
+		cost = 2.9
 		ai_will_do = {
 			factor = 200			
 		}
@@ -1300,7 +1300,7 @@ focus_tree = {
 		icon = GFX_AST_secure_papua
 		x = -2
 		y = 1
-		cost = 7.2
+		cost = 2.9
 		ai_will_do = {
 			factor = 200			
 		}
@@ -1354,7 +1354,7 @@ focus_tree = {
 		icon = GFX_AST_DC3
 		x = 0
 		y = 1
-		cost = 7.2
+		cost =  4.3
 		ai_will_do = {
 			factor = 200			
 		}
@@ -1379,7 +1379,7 @@ focus_tree = {
 		icon = GFX_AST_fort
 		x = 0
 		y = 2
-		cost = 7.2
+		cost = 4.3
 		ai_will_do = {
 			factor = 200			
 		}
@@ -1498,7 +1498,7 @@ focus_tree = {
 		icon = GFX_focus_hol_continue_the_war_in_batavia
 		x = 1
 		y = 1
-		cost = 7.2
+		cost = 2.9
 		ai_will_do = {
 			factor = 200			
 		}
@@ -1571,7 +1571,7 @@ focus_tree = {
 		icon = GFX_goal_MAL_malaya
 		x = 3
 		y = 1
-		cost = 7.2
+		cost = 2.9
 		ai_will_do = {
 			factor = 200			
 		}
@@ -1871,7 +1871,7 @@ focus_tree = {
 		icon = GFX_AST_boomerang
 		x = 0
 		y = 1
-		cost = 10
+		cost = 7.2
 		ai_will_do = {
 			factor = 200			
 		}
@@ -2253,7 +2253,7 @@ focus_tree = {
 		icon = GFX_AST_backbone_of_australia
 		x = 11
 		y = 1
-		cost = 7.2
+		cost = 5
 		ai_will_do = {
 			factor = 200			
 		}
@@ -2284,7 +2284,7 @@ focus_tree = {
 		icon = GFX_AST_singapore
 		x = -1
 		y = 1
-		cost = 7.2
+		cost = 5
 		ai_will_do = {
 			factor = 200			
 		}
@@ -2319,7 +2319,7 @@ focus_tree = {
 		icon = GFX_AST_wynters_plan
 		x = 1
 		y = 1
-		cost = 7.2
+		cost = 5
 		ai_will_do = {
 			factor = 200			
 		}
@@ -2475,6 +2475,12 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			custom_effect_tooltip = AST_modify_army_spirit_tt
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
 			add_to_variable = {
 				AST_amphibious_invasion_var = 0.1
 				tooltip = amphb_invasion_speed_tt
@@ -2921,7 +2927,7 @@ focus_tree = {
 		
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
 		completion_reward = {
-			set_technology = { eng_nsb_tech_armored_cars3  = 1  }
+			set_technology = { eng_nsb_tech_armored_cars4  = 1  }
 			if = {
 				limit = {
 					NOT = {

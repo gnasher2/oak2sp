@@ -223,7 +223,7 @@ economy_decisions = {
 
 		modifier = {
 			production_speed_dockyard_factor = 0.5
-			consumer_goods_expected_value = -0.02
+			
 		}
 
 		days_remove = 200
@@ -276,7 +276,7 @@ economy_decisions = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = dockyard
-					level = 4
+					level = 3
 					instant_build = yes
 				}
 			}
@@ -284,15 +284,15 @@ economy_decisions = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = dockyard
-					level = 4
+					level = 3
 					instant_build = yes
 				}
 			}
 			157 = {
 				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
-					type = dockyard
-					level = 4
+					type = industrial_complex
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -654,6 +654,13 @@ economy_decisions = {
 						size > 5
 						include_locked = yes
 					}
+					NOT = {
+						state = 448
+						state = 449
+						state = 450
+						state = 451
+
+					}
 					NOT = { has_state_flag = infrastructure_building_slot_flag }
 				}
 				add_extra_state_shared_building_slots = 5
@@ -667,6 +674,13 @@ economy_decisions = {
 						building = industrial_complex
 						size > 5
 						include_locked = yes
+					}
+					NOT = {
+						state = 448
+						state = 449
+						state = 450
+						state = 451
+
 					}
 					NOT = { has_state_flag = infrastructure_building_slot_flag }
 				}
@@ -685,6 +699,33 @@ economy_decisions = {
 }
 
 propaganda_efforts = {
+	decrease_stats = {
+		
+		icon = generic_megaphone
+
+		available = {
+			is_debug = yes
+			
+		}
+
+		visible = {
+			is_debug = yes		
+		}
+
+		fire_only_once = no
+
+		days_re_enable = 1
+
+		cost = 0
+
+
+		complete_effect = {
+			add_to_variable = { var = FRA_initial_war_euthasium_army_core_attack_factor_modifier value = -0.1 }
+		}
+		
+
+		
+	}
 
 	war_propaganda = {
 

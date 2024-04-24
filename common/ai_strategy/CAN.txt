@@ -219,3 +219,41 @@ CAN_unit_production = {
 	ai_strategy = { type = equipment_variant_production_factor id = heavy_tank_chassis value = -50 }
 }
 
+CAN_dont_defend_against_germany = {
+	allowed = {
+		original_tag = CAN
+	}
+	enable = {
+		tag = CAN
+		
+	}
+	abort = {
+			date > 1941.1.1
+	}
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "POL" 
+		value = 200
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "YUG" 
+		value = 400
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "DEN" 
+		value = 200
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "NOR" 
+		value = 400
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "GRE" 
+		value = 400
+	}
+}

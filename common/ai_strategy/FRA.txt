@@ -596,6 +596,14 @@ FRA_operation_strange_war = {
 		manual_attack = no 
 		execute_order = no
 	}
+	ai_strategy = {
+		type = front_control
+		tag = ITA
+		ordertype = front
+		execution_type = careful
+		manual_attack = no 
+		execute_order = no
+	}
 }
 
 FRA_dont_defend_against_germany = {

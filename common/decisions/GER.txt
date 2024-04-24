@@ -674,7 +674,7 @@ GER_operation_barbarossa_category = {
 						tag = BUL
 						tag = ROM
 						tag = HUN
-						tag = EFR
+						
 						tag = SLO
 						
 					}
@@ -1607,7 +1607,7 @@ GER_operation_barbarossa_category = {
 						tag = BUL
 						tag = ROM
 						tag = HUN
-						tag = EFR
+						
 						tag = SLO
 						
 					}
@@ -1689,7 +1689,7 @@ GER_operation_barbarossa_category = {
 						tag = BUL
 						tag = ROM
 						tag = HUN
-						tag = EFR
+						
 						tag = SLO
 						
 					}
@@ -1761,7 +1761,7 @@ GER_operation_barbarossa_category = {
 						tag = BUL
 						tag = ROM
 						tag = HUN
-						tag = EFR
+						
 						tag = SLO
 						
 					}
@@ -1801,7 +1801,7 @@ GER_operation_barbarossa_category = {
 
 		visible = {
 			has_war_with = SOV
-			AND = { abort = { always = no }	.06.01 date < 1945.08.01 } 
+			AND = { date > 1945.06.01 date < 1945.08.01 } 
 		}
 
 
@@ -1833,7 +1833,7 @@ GER_operation_barbarossa_category = {
 						tag = BUL
 						tag = ROM
 						tag = HUN
-						tag = EFR
+						
 						tag = SLO
 						
 					}
@@ -2294,116 +2294,136 @@ special_projects = {
 
 		complete_effect = {
 			GER = {
+									   
+													
+				if = {
+					limit = {
+						GER_erwin_rommel = {
+							skill < 7
+						}	
+					}
+					set_country_flag = GER_rommel_replacement1_flag
+					if = {
+						limit = {
+							amount_taken_ideas = {
+								amount < 3
+								slots = {
+									high_command
+								}
+							}
+
+						}
+						add_ideas = GER_erwin_rommel2
+
+					}
+								  
+
+	 
+					else_if ={
+						limit = {
+							amount_taken_ideas = {
+								amount > 2
+								slots = {
+									high_command
+								}
+							}
+						}
+	  
+						add_political_power = 150
+	 
+	 
+		 
+			 
+			
+											
+	  
+		 
+		   
+							   
+						   
+												   
+																					  
+			   
+					  
+					   
+						
+						 
+	  
+	 
+	
+		 
+			 
+			
+											
+	  
+		 
+		   
+							   
+						   
+												   
+																					  
+			   
+					  
+					   
+						
+						 
+					}
+				}
+				else = {
+					set_country_flag = GER_rommel_replacement2_flag
+			 
+			
+											  
+	  
+		 
+		   
+					if = {
+						limit = {
+							amount_taken_ideas = {
+								amount < 3
+								slots = {
+									high_command
+								}
+							}
+
+						}
+						add_ideas = GER_erwin_rommel3
+
+						 
+					}
+	 
+	
+					else_if ={
+						limit = {
+							amount_taken_ideas = {
+								amount > 2
+								slots = {
+									high_command
+								}
+											  
+							}
+						}
+						add_political_power = 150
+					}
+
+			
+							   
+						   
+												   
+																					  
+			   
+					  
+					   
+						
+						 
+	   
+				}
 				retire_character = GER_erwin_rommel
 				set_country_flag = GER_sent_rommel_to_italy_flag
-				if = {
-				limit = {
-					amount_taken_ideas = {
-							amount < 3
-							slots = {
-								high_command
-							}
-						}
-
-					}
-					add_ideas = GER_erwin_rommel2
-
-				}
-				else_if ={
-					limit = {
-						amount_taken_ideas = {
-							amount > 2
-							slots = {
-								high_command
-							}
-						}
-					}
-					add_political_power = 150
-				}
-			}	
-			if = {
-				limit = {
-					GER = {
-						has_completed_focus = GER_gott_mit_uns
-					}
-				}				
-				ITA = {
-					create_corps_commander = {
-						name = "Erwin Rommel"
-						picture = "Portrait_Germany_Erwin_Rommel.dds"
-						traits = { trickster trait_reckless panzer_leader desert_fox expert_improviser }
-						skill = 4
-						attack_skill = 6
-						defense_skill = 2
-						planning_skill = 2
-						logistics_skill = 3
-					}
-				}
-			}
-			if = {
-				limit = {
-					GER = {
-						has_completed_focus = GER_kampfgruppes
-					}
-				}				
-				ITA = {
-					create_corps_commander = {
-						name = "Erwin Rommel"
-						picture = "Portrait_Germany_Erwin_Rommel.dds"
-						traits = { trickster trait_reckless panzer_leader desert_fox expert_improviser }
-						skill = 4
-						attack_skill = 6
-						defense_skill = 3
-						planning_skill = 2
-						logistics_skill = 2
-					}
-				}
-			}
-			if = {
-				limit = {
-					GER = {
-						has_completed_focus = GER_kesselschlacht
-					}
-				}				
-				ITA = {
-					create_corps_commander = {
-						name = "Erwin Rommel"
-						picture = "Portrait_Germany_Erwin_Rommel.dds"
-						traits = { trickster trait_reckless panzer_leader desert_fox expert_improviser }
-						skill = 4
-						attack_skill = 5
-						defense_skill = 2
-						planning_skill = 3
-						logistics_skill = 3
-					}
-				}
-			}
-			else_if = {		
-				limit = {
-					GER = {
-						NOT = {
-							OR = {
-								has_completed_focus = GER_kampfgruppes
-								has_completed_focus = GER_gott_mit_uns
-								has_completed_focus = GER_kampfgruppes
-							}
-						}		
-					}
-				}		
-				ITA = { 
-					create_corps_commander = {
-						name = "Erwin Rommel"
-						picture = "Portrait_Germany_Erwin_Rommel.dds"
-						traits = { trickster trait_reckless panzer_leader desert_fox expert_improviser }
-						skill = 4
-						attack_skill = 5
-						defense_skill = 3
-						planning_skill = 2
-						logistics_skill = 3
-					}	
-				}
-			}		
-		}
+				
+				
+			}					
+		}	
 	}
 	GER_dismantle_maginot = {
 
@@ -4373,6 +4393,9 @@ foreign_politics = {
 			}
 			
 			hidden_effect = {
+			AST = {
+					set_variable = { AST_experience_gain_army_var = 0.07 }
+				}
 				
 				ITA = {
 					set_country_flag = ita_keep_in_fuel_system_flag
@@ -4817,10 +4840,7 @@ foreign_politics = {
 					limit = {
 						OR = {
 							tag = GER
-							tag = BUL
-							tag = ROM
-							tag = HUN
-							tag = SLO
+						
 							
 						}
 					}
@@ -4862,7 +4882,7 @@ foreign_politics = {
 							pack_artillery = { x = 0 y = 3 }
 							logistics_company = { x = 1 y = 0 }
 							anti_air_company = { x = 1 y = 1 }
-							field_gun_support = { x = 1 y = 2 }
+							
 						}
 
 						priority = 2
@@ -4988,6 +5008,14 @@ hidden_effect = {
 				ITA = {
 					remove_ideas = italy_no_africa_first
 				}
+				if = {
+					limit = {
+						NOT = {
+							has_global_flag = FRA_phoney_war_is_over_flag
+						}
+					}
+					set_global_flag = FRA_phoney_war_is_over_flag
+				}
 			}
 			#custom_effect_tooltip = GER_Around_maginot_tt
 			add_ideas = GER_blitzkrieg
@@ -5020,11 +5048,21 @@ hidden_effect = {
 					}
 					
 				}
-				FRA = {
-					complete_national_focus = FRA_help_the_low_countries
+				if = {
+					limit = {
+						FRA = {
+							NOT = {
+								has_completed_focus = FRA_help_the_low_countries
+							}
+						}
+					}
+					FRA = {
+						complete_national_focus = FRA_help_the_low_countries
+						
+					}
 				}
 			}
-
+				
 			BEL = { remove_ideas = neutrality_idea }
 			HOL = { remove_ideas = HOL_aloof_neutrality }
 			LUX = { remove_ideas = neutrality_idea }
@@ -5375,7 +5413,19 @@ hidden_effect = {
 		}
 
 complete_effect = {
-			
+			every_country = {
+					limit = {
+						OR = {
+							tag = GER
+						
+							
+						}
+					}
+					create_wargoal = {
+						type = annex_everything
+						target = GRE
+					}
+				}	
 			
 			YUG = { 
 				add_to_war = { 
@@ -5383,7 +5433,7 @@ complete_effect = {
 					enemy = GER 
 				}
 				
-   
+				
   
 						 
 								
@@ -5418,15 +5468,10 @@ complete_effect = {
    
 
 					 
-			GRE = { 
-				add_to_war = { 
-					targeted_alliance = ENG
-					enemy = GER 
-				}
-			}
+			
 			ENG = {
 				add_to_faction = YUG
-				add_to_faction = GRE
+				
 			}			
 		}
 	}					
@@ -7011,7 +7056,7 @@ GER_economy_of_plunder_category = {
 			}
 
 		}		
-	}						
+	}
 	GER_economy_of_plunder_debug1111111111111 = {
 		icon = ger_reichskommissariats
 

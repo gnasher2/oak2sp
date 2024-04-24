@@ -605,7 +605,7 @@ operations = {
 		}
 		available = {
 			SAF = {
-				has_full_control_of_state = 542
+				has_completed_focus = SAF_secure_interests_in_africa
 			}	
 		}
 		ai_will_do = {
@@ -617,18 +617,18 @@ operations = {
 			}
 		}
 		complete_effect = {
-			SAF = {
-				give_resource_rights = {
-					receiver = ENG
-					state = 542
-				}
-			}
-			SAF = {
-				give_resource_rights = {
-					receiver = ENG
-					state = 771
-				}
-			}
+		  
+			SAF = { remove_resource_rights = 542 }
+			SAF = { remove_resource_rights = 771 }
+				
+	 
+	
+		  
+			SAF = { remove_resource_rights = 546 }
+				   
+				
+	 
+	
 		}
 	}
 }
@@ -898,7 +898,7 @@ ENG_budget_decisions = {
 				}
 				multiply_variable = {
 					var = budget_income_1
-					value = 1.05
+					value = 1.15
 				}
 			}					
 			add_to_variable = { var = resource_income value = resource_exported@rubber }
@@ -3504,6 +3504,14 @@ operations = {
 				NOT = { IRQ = { has_full_control_of_state = 675 } } # Al Hajara
 				NOT = { IRQ = { has_full_control_of_state = 291 } } # Baghdad
 				NOT = { IRQ = { has_full_control_of_state = 676 } } # Mosul
+			}
+				}
+		complete_effect = {
+			hidden_effect = {
+				ENG = {
+					set_country_flag = ENG_countenance_flag
+				} 
+					
 			}
 		}
 		remove_effect = {
