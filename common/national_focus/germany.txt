@@ -946,10 +946,10 @@ focus_tree = {
 				}
 			}	
 			67 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}			
@@ -965,10 +965,10 @@ focus_tree = {
 				}
 			}	
 			67 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1002,10 +1002,10 @@ focus_tree = {
 			show_mio_tooltip = Ger_alkett
 
 			63 = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = arms_factory
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -1037,13 +1037,13 @@ focus_tree = {
 			42 = {
 				add_resource = {
 					type = steel
-					amount = 15
+					amount = 12
 				}
 			}
 			51 = {
 				add_resource = {
 					type = steel
-					amount = 15
+					amount = 12
 				}
 			}
 			68 = {
@@ -1533,6 +1533,8 @@ focus_tree = {
 						state = 142
 						state = 143
 						state = 144
+						state = 817
+						state = 815
 					}
 				}
 				add_building_construction = {
@@ -1580,10 +1582,10 @@ focus_tree = {
 						garrison = { x = 2 y = 1 }
 						garrison = { x = 2 y = 2 }
 
-						artillery_brigade = { x = 3 y = 0 }		
-						artillery_brigade = { x = 3 y = 1 }
-						artillery_brigade = { x = 3 y = 2 }
-						artillery_brigade = { x = 3 y = 3 }
+						pack_artillery_brigade = { x = 3 y = 0 }		
+						pack_artillery_brigade = { x = 3 y = 1 }
+						pack_artillery_brigade = { x = 3 y = 2 }
+						pack_artillery_brigade = { x = 3 y = 3 }
 						
 					}
 
@@ -1625,13 +1627,13 @@ focus_tree = {
 						garrison = { x = 2 y = 2 }
 						garrison = { x = 2 y = 3 }
 
-						artillery_brigade = { x = 3 y = 0 }		
-						artillery_brigade = { x = 3 y = 1 }
-						artillery_brigade = { x = 3 y = 2 }
-						artillery_brigade = { x = 3 y = 3 }
+						pack_artillery_brigade = { x = 3 y = 0 }		
+						pack_artillery_brigade = { x = 3 y = 1 }
+						pack_artillery_brigade = { x = 3 y = 2 }
+						pack_artillery_brigade = { x = 3 y = 3 }
 
-						artillery_brigade = { x = 4 y = 0 }
-						artillery_brigade = { x = 4 y = 1 }
+						pack_artillery_brigade = { x = 4 y = 0 }
+						pack_artillery_brigade = { x = 4 y = 1 }
 						
 					}
 
@@ -1831,21 +1833,21 @@ focus_tree = {
 			every_state = {
 				limit = {
 					OR = {
-						state = 36
+						
 						state = 35
 						state = 7
 						state = 6
 						state = 34
-						state = 8
+						
 					}
 				}
 				add_building_construction = {
 					type = industrial_complex
-					level = -1
+					level = -2
 				}
 				add_building_construction = {
 					type = arms_factory 
-					level = 2 
+					level = 4
 				}	
 			}			
 
@@ -1934,10 +1936,10 @@ focus_tree = {
 						garrison = { x = 2 y = 1 }
 						garrison = { x = 2 y = 2 }
 
-						artillery_brigade = { x = 3 y = 0 }		
-						artillery_brigade = { x = 3 y = 1 }
-						artillery_brigade = { x = 3 y = 2 }
-						artillery_brigade = { x = 3 y = 3 }
+						pack_artillery_brigade = { x = 3 y = 0 }		
+						pack_artillery_brigade = { x = 3 y = 1 }
+						pack_artillery_brigade = { x = 3 y = 2 }
+						pack_artillery_brigade = { x = 3 y = 3 }
 						
 					}
 
@@ -1979,13 +1981,13 @@ focus_tree = {
 						garrison = { x = 2 y = 2 }
 						garrison = { x = 2 y = 3 }
 
-						artillery_brigade = { x = 3 y = 0 }		
-						artillery_brigade = { x = 3 y = 1 }
-						artillery_brigade = { x = 3 y = 2 }
-						artillery_brigade = { x = 3 y = 3 }
+						pack_artillery_brigade = { x = 3 y = 0 }		
+						pack_artillery_brigade = { x = 3 y = 1 }
+						pack_artillery_brigade = { x = 3 y = 2 }
+						pack_artillery_brigade = { x = 3 y = 3 }
 
-						artillery_brigade = { x = 4 y = 0 }
-						artillery_brigade = { x = 4 y = 1 }
+						pack_artillery_brigade = { x = 4 y = 0 }
+						pack_artillery_brigade = { x = 4 y = 1 }
 						
 					}
 
@@ -2297,10 +2299,10 @@ focus_tree = {
 						garrison = { x = 2 y = 1 }
 						garrison = { x = 2 y = 2 }
 
-						artillery_brigade = { x = 3 y = 0 }		
-						artillery_brigade = { x = 3 y = 1 }
-						artillery_brigade = { x = 3 y = 2 }
-						artillery_brigade = { x = 3 y = 3 }
+						pack_artillery_brigade = { x = 3 y = 0 }		
+						pack_artillery_brigade = { x = 3 y = 1 }
+						pack_artillery_brigade = { x = 3 y = 2 }
+						pack_artillery_brigade = { x = 3 y = 3 }
 						
 					}
 
@@ -2342,13 +2344,13 @@ focus_tree = {
 						garrison = { x = 2 y = 2 }
 						garrison = { x = 2 y = 3 }
 
-						artillery_brigade = { x = 3 y = 0 }		
-						artillery_brigade = { x = 3 y = 1 }
-						artillery_brigade = { x = 3 y = 2 }
-						artillery_brigade = { x = 3 y = 3 }
+						pack_artillery_brigade = { x = 3 y = 0 }		
+						pack_artillery_brigade = { x = 3 y = 1 }
+						pack_artillery_brigade = { x = 3 y = 2 }
+						pack_artillery_brigade = { x = 3 y = 3 }
 
-						artillery_brigade = { x = 4 y = 0 }
-						artillery_brigade = { x = 4 y = 1 }
+						pack_artillery_brigade = { x = 4 y = 0 }
+						pack_artillery_brigade = { x = 4 y = 1 }
 						
 					}
 
@@ -2590,11 +2592,11 @@ focus_tree = {
 						garrison = { x = 2 y = 0 }
 						garrison = { x = 2 y = 1 }
 						garrison = { x = 2 y = 2 }
-
-						artillery_brigade = { x = 3 y = 0 }		
-						artillery_brigade = { x = 3 y = 1 }
-						artillery_brigade = { x = 3 y = 2 }
-						artillery_brigade = { x = 3 y = 3 }
+			
+						pack_artillery_brigade = { x = 3 y = 0 }		
+						pack_artillery_brigade = { x = 3 y = 1 }
+						pack_artillery_brigade = { x = 3 y = 2 }
+						pack_artillery_brigade = { x = 3 y = 3 }
 						
 					}
 
@@ -2636,13 +2638,13 @@ focus_tree = {
 						garrison = { x = 2 y = 2 }
 						garrison = { x = 2 y = 3 }
 
-						artillery_brigade = { x = 3 y = 0 }		
-						artillery_brigade = { x = 3 y = 1 }
-						artillery_brigade = { x = 3 y = 2 }
-						artillery_brigade = { x = 3 y = 3 }
+						pack_artillery_brigade = { x = 3 y = 0 }		
+						pack_artillery_brigade = { x = 3 y = 1 }
+						pack_artillery_brigade = { x = 3 y = 2 }
+						pack_artillery_brigade = { x = 3 y = 3 }
 
-						artillery_brigade = { x = 4 y = 0 }
-						artillery_brigade = { x = 4 y = 1 }
+						pack_artillery_brigade = { x = 4 y = 0 }
+						pack_artillery_brigade = { x = 4 y = 1 }
 						
 					}
 
@@ -3084,7 +3086,26 @@ focus_tree = {
 			GER_economy_of_plunder = yes 
 
 			unlock_decision_tooltip = GER_recruit_workers_balkans
-
+			every_state = {
+				limit = {
+					OR = {
+						state = 187
+						state = 109
+						state = 104
+						state = 107
+						state = 105
+						state = 10
+					}
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = -1
+				}
+				add_building_construction = {
+					type = arms_factory 
+					level = 2 
+				}	
+			}
 			every_state = {
 				limit = {
 					is_core_of = YUG
@@ -3144,10 +3165,10 @@ focus_tree = {
 						garrison = { x = 2 y = 1 }
 						garrison = { x = 2 y = 2 }
 
-						artillery_brigade = { x = 3 y = 0 }		
-						artillery_brigade = { x = 3 y = 1 }
-						artillery_brigade = { x = 3 y = 2 }
-						artillery_brigade = { x = 3 y = 3 }
+						pack_artillery_brigade = { x = 3 y = 0 }		
+						pack_artillery_brigade = { x = 3 y = 1 }
+						pack_artillery_brigade = { x = 3 y = 2 }
+						pack_artillery_brigade = { x = 3 y = 3 }
 						
 					}
 
@@ -3189,13 +3210,13 @@ focus_tree = {
 						garrison = { x = 2 y = 2 }
 						garrison = { x = 2 y = 3 }
 
-						artillery_brigade = { x = 3 y = 0 }		
-						artillery_brigade = { x = 3 y = 1 }
-						artillery_brigade = { x = 3 y = 2 }
-						artillery_brigade = { x = 3 y = 3 }
+						pack_artillery_brigade = { x = 3 y = 0 }		
+						pack_artillery_brigade = { x = 3 y = 1 }
+						pack_artillery_brigade = { x = 3 y = 2 }
+						pack_artillery_brigade = { x = 3 y = 3 }
 
-						artillery_brigade = { x = 4 y = 0 }
-						artillery_brigade = { x = 4 y = 1 }
+						pack_artillery_brigade = { x = 4 y = 0 }
+						pack_artillery_brigade = { x = 4 y = 1 }
 						
 					}
 
@@ -3316,12 +3337,7 @@ focus_tree = {
 					diplomatic_relation = { country = TUR relation = non_aggression_pact }		
 				}	
 			}
-			4 = {
-				remove_building = {
-					type = industrial_complex
-					level = 5
-				}
-			}	
+			
 			add_ideas = TUR_rare_metal_trade_ger
 			TUR = { 
 				add_ideas = TUR_rare_metal_trade
@@ -3383,7 +3399,7 @@ focus_tree = {
 				technology = dispersed_industry4
 			}
 			
-			add_stability = -0.025
+			
 		}
 	}
 
@@ -4325,10 +4341,10 @@ focus_tree = {
 							volkssturm_infantry = { x = 2 y = 2 }
 							volkssturm_infantry = { x = 2 y = 3 }
 							
-							artillery_brigade = { x = 3 y = 0 }
-							artillery_brigade = { x = 3 y = 1 }
-							artillery_brigade = { x = 3 y = 2 }
-							artillery_brigade = { x = 3 y = 3 }						
+							pack_artillery_brigade = { x = 3 y = 0 }
+							pack_artillery_brigade = { x = 3 y = 1 }
+							pack_artillery_brigade = { x = 3 y = 2 }
+							pack_artillery_brigade = { x = 3 y = 3 }							
 						
 						}
 					}
@@ -4371,13 +4387,13 @@ focus_tree = {
 							volkssturm_infantry = { x = 2 y = 2 }
 							volkssturm_infantry = { x = 2 y = 3 }
 							
-							artillery_brigade = { x = 3 y = 0 }
-							artillery_brigade = { x = 3 y = 1 }
-							artillery_brigade = { x = 3 y = 2 }
-							artillery_brigade = { x = 3 y = 3 }
+							pack_artillery_brigade = { x = 3 y = 0 }
+							pack_artillery_brigade = { x = 3 y = 1 }
+							pack_artillery_brigade = { x = 3 y = 2 }
+							pack_artillery_brigade = { x = 3 y = 3 }
 							
-							artillery_brigade = { x = 4 y = 0 }	
-							artillery_brigade = { x = 4 y = 1 }	
+							pack_artillery_brigade = { x = 4 y = 0 }	
+							pack_artillery_brigade = { x = 4 y = 1 }
 						
 						}
 					}
@@ -6966,10 +6982,10 @@ focus_tree = {
 							anti_air = { x = 3 y = 0 }
 							anti_tank_brigade = { x = 3 y = 1 }	
 							
-							artillery_brigade = { x = 4 y = 0 }	
-							artillery_brigade = { x = 4 y = 1 }
-							artillery_brigade = { x = 4 y = 2 }
-							artillery_brigade = { x = 4 y = 3 }	
+							pack_artillery_brigade = { x = 4 y = 0 }	
+							pack_artillery_brigade = { x = 4 y = 1 }
+							pack_artillery_brigade = { x = 4 y = 2 }
+							pack_artillery_brigade = { x = 4 y = 3 }
 						}
 						support = {
 							DIV_HQ = { x = 0 y = 0 } 
@@ -7011,12 +7027,12 @@ focus_tree = {
 							cavalry = { x = 2 y = 3 }
 							
 							cavalry = { x = 3 y = 0 }
-							cavalry = { x = 3 y = 1 }	
+							anti_tank_brigade = { x = 3 y = 1 }	
 							
-							artillery_brigade = { x = 4 y = 0 }	
-							artillery_brigade = { x = 4 y = 1 }
-							artillery_brigade = { x = 4 y = 2 }
-							artillery_brigade = { x = 4 y = 3 }	
+							pack_artillery_brigade = { x = 4 y = 0 }	
+							pack_artillery_brigade = { x = 4 y = 1 }
+							pack_artillery_brigade = { x = 4 y = 2 }
+							pack_artillery_brigade = { x = 4 y = 3 }
 						}
 						support = {
 							DIV_HQ = { x = 0 y = 0 } 

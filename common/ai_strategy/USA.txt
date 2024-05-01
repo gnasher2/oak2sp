@@ -778,20 +778,40 @@ USA_help_waters_around_GER = {
 	}
 	enable = {
 		original_tag = USA
-		is_in_faction_with = ENG
-		NOT = { has_war_with = JAP }
+
 		has_war_with = GER
-		ENG = { has_war_with = GER }
+
 	}
 	abort = {
 		GER = {
 			has_capitulated = yes
 		}
 	}
-
+	ai_strategy = { type = naval_mission_threshold id = "MISSION_PATROL" value = 20000 }
+	ai_strategy = { type = area_priority id = 69 value = 100 } 
+	ai_strategy = { type = area_priority id = 68 value = 100 } 
+	ai_strategy = { type = area_priority id = 29 value = 100 } 
+	ai_strategy = {
+		type = strike_force_home_base
+		id = 68 
+		
+	}
+	ai_strategy = {
+		type = strike_force_home_base
+		id = 69 
+		
+	}
+	
+	ai_strategy = {
+		type = strike_force_home_base
+		id = 29
+		
+	}
+	
 	ai_strategy = {
 		type = strike_force_home_base
 		id = 18 # channel
+		value = 100
 	}
 }
 
@@ -869,32 +889,32 @@ USA_think_about_retaliation = {
 	ai_strategy = {
 		type = area_priority
 		id = home_islands
-		value = 1
+		value = -250
 	}
 	ai_strategy = {
 		type = area_priority
 		id = oceania
-		value = 1
+		value = -250
 	}
 	ai_strategy = {
 		type = area_priority
 		id = asia
-		value = 1
+		value = -250
 	}
 	ai_strategy = {
 		type = area_priority
 		id = pacific
-		value = 1
+		value = -250
 	}
 	ai_strategy = {
 		type = area_priority
 		id = just_philippines
-		value = 1
+		value = -250
 	}
 	ai_strategy = {
 		type = area_priority
 		id = east_indies
-		value = 1
+		value = -250
 	}
 	ai_strategy = {
 		type = area_priority
@@ -907,11 +927,15 @@ USA_think_about_retaliation = {
 		id = mainland_europe
 		value = 170
 	}
-
+	ai_strategy = { type = area_priority id = normandy_landing_zone value = 100000 } 
 	ai_strategy = {
 		type = naval_invasion_supremacy_weight
 		value = 30
 	}
+	
+	subtract_fronts_from_need = no
+	subtract_invasions_from_need = no
+	
 }
 
 USA_go_time = {
@@ -933,7 +957,7 @@ USA_go_time = {
 	ai_strategy = {
 		type = front_unit_request
 		area = home_islands
-		value = 1
+		value = -250
 	}
 	
 	ai_strategy = {
@@ -953,7 +977,7 @@ allowed = {
 		date > 1941.6.6
 	}
 	abort = {
-		date > 1944.9.9
+		date > 1943.9.9
 		}
 ai_strategy = {
 		type = area_priority
@@ -977,7 +1001,7 @@ USA_dont_invade_BUL = {
 	}
 
 	
-		abort = { always = no }	
+	abort = { always = no }	
 	
 
 	ai_strategy = {
@@ -1006,51 +1030,102 @@ english_be_careful = {
 		
 	}
 	
-		
 			abort = { always = no }	
 		
 		
-	
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 53
+		value = 100
+	}
 	
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 59
-		value = 500
+		value = 100
+	}
+	
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 173
+		value = 50
 	}
 	
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 57
-		value = 500
+		value = 100
 	}
 	
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 56
-		value = 500
+		value = 100
 	}
 	
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 206
+		value = 500
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 207
+		value = 500
+	}
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 173
+		value = 1000
+	}
 	
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 44
+		value = 100
+	}
 	
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 51
-		value = 500
+		value = 100
 	}
 	
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 49
-		value = 500
+		value = 100
 	}
 	
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 43
+		value = 100
+	}
 	
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 174
+		value = 100
+	}
 	
 
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 61
-		value = 500
+		value = 100
 	}
+	
+	
+
+	
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 29
+		value = 100
+	}
+
+	
+	
 	
 }

@@ -1090,7 +1090,7 @@ USA_unit_production = {
 	ai_strategy = { type = equipment_variant_production_factor id = horse_equipment value = 1 }
 	ai_strategy = { type = equipment_variant_production_factor id = artillery_equipment	value = 17		}
 	ai_strategy = { type = equipment_variant_production_factor id = anti_tank_equipment	value = 30		}
-	ai_strategy = { type = equipment_variant_production_factor id = anti_air_equipment	value = 20	}
+	ai_strategy = { type = equipment_variant_production_factor id = anti_air_equipment	value = 30	}
 }
 
 
