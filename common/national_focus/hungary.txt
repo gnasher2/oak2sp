@@ -729,7 +729,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 0
+			factor = 1
 		}
 
 		available = {
@@ -765,9 +765,9 @@ focus_tree = {
 		y = 2
 
 		cost = 5
-
+ 
 		ai_will_do = {
-			factor = 0
+			factor = 1
 		}
 
 		available = {
@@ -1798,7 +1798,7 @@ focus_tree = {
 		cost = 5
 
 		ai_will_do = {
-			factor = 0
+			factor = 1
 		}
 
 		available = {
@@ -4327,9 +4327,14 @@ focus_tree = {
 					}
 				}
 				custom_effect_tooltip = HUN_northern_trans			
-			}			
+			}
 			
-
+			hidden_effect = {
+				HUN = {
+					add_state_core = 76
+				}
+			}
+			
 		}
 	}				
 
@@ -4366,6 +4371,12 @@ focus_tree = {
 				set_compliance = 95 
 				set_resistance = 5 
 				
+			}
+
+			hidden_effect = {
+				HUN = {
+					add_state_core = 45
+				}
 			}
 
 			HUN_treaty_hungary_level_up = yes
@@ -4412,6 +4423,7 @@ focus_tree = {
 				category = infantry_weapons
 				category = industry
 				category = electronics
+			}
 			add_stability = 0.1
 			hidden_effect = {
 				news_event = { id = news.299 }

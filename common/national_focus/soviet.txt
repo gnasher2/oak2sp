@@ -162,7 +162,7 @@ focus_tree = {
 		cost = 2.9
 
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 
 		available = {			
@@ -6949,7 +6949,13 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_the_great_patriotic_war
 		cost = 0
-		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 20
+				has_war = yes
+			}
+		}
 		available = {
 			surrender_progress > 0.3
 			casualties > 2500000
@@ -6971,8 +6977,15 @@ focus_tree = {
 		relative_position_id = SOV_order_270
 		available = {
 			casualties > 4500000
-			surrender_progress > 0.5
-			date < 1942.9.1
+			surrender_progress > 0.65
+			
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 20
+				has_war = yes
+			}
 		}
 		completion_reward = {
 			hidden_effect = {
@@ -6996,8 +7009,15 @@ focus_tree = {
 		relative_position_id = SOV_slacken_inf
 		available = {
 			casualties > 5000000
-			surrender_progress > 0.7
-			date < 1942.9.1
+			surrender_progress > 0.75
+			
+		}
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 20
+				has_war = yes
+			}
 		}
 		completion_reward = {
 			hidden_effect = {
@@ -7023,7 +7043,13 @@ focus_tree = {
 			casualties > 3500000
 			surrender_progress > 0.45
 		}
-
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 20
+				has_war = yes
+			}
+		}
 		completion_reward = {
 			hidden_effect = {
 				if = {
@@ -7095,11 +7121,17 @@ focus_tree = {
 		y = 1
 		relative_position_id = SOV_frontline_mob2
 		cost = 0
-		
+		ai_will_do = {
+			factor = 100
+			modifier = {
+				factor = 20
+				has_war = yes
+			}
+		}
 		available = {
 			casualties > 5000000
 			surrender_progress > 0.7
-			date < 1943.1.1
+			
 		}
 
 		completion_reward = {
@@ -8576,7 +8608,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		ai_will_do = {
-			factor = 1.5
+			factor = 1
 			modifier = {
 				factor = 2
 				has_war = yes
@@ -8684,7 +8716,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		ai_will_do = {
-			factor = 1.5
+			factor = 1
 			modifier = {
 				factor = 2
 				has_war = yes
@@ -8721,7 +8753,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		ai_will_do = {
-			factor = 1.5
+			factor = 1
 			modifier = {
 				factor = 2
 				has_war = yes

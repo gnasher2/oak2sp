@@ -191,24 +191,30 @@ ideas = {
 				NOT = { has_idea = CAN_conscription_question_1}
 				has_war_support > 0.3
 				OR = {
-					has_government = fascism
+					
+					AND = {
+					    has_government = fascism
+						has_war = yes
+						casualties > 50000
+						
+					}
 					AND = {
 					    has_government = communism
 						has_war = yes
-						casualties > 100000
+						casualties > 50000
 						
 					}
 					
 					AND = {
 					    has_government = neutrality
 						has_war = yes
-						casualties > 100000
+						casualties > 50000
 						
 					}
 					AND = {
 					    has_government = democratic
 						has_war = yes
-						casualties > 100000
+						casualties > 50000
 						
 					}				
 				}			
@@ -252,12 +258,16 @@ ideas = {
 				NOT = { has_idea = CAN_conscription_question_1}
 				has_war_support > 0.35
 				OR = {
-					has_government = fascism
 					
+					AND = {
+					    has_government = fascism
+						has_war = yes
+						casualties > 500000
+					}
 					AND = {
 					    has_government = neutrality
 						has_war = yes
-						enemies_strength_ratio > 0.6
+						casualties > 500000
 					}
 					AND = {
 					    has_government = democratic
@@ -285,7 +295,7 @@ ideas = {
 			}
 			
 			ai_will_do = {
-   				factor = 0
+   				factor = 0.1
 
 				modifier = {
 					factor = 0
@@ -293,7 +303,7 @@ ideas = {
 				}
 				modifier = {
 					factor = 500
-		     		has_manpower < 50000	
+		     		has_manpower < 300000	
 				}
 			}
 			visible = {

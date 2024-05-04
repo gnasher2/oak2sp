@@ -1007,6 +1007,11 @@ english_be_careful1 = {
 		value = 100
 	}
 	
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 60
+		value = 100
+	}
 	
 	ai_strategy = {
 		type = naval_avoid_region
@@ -1040,32 +1045,42 @@ english_be_careful1 = {
 	ai_strategy = {
 		type = naval_avoid_region
 		id = 44
+		value = 200
+	}
+	
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 47
 		value = 100
 	}
 	
 	ai_strategy = {
-		type = theatre_distribution_demand_increase
-		id = 68
-		value = 100
+		type = naval_avoid_region
+		id = 45
+		value = 600
 	}
+	
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 43
+		value = 600
+	}
+	
+	ai_strategy = {
+		type = naval_avoid_region
+		id = 16
+		value = 500
+	}
+	
 
 	
 	ai_strategy = {
 		type = theatre_distribution_demand_increase
 		id = 29
-		value = 100
+		value = 1000
 	}
 
 	
-	ai_strategy = {
-		type = theatre_distribution_demand_increase
-		id = 69
-		value = 100
-	}
-	ai_strategy = {
-		type = theatre_distribution_demand_increase
-		id = 169
-		value = 100
-	}
+	
 	
 }

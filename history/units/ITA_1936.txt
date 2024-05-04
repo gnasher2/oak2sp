@@ -511,10 +511,7 @@ air_wings = {
 			owner = "ITA" 
 			amount = 250
 		}
-		nav_bomber_equipment_1936 = {
-			owner = "ITA" 
-			amount = 100
-		}
+		
 	}
 	550 = {
 		fighter_equipment_1934 = {
@@ -662,15 +659,7 @@ instant_effect = { #player
 		efficiency = 35
 	}
 	
-	add_equipment_production = {
-		equipment = {
-			type = nav_bomber_equipment_1936
-			creator = "ITA" 
-		}
-		requested_factories = 2
-		progress = 0.15
-		efficiency = 35
-	}
+
 	
 		############################ Equipment stockpile
 	add_equipment_to_stockpile = {
@@ -714,12 +703,7 @@ instant_effect = { #player
 			amount = 50
 			producer = ITA
 		}
-	add_equipment_to_stockpile = {
-		type = heavy_anti_air_equipment_1
-			amount = 200
-			producer = ITA
-			variant_name = "Cannone da 76/40 mod. 35"
-		}
+	
 	add_equipment_to_stockpile = {
 		type = anti_tank_equipment_1
 			amount = 100

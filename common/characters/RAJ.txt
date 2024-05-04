@@ -671,6 +671,9 @@ characters={
 			allowed = {
 				original_tag  = RAJ
 			}
+			ai_will_do  = {
+					factor  = 0
+				}
 			traits = {
 				navy_anti_submarine_2
 			}

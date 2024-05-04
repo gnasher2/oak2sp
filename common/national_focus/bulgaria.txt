@@ -2689,10 +2689,7 @@ ai_will_do = {
 		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS }
 		completion_reward = {
 			add_ideas = BUL_ratniks
-			BUL = {
-				add_state_core  = 106
-	
-			}
+			
 		}
 	}
 
@@ -3148,19 +3145,17 @@ ai_will_do = {
 
 		available = {
 			184 = { is_controlled_by = BUL }
-			731 = { is_controlled_by = BUL }
+		
+			77 = { is_controlled_by = BUL }
 			
 		}
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 		completion_reward = {
-			184 = {	
-				set_resistance = 0
-				set_compliance = 100
-			}
-			731 = {	
-				set_resistance = 0
-				set_compliance = 100
+			BUL = {
+				add_state_core  = 184
+				
+				add_state_core  = 77
 	
 		   
 					  
@@ -3330,7 +3325,7 @@ ai_will_do = {
 			if = {
 				limit = {
 					184 = { is_controlled_by = BUL }
-					731 = { is_controlled_by = BUL }
+					77 = { is_controlled_by = BUL }
 					106 = { is_controlled_by = BUL }
 				}
 				random_owned_state = {

@@ -138,7 +138,7 @@ USA_unit_buffer_for_europe = {
 			122 
 		}
 		
-		ratio = 0.1
+		ratio = 0.01
 		
 		area = europe
 		
@@ -755,7 +755,7 @@ USA_home_land_is_safe = {
 	
 	ai_strategy = {
 		type = garrison
-		value = -175
+		value = -5000
 	}
 
 	ai_strategy = {

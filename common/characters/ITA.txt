@@ -1605,10 +1605,7 @@ characters={
 			}
 
 			ai_will_do = {
-				base = 0.300
-				modifier = {
-					factor = 0
-				}
+				factor  = 0
 			}
 		}
 	}

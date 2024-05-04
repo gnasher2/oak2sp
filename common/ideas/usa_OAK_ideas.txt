@@ -642,7 +642,7 @@ ideas = {
 			picture = USA_aircraft_industry
 
 			name = USA_aircraft_industry_name 
-	
+			supply_consumption_factor = -0.1
 			removal_cost = -1
 
 			
@@ -657,7 +657,7 @@ ideas = {
 			picture = USA_aircraft_industry
 
 			name = USA_aircraft_industry_name 
-
+			supply_consumption_factor = -0.2
 			equipment_bonus = {
 				suicide = {
 					build_cost_ic = -0.02 instant = yes
@@ -683,7 +683,7 @@ ideas = {
 			name = USA_aircraft_industry_name 
 
 			removal_cost = -1
-
+			supply_consumption_factor = -0.3
 			equipment_bonus = {
 				suicide = {
 					build_cost_ic = -0.04 instant = yes
@@ -707,7 +707,7 @@ ideas = {
 			name = USA_aircraft_industry_name 
 
  			removal_cost = -1
-
+			supply_consumption_factor = -0.4
 			equipment_bonus = {
 				suicide = {
 					build_cost_ic = -0.06  instant = yes

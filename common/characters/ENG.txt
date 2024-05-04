@@ -19,7 +19,9 @@ characters={
 			allowed  = {
 					original_tag  = ENG
 				}
-
+				ai_will_do = {
+				factor = 0
+			}
 				cost  = 150.000
 				traits  = {
 					hawk 
@@ -1552,12 +1554,12 @@ characters={
 				original_tag = ENG
 				has_dlc = "La Resistance" 
 			}
-			
-			traits = { head_of_intelligence }
-		}
-		ai_will_do = {
+			ai_will_do = {
 				factor = 0
 			}
+			traits = { head_of_intelligence }
+		}
+		
 	}
 	ENG_clement_attlee = {
 		portraits={
@@ -1820,7 +1822,7 @@ characters={
 			traits = { ENG_minister_of_labour }
 
 			ai_will_do = {
-				base = 0
+				base = 1
 				modifier = {
 					add = 2000
 					date > 1940.1.1

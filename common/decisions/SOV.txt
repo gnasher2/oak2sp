@@ -14041,6 +14041,7 @@ SOV_great_patriotic_war = {
 
 		available = {
 			surrender_progress > 0.5
+			CHI = { has_full_control_of_state = 717 }
 		}
 
 		visible = {
