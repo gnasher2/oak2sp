@@ -146,14 +146,7 @@ units = {
 	
 	# Army of the Center # Led by Mulugeta Yeggazu, 70,000 milita approx.
 	
-	division = {
-		name = "Gubba Sefari"
-		location = 2040
-		division_template = "Levy Sefari"		# infantry
-		start_experience_factor = 0.1
-		start_equipment_factor = 1
-
-	}
+	
 	division = {
 		name = "Gurage Sefari"
 		location = 10734

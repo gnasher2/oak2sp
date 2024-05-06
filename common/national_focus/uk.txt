@@ -1371,7 +1371,7 @@ focus_tree = {
 					}
 
 					support = {
-						DIV_HQ = { x = 0 y = 0 }
+						pack_artillery = { x = 0 y = 0 }
 					   	engineer = { x = 0 y = 1 }
 					   	anti_air_company = { x = 0 y = 2 }
 						military_police = { x = 1 y = 0 }

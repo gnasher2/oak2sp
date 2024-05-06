@@ -1033,7 +1033,7 @@ focus_tree = {
 								heavy_armor = { x = 4 y = 1 }	
 							}
 							support = {
-								DIV_HQ = { x = 0 y = 0 }
+								pack_artillery = { x = 0 y = 0 }
 								engineer = { x = 1 y = 0 }
 								logistics_company_mot = { x = 0 y = 1 }
 								maintenance_company = { x = 1 y = 1 }
@@ -1074,7 +1074,7 @@ focus_tree = {
 								heavy_armor = { x = 4 y = 2 }
 							}
 							support = {
-								DIV_HQ = { x = 0 y = 0 }
+								pack_artillery = { x = 0 y = 0 }
 								engineer = { x = 1 y = 0 }
 								logistics_company_mot = { x = 0 y = 1 }
 								maintenance_company = { x = 1 y = 1 }
@@ -1137,7 +1137,7 @@ focus_tree = {
 								medium_armor = { x = 4 y = 1 }	
 							}
 							support = {
-								DIV_HQ = { x = 0 y = 0 }
+								pack_artillery = { x = 0 y = 0 }
 								engineer = { x = 1 y = 0 }
 								logistics_company_mot = { x = 0 y = 1 }
 								maintenance_company = { x = 1 y = 1 }
@@ -1178,7 +1178,7 @@ focus_tree = {
 								medium_armor = { x = 4 y = 2 }
 							}
 							support = {
-								DIV_HQ = { x = 0 y = 0 }
+								pack_artillery = { x = 0 y = 0 }
 								engineer = { x = 1 y = 0 }
 								logistics_company_mot = { x = 0 y = 1 }
 								maintenance_company = { x = 1 y = 1 }
@@ -1243,7 +1243,7 @@ focus_tree = {
 								light_armor = { x = 4 y = 1 }	
 							}
 							support = {
-								DIV_HQ = { x = 0 y = 0 }
+								pack_artillery = { x = 0 y = 0 }
 								engineer = { x = 1 y = 0 }
 								logistics_company_mot = { x = 0 y = 1 }
 								maintenance_company = { x = 1 y = 1 }
@@ -1284,7 +1284,7 @@ focus_tree = {
 								light_armor = { x = 4 y = 2 }
 							}
 							support = {
-								DIV_HQ = { x = 0 y = 0 }
+								pack_artillery = { x = 0 y = 0 }
 								engineer = { x = 1 y = 0 }
 								logistics_company_mot = { x = 0 y = 1 }
 								maintenance_company = { x = 1 y = 1 }
@@ -1587,7 +1587,7 @@ focus_tree = {
 							anti_tank_brigade = { x = 4 y = 1 }	
 						}
 						support = {
-							DIV_HQ = { x = 0 y = 0 } 
+							military_police = { x = 0 y = 0 } 
 							engineer = { x = 0 y = 1 } 		
 							recon = { x = 0 y = 2 }
 							pack_artillery = { x = 0 y = 3 }
@@ -1595,7 +1595,7 @@ focus_tree = {
 							anti_air_company = { x = 1 y = 1 }
 							field_gun_support = { x = 1 y = 2 }
 							field_hospital = { x = 1 y = 3 }
-							military_police = { x = 1 y = 4 }
+							
 						}
 					}
 					division_template = {
@@ -1625,7 +1625,7 @@ focus_tree = {
 							anti_air = { x = 4 y = 1 }
 						}
 						support = {
-							DIV_HQ = { x = 0 y = 0 }
+							pack_artillery = { x = 0 y = 0 }
 							engineer = { x = 0 y = 1 }
 							recon = { x = 0 y = 2 }
 							maintenance_company = { x = 1 y = 0 }
@@ -1673,7 +1673,7 @@ focus_tree = {
 							anti_tank_brigade = { x = 4 y = 1 }	
 						}
 						support = {
-							DIV_HQ = { x = 0 y = 0 } 
+							military_police = { x = 0 y = 0 }
 							engineer = { x = 0 y = 1 } 		
 							recon = { x = 0 y = 2 }
 							pack_artillery = { x = 0 y = 3 }
@@ -1681,7 +1681,7 @@ focus_tree = {
 							anti_air_company = { x = 1 y = 1 }
 							field_gun_support = { x = 1 y = 2 }
 							field_hospital = { x = 1 y = 3 }
-							military_police = { x = 1 y = 4 }
+							
 						}
 					}
 					division_template = {
@@ -1714,7 +1714,7 @@ focus_tree = {
 							anti_air = { x = 4 y = 1 }
 						}
 						support = {
-							DIV_HQ = { x = 0 y = 0 }
+							pack_artillery = { x = 0 y = 0 }
 							engineer = { x = 0 y = 1 }
 							recon = { x = 0 y = 2 }
 							maintenance_company = { x = 1 y = 0 }
@@ -6647,7 +6647,7 @@ focus_tree = {
 									heavy_armor = { x = 4 y = 1 }	
 								}
 								support = {
-									DIV_HQ = { x = 0 y = 0 }
+									pack_artillery = { x = 0 y = 0 }
 									engineer = { x = 1 y = 0 }
 									logistics_company_mot = { x = 0 y = 1 }
 									maintenance_company = { x = 1 y = 1 }
@@ -6688,11 +6688,11 @@ focus_tree = {
 									heavy_armor = { x = 4 y = 2 }
 								}
 								support = {
-									DIV_HQ = { x = 0 y = 0 }
+									pack_artillery = { x = 0 y = 0 }
 									engineer = { x = 1 y = 0 }
 									logistics_company_mot = { x = 0 y = 1 }
 									maintenance_company = { x = 1 y = 1 }
-									recon_ac = { x = 0 y = 2 }
+									mot_recon = { x = 0 y = 2 }
 									military_police = { x = 1 y = 2 } 
 									signal_company = { x = 0 y = 3 } 
 									
@@ -6750,7 +6750,7 @@ focus_tree = {
 									medium_armor = { x = 4 y = 1 }	
 								}
 								support = {
-									DIV_HQ = { x = 0 y = 0 }
+									pack_artillery = { x = 0 y = 0 }
 									engineer = { x = 1 y = 0 }
 									logistics_company_mot = { x = 0 y = 1 }
 									maintenance_company = { x = 1 y = 1 }
@@ -6791,7 +6791,7 @@ focus_tree = {
 									medium_armor = { x = 4 y = 2 }
 								}
 								support = {
-									DIV_HQ = { x = 0 y = 0 }
+									pack_artillery = { x = 0 y = 0 }
 									engineer = { x = 1 y = 0 }
 									logistics_company_mot = { x = 0 y = 1 }
 									maintenance_company = { x = 1 y = 1 }
@@ -6856,7 +6856,7 @@ focus_tree = {
 									light_armor = { x = 4 y = 1 }	
 								}
 								support = {
-									DIV_HQ = { x = 0 y = 0 }
+									pack_artillery = { x = 0 y = 0 }
 									engineer = { x = 1 y = 0 }
 									logistics_company_mot = { x = 0 y = 1 }
 									maintenance_company = { x = 1 y = 1 }
@@ -6897,7 +6897,7 @@ focus_tree = {
 									light_armor = { x = 4 y = 2 }
 								}
 								support = {
-									DIV_HQ = { x = 0 y = 0 }
+									pack_artillery = { x = 0 y = 0 }
 									engineer = { x = 1 y = 0 }
 									logistics_company_mot = { x = 0 y = 1 }
 									maintenance_company = { x = 1 y = 1 }

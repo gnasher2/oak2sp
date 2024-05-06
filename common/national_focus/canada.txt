@@ -1206,13 +1206,13 @@ focus_tree = {
 						mountaineers = { x = 2 y = 1 }
 						mountaineers = { x = 2 y = 2 }
 			
-						artillery_brigade = { x = 3 y = 0 }
-						artillery_brigade = { x = 3 y = 1 }
-						artillery_brigade = { x = 3 y = 2 }
+						pack_artillery_brigade = { x = 3 y = 0 }
+						pack_artillery_brigade = { x = 3 y = 1 }
+						pack_artillery_brigade = { x = 3 y = 2 }
 						anti_tank_brigade =  { x = 3 y = 3 }
 					}
 					support = { 
-						DIV_HQ = { x = 0 y = 0 }
+						pack_artillery = { x = 0 y = 0 }
 						engineer = { x = 0 y = 1 }
 						recon = { x = 0 y = 2 }
 						maintenance_company = { x = 1 y = 0 }
@@ -1246,7 +1246,7 @@ focus_tree = {
 						paratrooper = { x = 3 y = 2 }
 					}
 					support = { 
-						DIV_HQ = { x = 0 y = 0 }
+						artillery = { x = 0 y = 0 }
 						engineer = { x = 0 y = 1 }
 						recon = { x = 1 y = 0 }
 						field_hospital = { x = 1 y = 1 }
@@ -3882,7 +3882,7 @@ focus = {
 						anti_tank_brigade =  { x = 3 y = 3 }
 					}
 					support = { 
-						DIV_HQ = { x = 0 y = 0 }
+						artillery = { x = 0 y = 0 }
 						engineer = { x = 0 y = 1 }
 						recon = { x = 0 y = 2 }
 						maintenance_company = { x = 1 y = 0 }

@@ -418,8 +418,8 @@ ideas = {
 			picture = USA_asia_matters
 			
 			modifier = {
-				production_cost_synthetic_rubber_refinery_factor = 10
-				production_cost_synthetic_refinery_factor = 10
+				production_cost_synthetic_rubber_refinery_factor = 1
+				production_cost_synthetic_refinery_factor = 1
 				supply_consumption_factor = -0.4
 				supply_node_range = 0.5
 			}

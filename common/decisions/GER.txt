@@ -320,7 +320,7 @@ GER_operation_barbarossa_category = {
 						}
 
 						support = {
-							DIV_HQ = { x = 0 y = 0 }
+							pack_artillery = { x = 0 y = 0 }
 							engineer = { x = 0 y = 1 }
 							military_police = { x = 1 y = 0 }
 							recon = { x = 1 y = 1 }
@@ -365,7 +365,7 @@ GER_operation_barbarossa_category = {
 						}
 
 						support = {
-							DIV_HQ = { x = 0 y = 0 }
+							pack_artillery = { x = 0 y = 0 }
 							engineer = { x = 0 y = 1 }
 							military_police = { x = 1 y = 0 }
 							recon = { x = 1 y = 1 }
@@ -462,7 +462,7 @@ GER_operation_barbarossa_category = {
 							}
 
 							support = {
-								DIV_HQ = { x = 0 y = 0 }
+								pack_artillery = { x = 0 y = 0 }
 								engineer = { x = 0 y = 1 }
 								military_police = { x = 1 y = 0 }
 								recon = { x = 1 y = 1 }
@@ -508,14 +508,14 @@ GER_operation_barbarossa_category = {
 							}
 
 							support = {
-								DIV_HQ = { x = 0 y = 0 }
+								pack_artillery = { x = 0 y = 0 }
 								engineer = { x = 0 y = 1 }
 								military_police = { x = 1 y = 0 }
 								recon = { x = 1 y = 1 }
 							}
 						}	
 					}
-				}									   
+				}
 				complete_national_focus = GER_ussr_war_goal
 				every_state = {
 					limit = {
@@ -4948,13 +4948,13 @@ foreign_politics = {
 								pack_artillery_brigade = { x = 4 y = 1 }	
 							}
 							support = {
-								DIV_HQ = { x = 0 y = 0 } 
+								anti_air_company = { x = 0 y = 0 }
 								engineer = { x = 0 y = 1 } 		
 								recon = { x = 0 y = 2 }
 								pack_artillery = { x = 0 y = 3 }
 								logistics_company = { x = 1 y = 0 }
-								anti_air_company = { x = 1 y = 1 }
-								field_gun_support = { x = 1 y = 2 }
+								
+								
 							}
 
 							priority = 2
@@ -5130,12 +5130,12 @@ foreign_politics = {
 							pack_artillery_brigade = { x = 4 y = 1 }	
 						}
 						support = {
-							DIV_HQ = { x = 0 y = 0 } 
+							anti_air_company = { x = 0 y = 0 } 
 							engineer = { x = 0 y = 1 } 		
 							recon = { x = 0 y = 2 }
 							pack_artillery = { x = 0 y = 3 }
 							logistics_company = { x = 1 y = 0 }
-							anti_air_company = { x = 1 y = 1 }
+							
 							
 						}
 
@@ -6237,7 +6237,7 @@ GER_endsieg_category = {
 							mechanized = { x = 3 y = 3 }
 						}
 				  		support = {
-							DIV_HQ = { x = 0 y = 0 }
+							pack_artillery = { x = 0 y = 0 }
 							recon = { x = 0 y = 1 }
 							engineer = { x = 0 y = 2 }
 							anti_air_company = { x = 0 y = 3 }
@@ -6294,7 +6294,7 @@ GER_endsieg_category = {
 							mechanized = { x = 3 y = 3 }
 						}
 				  		support = {
-							DIV_HQ = { x = 0 y = 0 }
+							pack_artillery = { x = 0 y = 0 }
 							recon = { x = 0 y = 1 }
 							engineer = { x = 0 y = 2 }
 							anti_air_company = { x = 0 y = 3 }

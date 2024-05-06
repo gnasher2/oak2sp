@@ -26,7 +26,7 @@ division_template = {
 		medium_armor = { x = 4 y = 0 }
 	}
 	support = {
-		DIV_HQ = { x = 0 y = 0 }
+		pack_artillery = { x = 0 y = 0 }
 		engineer = { x = 1 y = 0 }
 		logistics_company_mot = { x = 0 y = 1 }
 		maintenance_company = { x = 1 y = 1 }
@@ -65,7 +65,7 @@ division_template = {
 		heavy_armor = { x = 4 y = 0 }
 	}
 	support = {
-		DIV_HQ = { x = 0 y = 0 }
+		pack_artillery = { x = 0 y = 0 }
 		engineer = { x = 1 y = 0 }
 		logistics_company_mot = { x = 0 y = 1 }
 		maintenance_company = { x = 1 y = 1 }
@@ -103,7 +103,7 @@ division_template = {
 		pack_artillery_brigade = { x = 4 y = 0 }
 	}
 	support = {
-		DIV_HQ = { x = 0 y = 0 }
+		pack_artillery = { x = 0 y = 0 }
 		engineer = { x = 1 y = 0 }
 		logistics_company = { x = 0 y = 1 }
 		maintenance_company = { x = 1 y = 1 }
@@ -139,7 +139,7 @@ division_template = {
 		pack_artillery_brigade = { x = 4 y = 0 }
 	}
 	support = {
-		DIV_HQ = { x = 0 y = 0 }
+		pack_artillery = { x = 0 y = 0 }
 		engineer = { x = 1 y = 0 }
 		logistics_company = { x = 0 y = 1 }
 		maintenance_company = { x = 1 y = 1 }
