@@ -1461,7 +1461,7 @@ ideas = {
 
 			modifier = {
 				stability_weekly = 0.001
-				supply_consumption_factor = -0.4
+				supply_consumption_factor = -0.3
 				production_speed_infrastructure_factor = 0.1
 				supply_node_range = 0.5
 			}

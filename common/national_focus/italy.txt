@@ -658,7 +658,7 @@ focus_tree = {
 
 		completion_reward = {
 			hidden_effect = {
-				sound_effect = sp_ita_waronallies
+				play_song = sp_ita_waronallies
 				set_global_flag = GER_sealion_fix
 			}
 			custom_effect_tooltip = salo_warning_2
@@ -1371,6 +1371,7 @@ focus_tree = {
 					ENG = {
 						NOT = {
 							has_decision = ENG_operation_countenance
+							has_country_flag = ENG_countenance_flag
 						}
 					}
 				}
@@ -3054,7 +3055,7 @@ focus_tree = {
 					}
 					add_extra_state_shared_building_slots = 9
 					add_compliance = 10
-				
+				set_state_category = large_town
 				add_dynamic_modifier = {
 					modifier = ITA_state_development_africa
 					days = 365
@@ -5845,7 +5846,7 @@ focus_tree = {
 		relative_position_id = ITA_question_the_high_command
 		x = 1
 		y = 1
-		cost = 2.9
+		cost = 5
 		ai_will_do = {
 			factor = 40
 		}

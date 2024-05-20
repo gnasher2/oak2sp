@@ -6313,11 +6313,7 @@ focus_tree = {
 			air_experience = 250
 
 		
-			hidden_effect = {
-				GER_mefo_bills_level_up = yes
-				GER_mefo_bills_level_up = yes
-			}
-			custom_effect_tooltip = GER_plan_z_tt_4 	
+			
 				
 			SPR = {
 				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 4000 producer = GER }
@@ -6367,11 +6363,8 @@ focus_tree = {
 			}
 			air_experience = 250
 
-			hidden_effect = {
-				GER_mefo_bills_level_up = yes
-				GER_mefo_bills_level_up = yes
-			}
-			custom_effect_tooltip = GER_plan_z_tt_4 
+			
+			
 		
 				
 			SPR = {

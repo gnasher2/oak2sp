@@ -3873,16 +3873,16 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 60
+			army_experience = 30
 			SPN = {
-				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 8000 producer = SOV }
-				add_equipment_to_stockpile = { type = support_equipment_1 amount = 800 producer = SOV }
-				add_equipment_to_stockpile = { type = radio_equipment_1 amount = 800 producer = SOV }
-				add_equipment_to_stockpile = { type = motorized_equipment amount = 800 producer = SOV }
+				add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 6000 producer = SOV }
+				add_equipment_to_stockpile = { type = support_equipment_1 amount = 300 producer = SOV }
+				
+				add_equipment_to_stockpile = { type = motorized_equipment amount = 300 producer = SOV }
 				add_equipment_to_stockpile = { type = horse_equipment amount = 1000 producer = SOV }
-				add_equipment_to_stockpile = { type = fighter_equipment_1934 amount = 100 producer = SOV }
-				add_equipment_to_stockpile = { type = tac_bomber_equipment_1936 amount = 150 producer = SOV }
-				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 600 producer = SOV }
+				
+			
+				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 100 producer = SOV }
 				add_opinion_modifier = { target = SOV modifier = SOV_SPR_help }
 			}
 				
@@ -3914,7 +3914,7 @@ focus_tree = {
 		y = 0
 		cost = 7.16
 		ai_will_do = {
-			factor = 1
+			factor = 0
 		}
 		relative_position_id = SOV_SPR_military_advisors
 		available_if_capitulated = yes
@@ -3928,7 +3928,7 @@ focus_tree = {
 				add_equipment_to_stockpile = { type = radio_equipment_1 amount = 800 producer = SOV }
 				add_equipment_to_stockpile = { type = motorized_equipment amount = 800 producer = SOV }
 				add_equipment_to_stockpile = { type = horse_equipment amount = 1500 producer = SOV }
-				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 800 producer = SOV }
+				add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 600 producer = SOV }
 				add_equipment_to_stockpile = { type = fighter_equipment_1934 amount = 200 producer = SOV }
 				add_equipment_to_stockpile = { type = tac_bomber_equipment_1936 amount = 200 producer = SOV }
 				add_opinion_modifier = { target = SOV modifier = SOV_SPR_help }
@@ -7065,19 +7065,19 @@ focus_tree = {
 							}
 						}
 						create_unit = {
-							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
+							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 0.75 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
 							owner = SOV
 						}
 						create_unit = {
-							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
+							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 0.75 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
 							owner = SOV
 						}
 						create_unit = {
-							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
+							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 0.75 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
 							owner = SOV
 						}
 						create_unit = {
-							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }}"
+							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 0.75 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }}"
 							owner = SOV
 						}
 					}
@@ -7091,19 +7091,19 @@ focus_tree = {
 							}
 						}
 						create_unit = {
-							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
+							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 0.75 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
 							owner = SOV
 						}
 						create_unit = {
-							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
+							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 0.75 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
 							owner = SOV
 						}
 						create_unit = {
-							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
+							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 0.75 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
 							owner = SOV
 						}
 						create_unit = {
-							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }}"
+							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 0.75 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }}"
 							owner = SOV
 						}
 					}
@@ -7149,19 +7149,19 @@ focus_tree = {
 							}
 						}
 						create_unit = {
-							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
+							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 0.75 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
 							owner = SOV
 						}
 						create_unit = {
-							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
+							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 0.75 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
 							owner = SOV
 						}
 						create_unit = {
-							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
+							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 0.75 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
 							owner = SOV
 						}
 						create_unit = {
-							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }}"
+							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 0.75 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }}"
 							owner = SOV
 						}
 					}
@@ -7175,19 +7175,19 @@ focus_tree = {
 							}
 						}
 						create_unit = {
-							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
+							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 0.75 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
 							owner = SOV
 						}
 						create_unit = {
-							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
+							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 0.75 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
 							owner = SOV
 						}
 						create_unit = {
-							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
+							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 0.75 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }} "
 							owner = SOV
 						}
 						create_unit = {
-							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 1.0 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }}"
+							division = "division_template = \"Strelkovaya Diviziya - Reinforcements\" start_experience_factor = 0.4 start_equipment_factor = 0.75 force_equipment_variants = { infantry_equipment_2 = { owner = \"SOV\" } artillery_equipment_2 = { owner = \"SOV\" }}"
 							owner = SOV
 						}
 					}
@@ -8657,7 +8657,7 @@ focus_tree = {
 					}
 					add_equipment_to_stockpile = {
 						type = radio_equipment_1
-						amount = 10000
+						amount = 1000
 						producer = USA
 					}	
 					add_equipment_to_stockpile = {
@@ -8686,7 +8686,7 @@ focus_tree = {
 						}
 						add_equipment_to_stockpile = {
 						type = medium_tank_chassis
-							amount = 1500
+							amount = 500
 							producer = SOV
 						}	
 					}

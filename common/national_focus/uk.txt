@@ -934,7 +934,7 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			add_political_power = 200
+			add_political_power = 100
 			custom_effect_tooltip = ENG_containment_upgrade_3_tt
 
 			add_to_variable = {
@@ -1033,7 +1033,7 @@ focus_tree = {
 			custom_effect_tooltip = ENG_appeasement_tt
 
 			add_to_variable = {
-				ENG_political_power_factor_var = 0.1
+				ENG_political_power_factor_var = 0.2
 			}
 			add_to_variable = {
 				ENG_political_power_cost_var = -0.1
@@ -1054,19 +1054,38 @@ focus_tree = {
 			custom_effect_tooltip = ENG_appeasment_change_2_tt
 
 			add_to_variable = {
-				ENG_political_power_factor_var = 0.1
+				ENG_production_speed_industrial_complex_factor_var = 0.1
 			}
 			add_to_variable = {
-				ENG_production_speed_industrial_complex_factor_var = 0.05
+				ENG_production_speed_arms_factory_factor_var = -0.1
 			}
-			add_to_variable = {
-				ENG_production_speed_arms_factory_factor_var = -0.05
+			random_owned_state = {
+				limit = {
+					is_core_of = ENG  
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex 
+					level = 2
+					instant_build = yes 
+				}
+			}
+			random_owned_state = {
+				limit = {
+					is_core_of = ENG  
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex 
+					level = 2
+					instant_build = yes 
+				}
 			}
 		}
 	}
 	focus = {
 		id = ENG_18
-		icon = GFX_advanced_industry
+		icon = GFX_advanced_industry2
 		prerequisite = { focus = ENG_17 }
 		relative_position_id = ENG_17
 		x = 0
@@ -1139,28 +1158,6 @@ focus_tree = {
 					instant_build = yes 
 				}
 			}
-			random_owned_state = {
-				limit = {
-					is_core_of = ENG  
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex 
-					level = 2
-					instant_build = yes 
-				}
-			}
-			random_owned_state = {
-				limit = {
-					is_core_of = ENG  
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex 
-					level = 2
-					instant_build = yes 
-				}
-			}
 		}
 	}
 	focus = {
@@ -1220,7 +1217,7 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-		custom_effect_tooltip = ENG_output_upgrade_tt
+			custom_effect_tooltip = ENG_output_upgrade_tt
 
 			add_to_variable = {
 				ENG_industrial_capacity_factory_var = 0.10
@@ -1527,33 +1524,7 @@ focus_tree = {
 				days = 365
 			}
 			add_political_power = 200
-			133 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
 
-			}
-			120 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
 		}
 	}
 	focus = {
@@ -1668,7 +1639,7 @@ focus_tree = {
 		relative_position_id = ENG_amend_factory_acts
 		x = 0
 		y = 1
-		cost = 1
+		cost = 2
 
 		completion_reward = {
 			add_to_variable = {
@@ -1685,7 +1656,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 1
+		cost = 2
 
 		completion_reward = {
 			custom_effect_tooltip = ENG_appeasment_civs_speed
@@ -1703,7 +1674,7 @@ focus_tree = {
 		relative_position_id = ENG_shadow_over_europe
 		x = -16
 		y = 1
-		cost = 1
+		cost = 2
 		completion_reward = {
 			add_war_support = 0.05
 			add_to_variable = {
@@ -1775,7 +1746,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 350				
+			add_political_power = 200			
 			add_ideas = {
 				ENG_expand_raf
 			}
@@ -2732,9 +2703,9 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 120
+			army_experience = 40
 
-		custom_effect_tooltip = ENG_tank_spawn_in
+			custom_effect_tooltip = ENG_tank_spawn_in
 			country_event = { id = britain.50 }
 			
 		}
@@ -2759,7 +2730,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 120
+			army_experience = 40
 			custom_effect_tooltip = ENG_form_tank_board_tt
 			add_to_variable = {
 				ENG_army_armor_attack_factor_var = 0.05

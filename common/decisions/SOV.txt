@@ -14029,7 +14029,7 @@ SOV_great_patriotic_war = {
 		}
 	}
 	
-			SOV_annex_chi = {
+	SOV_annex_chi = {
 		
 		icon = generic_operation
 
@@ -14056,6 +14056,8 @@ SOV_great_patriotic_war = {
 			every_state = {
 				limit = {
 					is_core_of = CHI
+					is_core_of = PRC
+					is_core_of = KOR
 				}
 				set_compliance = 100
 			}

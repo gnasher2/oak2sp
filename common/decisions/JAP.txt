@@ -803,44 +803,44 @@ JAP_pacific_war_explanation_category = {
 		complete_effect = {
 			hidden_effect = {
 				every_country = {
-					limit = { 
-						AND = {
-							check_variable= { 
-								speeches_enabled > 0
-							} 
-							check_variable= { 
-								music_enabled < 2
-							} 
-						}
-					}
-					scoped_sound_effect = "sp_jap_sov_prelude"
-				}
-				every_country = {
-					limit = { 
-						AND = {
-							check_variable= { 
-								music_enabled > 0
-							} 
-							check_variable= { 
-								speeches_enabled < 2
-							} 
-						}
-					}
-					scoped_sound_effect = "sp_jap_sov_prelude"
-				}
-				every_country = {
-					limit = { 
-						AND = {
-							check_variable= {
-								music_enabled > 0
-							} 
-							check_variable= { 
-								speeches_enabled > 0
-							} 
-						}
-					}
-					scoped_sound_effect = "sp_jap_sov_prelude"
-				}
+			   
+			 
+						 
+							
+		 
+						 
+						 
+		 
+	   
+	  
+											   
+	 
+					 
+			   
+			 
+						 
+						 
+		 
+						 
+							
+		 
+	   
+	  
+											   
+	 
+					 
+			   
+			 
+						
+						 
+		 
+						 
+							
+		 
+	   
+	  
+					play_song = "sp_jap_sov_prelude"
+				}	
 			}
 		}
 		
@@ -873,44 +873,45 @@ JAP_pacific_war_explanation_category = {
 			}
 			hidden_effect = {
 				every_country = {
-					limit = { 
-						AND = {
-							check_variable= { 
-								speeches_enabled > 0
-							} 
-							check_variable= { 
-								music_enabled < 2
-							} 
-						}
-					}
-					scoped_sound_effect = "sp_jap_sov"
+			   
+			 
+						 
+							
+		 
+						 
+						 
+		 
+	   
+	  
+									   
+	 
+					 
+			   
+			 
+						 
+						 
+		 
+						 
+							
+		 
+	   
+	  
+					play_song = "sp_jap_sov"
+	 
+					 
+			   
+			 
+						
+						 
+		 
+						 
+							
+		 
+	   
+	  
+									   
 				}
-				every_country = {
-					limit = { 
-						AND = {
-							check_variable= { 
-								music_enabled > 0
-							} 
-							check_variable= { 
-								speeches_enabled < 2
-							} 
-						}
-					}
-					scoped_sound_effect = "sp_jap_sov"
-				}
-				every_country = {
-					limit = { 
-						AND = {
-							check_variable= {
-								music_enabled > 0
-							} 
-							check_variable= { 
-								speeches_enabled > 0
-							} 
-						}
-					}
-					scoped_sound_effect = "sp_jap_sov"
-				}
+				set_global_flag = jap_sov_war
 			}
 		}
 	}
@@ -1007,7 +1008,7 @@ JAP_pacific_war_explanation_category = {
 							} 
 						}
 					}
-					scoped_sound_effect = "sp_jap_allies"
+					play_song = "sp_jap_allies"
 				}
 			
 		
@@ -1085,7 +1086,8 @@ JAP_pacific_war_explanation_category = {
 					idea = JAP_tora_tora_tora_idea
 					days = 60	
 				}
-			}else_if = {	
+			}
+			else_if = {	
 				limit = {
 					date < 1940.8.1
 				}
@@ -1131,7 +1133,8 @@ JAP_pacific_war_explanation_category = {
 					idea = JAP_tora_tora_tora_idea
 					days = 110	
 				}
-			}else_if = {	
+			}
+			else_if = {	
 				limit = {
 					date < 1941.1.1
 				}

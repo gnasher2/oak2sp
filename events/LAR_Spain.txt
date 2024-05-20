@@ -40,6 +40,9 @@ country_event = {
 			add_named_threat = { threat = 5 name = SPR_civil_war_threat }
 		}	
 		hidden_effect = {
+				SPN = {
+					country_event = { id = spain.1000 days = 60 }
+				}
 				# Add Nationalist and Republican Garrison division templates
 				set_war_support = 1
 				division_template = {
@@ -130,42 +133,42 @@ country_event = {
 
 						priority = 2
 					}
-					division_template = {
-						name = "Republicans"		
+						  
+							
 					
-						regiments = {
-							infantry_spain = { x = 0 y = 0 }	
-							infantry_spain = { x = 0 y = 1 }
-							infantry_spain = { x = 0 y = 2 }
-							
-							infantry_spain = { x = 1 y = 0 }
-							infantry_spain = { x = 1 y = 1 }
-							infantry_spain = { x = 1 y = 2 }	
-							
-							infantry_spain = { x = 2 y = 0 }	
-							infantry_spain = { x = 2 y = 1 }	
-							infantry_spain = { x = 2 y = 2 }	
-							
-							artillery_brigade = { x = 3 y = 0 }
-							artillery_brigade = { x = 3 y = 1 }	
-							artillery_brigade = { x = 3 y = 2 }
-							artillery_brigade = { x = 3 y = 3 }
+					random_owned_state = {
+						
+						limit = {
+							check_variable = { var = SPA_garrison_control value = 2 compare = less_than_or_equals }
+	   
+									   
+									   
+										
+	   
+										
+										
+										
+	   
+										  
+										   
+										  
+										  
 
-							artillery_brigade = { x = 4 y = 0 }
-							artillery_brigade = { x = 4 y = 1 }	
+										  
+										   
 						}
-						support = {
-							pack_artillery = { x = 0 y = 0 } 
-							engineer = { x = 0 y = 1 } 		
-							recon = { x = 0 y = 2 }
-							logistics_company = { x = 0 y = 3 }
-							anti_air_company = { x = 1 y = 0 }
-							artillery = { x = 1 y = 1 }
+						prioritize = {167}
+					
+						create_unit = {
+							division = "division_template = \"Gornostrelkovaya Diviziya\" start_experience_factor = 0.6" 
+							owner = SPN
+							allow_spawning_on_enemy_provs = no
+							count = 4
 						}
 
-						priority = 2
+				  
 					}
-					
+	 
 					division_template = {
 						name = "Guarnición Republicana"
 						is_locked = yes
@@ -185,10 +188,22 @@ country_event = {
 							anti_air_company = { x = 0 y = 0 }
 						}
 					}
-
+					random_owned_state = {
+						
+						limit = {
+							check_variable = { var = SPA_garrison_control value = 2 compare = less_than_or_equals }
+						}
+						prioritize = {167}
+					
+						create_unit = {
+							division = "division_template = \"Guarnición Republicana\" start_experience_factor = 0.1" 
+							owner = SPN
+							allow_spawning_on_enemy_provs = no
+							count = 2
+						}
+					}
+				
 				}
-				
-				
 				# If Madrid is controlled by Nationalists, but a random state exists that has total Republican garrison control, give that as capital first
 				if = {
 					limit = {
@@ -211,7 +226,7 @@ country_event = {
 							division = "division_template = \"Guarnición Republicana\" start_experience_factor = 0.1" 
 							owner = SPN
 							allow_spawning_on_enemy_provs = yes
-							count = 1
+							count = 3
 						}
 					}
 				}
@@ -237,7 +252,7 @@ country_event = {
 							division = "division_template = \"Guarnición Republicana\" start_experience_factor = 0.1" 
 							owner = SPN
 							allow_spawning_on_enemy_provs = yes
-							count = 1
+							count = 2
 						}
 						create_unit = {
 							division = "division_template = \"Guarnición Nacionalista\" start_experience_factor = 0.1" 
@@ -268,7 +283,7 @@ country_event = {
 							division = "division_template = \"Guarnición Nacionalista\" start_experience_factor = 0.1" 
 							owner = SPR
 							allow_spawning_on_enemy_provs = yes
-							count = 1
+							count = 2
 						}
 						create_unit = {
 							division = "division_template = \"Guarnición Republicana\" start_experience_factor = 0.1" 
@@ -375,7 +390,7 @@ country_event = {
 							division = "division_template = \"Guarnición Republicana\" start_experience_factor = 0.1" 
 							owner = SPN
 							allow_spawning_on_enemy_provs = yes
-							count = 2
+							count = 3
 						}
 					}
 				
@@ -1513,7 +1528,7 @@ country_event = {
 							division = "division_template = \"Brigada de Juventudes Sindicales\" start_experience_factor = 0.2" 
 							owner = SPN
 							allow_spawning_on_enemy_provs = yes
-							count = 1
+							count = 2
 						}
 						
 					}	
@@ -1657,7 +1672,7 @@ country_event = {
 					}
 				}
 				# Unlock division templates for Nationalists
-				country_lock_all_division_template = no
+										   
 				every_owned_state = {
 					set_state_flag = SPR_sided_with_nationalists_flag
 				}
@@ -1679,9 +1694,9 @@ country_event = {
 					}
 				}
 				# Unlock division templates for Republicans
-				SPN = {
-					country_lock_all_division_template = no
-				}
+		   
+											
+	 
 				if = {
 					limit = {
 						169 = { is_owned_by = SPN }

@@ -1,5 +1,50 @@
 
 PAR_instant_effect_decisions = {
+	PAR_fix_spain_bug = {
+		allowed = { tag = PAR }
+		ai_will_do = {
+			base = 1000			
+		}
+		available = {
+			OR = {
+				AND = {
+					SPR = {
+						has_idea = SPA_awaiting_the_rebellion
+					}
+					has_global_flag = spanish_civil_war
+				}
+				AND = {
+					SPR = {
+						has_idea = SPA_a_methodical_approach
+					}
+					has_global_flag = scw_over
+				}
+			}	
+		}
+		fire_only_once = no
+
+		complete_effect = {
+			if = {
+				limit = {
+					SPR = {
+						has_idea = SPA_awaiting_the_rebellion
+					}
+					has_global_flag = spanish_civil_war
+				}
+				remove_ideas = SPA_awaiting_the_rebellion
+			}
+			if = {
+				limit = {
+					SPR = {
+						has_idea = SPA_a_methodical_approach
+					}
+					has_global_flag = scw_over
+				}
+				remove_ideas = SPA_a_methodical_approach
+			}
+			
+		}	
+	}
 	PAR_fra_reinforcerate = {
 		allowed = { tag = PAR }
 		ai_will_do = {
@@ -8396,6 +8441,8 @@ PAR_instant_effect_decisions = {
 	}
 
 
+
+
 	PAR_RAJ_1 = {
 		fire_only_once = yes
 		
@@ -8885,7 +8932,7 @@ PAR_instant_effect_decisions = {
 		complete_effect = {
            hidden_effect = {
 				every_country = {limit = { check_variable= { speeches_enabled > 0}  }
-					scoped_sound_effect = "sp_eng_fight_them"
+					play_song = "sp_eng_fight_them"
 				}
 
 		    }
@@ -8932,7 +8979,7 @@ PAR_instant_effect_decisions = {
 		complete_effect = {
            hidden_effect = {
 				every_country = {limit = { check_variable= { speeches_enabled > 0}  }
-					scoped_sound_effect = "sp_dday"
+					play_song = "sp_dday"
 				}
 		    }
 		    GER = {
@@ -8981,7 +9028,7 @@ PAR_instant_effect_decisions = {
 		complete_effect = {
            hidden_effect = {
 				every_country = {limit = { check_variable= { speeches_enabled > 0}  }
-					scoped_sound_effect = "sp_dday"
+					play_song = "sp_dday"
 				}
 		    }
 		    GER = {
@@ -9030,7 +9077,7 @@ PAR_instant_effect_decisions = {
 		complete_effect = {
            hidden_effect = {
 				every_country = {limit = { check_variable= { speeches_enabled > 0}  }
-					scoped_sound_effect = "sp_dday"
+					play_song = "sp_dday"
 				}
 		    }
 		    GER = {
@@ -9079,7 +9126,7 @@ PAR_instant_effect_decisions = {
 		complete_effect = {
            hidden_effect = {
 				every_country = {limit = { check_variable= { speeches_enabled > 0}  }
-					scoped_sound_effect = "sp_dday"
+					play_song = "sp_dday"
 				}
 		    }
 		    GER = {
@@ -9128,7 +9175,7 @@ PAR_instant_effect_decisions = {
 		complete_effect = {
            hidden_effect = {
 				every_country = {limit = { check_variable= { speeches_enabled > 0}  }
-					scoped_sound_effect = "sp_dday"
+					play_song = "sp_dday"
 				}
 		    }
 		    GER = {
@@ -9177,7 +9224,7 @@ PAR_instant_effect_decisions = {
 		complete_effect = {
            hidden_effect = {
 				every_country = {limit = { check_variable= { speeches_enabled > 0}  }
-					scoped_sound_effect = "sp_dday"
+					play_song = "sp_dday"
 				}
 		    }
 		    GER = {

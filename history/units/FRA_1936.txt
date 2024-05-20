@@ -830,16 +830,8 @@ instant_effect = { #player
 			amount = 1300
 			producer = FRA
 		}
-	add_equipment_to_stockpile = {
-		type = heavy_anti_air_equipment_1
-			amount = 300
-			producer = FRA
-		}
-	add_equipment_to_stockpile = {
-		type = heavy_anti_air_equipment_2
-			amount = 50
-			producer = FRA
-		}
+	
+	
 	add_equipment_to_stockpile = {
 		type = field_gun_equipment_1
 			amount = 5000
@@ -861,12 +853,7 @@ instant_effect = { #player
           producer = FRA
           variant_name = "FT-31"
        }
-    add_equipment_to_stockpile = {
-       type = super_heavy_tank_chassis_1934
-          amount = 10
-          producer = FRA
-          variant_name = "2C"
-       }
+    
     add_equipment_to_stockpile = {
        type = light_tank_chassis_1934
           amount = 120

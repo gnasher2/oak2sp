@@ -3447,7 +3447,7 @@ USA_reciprocal_trade_decision_category = {
 		}
 	}
 	
-			USA_annex_JAP = {
+	USA_annex_JAP = {
 		
 		icon = generic_operation
 
@@ -3459,7 +3459,11 @@ USA_reciprocal_trade_decision_category = {
 
 		available = {
 			date > 1942.2.4
-			MAN = { has_capitulated = yes }
+			OR = {
+				 MAN = { has_capitulated = yes }
+				  MAN = { exists = no }
+				 }
+			
 		}
 
 		visible = {
@@ -3478,27 +3482,7 @@ USA_reciprocal_trade_decision_category = {
 				}
 				set_compliance = 100
 			}
-			CHI = { 
-				transfer_state = 594
-				transfer_state = 592
-				transfer_state = 591
-				transfer_state = 822
-				transfer_state = 606
-				transfer_state = 620
-				transfer_state = 613
-				transfer_state = 607
-				transfer_state = 598
-				transfer_state = 597
-				transfer_state = 615
-				transfer_state = 613
-	transfer_state = 621
-	transfer_state = 609
-	transfer_state = 608
-transfer_state = 745
-transfer_state = 527
-transfer_state = 525	
-transfer_state = 614
-			}	
+			
 			
 		}	
 
