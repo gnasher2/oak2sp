@@ -32,7 +32,7 @@ division_template = {
 division_template = {
 	name = "National Guard Division"  	# Standard formation for NG divisions through late 1940
 	division_names_group = USA_INF_01
-	regiments = {
+	regiments = {	
 		truck_infantry = { x = 0 y = 0 }
 		truck_infantry = { x = 0 y = 1 }
 		truck_infantry = { x = 0 y = 2 }
@@ -61,7 +61,7 @@ division_template = {
 		logistics_company_mot = { x = 1 y = 0 }
 		field_hospital = { x = 1 y = 1 }
 		anti_air_company = { x = 1 y = 2 }
-
+	}
 }
 division_template = {
 	name = "Cavalry Division"  		# 1st Cavalry Division only

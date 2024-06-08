@@ -344,7 +344,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 1
 		start_year = 1934
 		folder = {
 			name = nsb_rom_armor_folder
@@ -375,7 +375,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 1
 		start_year = 1936
 
 		folder = {
@@ -455,15 +455,13 @@ technologies = {
 			leads_to_tech = rom_1943_light_tank_chassis
 			research_cost_coeff = 1
 		}
-		dependencies = {
-			improved_machine_tools = 1
-		}
+		
 		enable_equipment_modules = {
 			tank_small_cannon_2
 			tank_light_three_man_tank_turret
 			armor_skirts
 		}
-		research_cost = 2
+		research_cost = 1
 		start_year = 1940
 
 		folder = {
@@ -540,10 +538,8 @@ technologies = {
 			tank_high_velocity_cannon_2
 			advanced_sloped_armor
 		}
-		dependencies = {
-			improved_machine_tools = 1
-		}
-		research_cost = 2
+		
+		research_cost = 1
 		start_year = 1943
 
 		folder = {
@@ -625,9 +621,7 @@ technologies = {
 			early_cupola
 			basket
 		}
-		dependencies = {
-			improved_machine_tools = 1
-		}
+		
 		enable_subunits = {
 			medium_armor
 		}
@@ -693,10 +687,10 @@ technologies = {
 	    enable_equipment_modules = {
 			tank_medium_improved_three_man_tank_turret
 			tank_medium_cannon_2
+			tank_medium_special_casemate_turret
+			tank_medium_special_opentop_turret
 		}
-		dependencies = {
-			advanced_machine_tools = 1
-		}
+		
 
 		research_cost = 2
 		start_year = 1940
@@ -750,9 +744,7 @@ technologies = {
 			medium_tank_artillery_chassis_1942
 			medium_tank_aa_chassis_1942
 		}
-		dependencies = {
-			advanced_machine_tools = 1
-		}
+		
 		path = {
 			leads_to_tech = rom_1944_medium_tank_chassis
 			research_cost_coeff = 1
@@ -901,9 +893,7 @@ technologies = {
             tank_heavy_casemate_turret
 			tank_heavy_opentop_turret
 		}
-		dependencies = {
-			advanced_machine_tools = 1
-		}
+		
 
     	on_research_complete = {
            	create_equipment_variant = {
@@ -968,9 +958,7 @@ technologies = {
 			basket
 		
 		}
-		dependencies = {
-			assembly_line_production = 1
-		}
+		
 		enable_subunits = {
 			heavy_armor			
 		}

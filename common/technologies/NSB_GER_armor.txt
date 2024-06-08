@@ -322,7 +322,7 @@ technologies = {
 		enable_equipments = {
 			light_tank_chassis_1934
 			light_tank_destroyer_chassis_1934
-			light_tank_flame_chassis_1934					
+			light_tank_flame_chassis_1934
 			light_tank_artillery_chassis_1934
 			light_tank_aa_chassis_1934
 			light_tank_rocket_chassis_1934
@@ -344,7 +344,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 1
 		start_year = 1934
 		folder = {
 			name = nsb_ger_armor_folder
@@ -378,7 +378,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 1
 		start_year = 1936
 
 		folder = {
@@ -408,14 +408,12 @@ technologies = {
 			light_tank_rocket_chassis_1940
 			light_tank_flame_chassis_1940
 		}
-		dependencies = {
-			improved_machine_tools = 1
-		}
+		
 		path = {
 			leads_to_tech = ger_1943_light_tank_chassis
 			research_cost_coeff = 1
 		}
-		research_cost = 2
+		research_cost = 1
 		start_year = 1940
 
 		folder = {
@@ -493,10 +491,8 @@ technologies = {
 		enable_equipment_modules = {
 			tank_light_three_man_tank_turret
 		}
-		dependencies = {
-			improved_machine_tools = 1
-		}
-		research_cost = 2
+		
+		research_cost = 1
 		start_year = 1943
 
 		folder = {
@@ -618,9 +614,7 @@ technologies = {
 			medium_tank_flame_chassis_1946
 		}
 
-		dependencies = {
-			advanced_machine_tools = 1
-		}
+		
 
 		path = {
 			leads_to_tech = ger_1942_medium_tank_chassis
@@ -681,9 +675,7 @@ technologies = {
 			medium_tank_rocket_chassis_1940
 			medium_tank_flame_chassis_1940
 		}
-		dependencies = {
-			advanced_machine_tools = 1
-		}	
+			
 		path = {
 			leads_to_tech = ger_1943_medium_tank_chassis
 			research_cost_coeff = 1
@@ -748,9 +740,7 @@ technologies = {
 			medium_tank_rocket_chassis_1942
 			medium_tank_flame_chassis_1942
 		}
-		dependencies = {
-			advanced_machine_tools = 1
-		}
+		
 		path = {
 			leads_to_tech = ger_1943_medium_tank_chassis
 			research_cost_coeff = 1
@@ -1001,9 +991,7 @@ technologies = {
 			heavy_tank_rocket_chassis_1940
 			heavy_tank_flame_chassis_1940
 		}
-		dependencies = {
-			advanced_machine_tools = 1
-		}
+		
 
     	on_research_complete = {
            	create_equipment_variant = {
@@ -1063,9 +1051,7 @@ technologies = {
 			heavy_tank_rocket_chassis_1942
 			heavy_tank_flame_chassis_1942
 		}
-		dependencies = {
-			assembly_line_production = 1
-		}
+		
 		enable_equipment_modules = {
 			tank_heavy_four_man_tank_turret
 		}
@@ -1182,7 +1168,7 @@ technologies = {
 	}
 	
 ####Amphi
-amphibious_tank_chassis = { 
+	amphibious_tank_chassis = { 
 
 
 		path = {
@@ -1195,7 +1181,7 @@ amphibious_tank_chassis = {
 			has_dlc = "Man the Guns"
 		}
 
-		research_cost = 1
+		research_cost = 2
 		start_year = 1936
 
 		folder = {
@@ -1250,12 +1236,12 @@ amphibious_tank_chassis = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 1
-		start_year = 1942
+		research_cost = 0.8
+		start_year = 1941
 
 		folder = {
 			name = nsb_ger_armor_folder
-			position = { x = 8 y = @1942 }
+			position = { x = 8 y = @1941 }
 		}
 
 		ai_will_do = {

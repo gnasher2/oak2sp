@@ -22,10 +22,7 @@ EFR_unit_production = {
 	ai_strategy = { type = unit_ratio id = cas 									value = -200 	}	
 	ai_strategy = { type = unit_ratio id = air_transport 						value = -200 	}	
 	
-	ai_strategy = { type = equipment_production_factor id = light_tank_chassis value = -50 }
 	ai_strategy = { type = equipment_variant_production_factor id = light_tank_chassis value = -50 }
-	ai_strategy = { type = equipment_production_factor id = medium_tank_chassis value = -50 }
 	ai_strategy = { type = equipment_variant_production_factor id = medium_tank_chassis value = -50 }
-	ai_strategy = { type = equipment_production_factor id = heavy_tank_chassis value = -50 }
 	ai_strategy = { type = equipment_variant_production_factor id = heavy_tank_chassis value = -50 }
 }

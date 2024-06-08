@@ -933,8 +933,7 @@ USA_think_about_retaliation = {
 		value = 30
 	}
 	
-	subtract_fronts_from_need = no
-	subtract_invasions_from_need = no
+	
 	
 }
 

@@ -57,6 +57,15 @@ JAP_ija_general_staff_original = {
 
 	
 }
+ETH_rugged_terrain = { 
+	icon = GFX_idea_generic_fortify_the_borders
+
+	enable = { always = yes }
+	
+	max_dig_in = -5
+	land_bunker_effectiveness_factor = -0.25
+
+}
 SOV_surprise_strike_dynamic = { 
 
 	icon = GFX_idea_anti_soviet_pact
@@ -108,7 +117,7 @@ CHI_the_united_front = {
 	icon = GFX_idea_chi_chinese_unity
 	army_core_defence_factor = CHI_army_defence_factor_var 
 	army_strength_factor = CHI_army_strength_factor  
-	dig_in_speed_factor = CHI_dig_in_speed_factor_var 
+												   
 	experience_gain_army_factor = -0.5
 	experience_gain_factor = -0.5
 	supply_consumption_factor = -1
@@ -123,7 +132,7 @@ CHI_the_united_front = {
 	air_range_factor = 0.4
 }
 ITA_ethiopia_suppliess = { 
-	icon = GFX_idea_generic_fortify_the_borders	
+	icon = GFX_modifiers_SOV_civilian_labor_in_defense	
 	enable = { always = yes }
 	
 	local_supplies_for_controller = 1

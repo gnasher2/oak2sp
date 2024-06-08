@@ -607,7 +607,7 @@ focus_tree = {
 			}
 			add_to_variable = {
 				var = USA_production_speed_arms_factory_factor_var
-				value = 0.2
+				value = 0.1
 				}
 			add_to_variable = {
 				var = USA_research_speed_factor_var
@@ -799,7 +799,7 @@ focus_tree = {
 			add_ideas = annapolis_academy
 			custom_effect_tooltip = USA_infra_shipbuilding_tt
 			hidden_effect = {
-			every_state = {
+				every_state = {
 				limit = {
 					OR = {
 						state = 357
@@ -1233,7 +1233,7 @@ focus_tree = {
 					CAN_industrial_capacity_factory_var = 0.05
 				}
 			}
-				AST = {
+			AST = {
 				
 				add_to_variable = {
 					AST2_production_factory_max_efficiency_factor_var = 0.025
@@ -1262,7 +1262,7 @@ focus_tree = {
 			remove_ideas = USA_reciprocal_trade_1
 		}
 	}
-focus = {
+	focus = {
 		id = USA_lend_lease_act
 		icon = GFX_USA_aircraft_for_the_allies
 		cost = 5
@@ -1335,7 +1335,7 @@ focus = {
 					CAN_industrial_capacity_factory_var = 0.05
 				}
 			}
-				AST = {
+			AST = {
 				
 				add_to_variable = {
 					AST2_production_factory_max_efficiency_factor_var = 0.025
@@ -1524,7 +1524,7 @@ focus = {
 		completion_reward = {
 			hidden_effect = {
 				add_ideas = USA_economy_of_plunder_a0
-				}
+			}
 			custom_effect_tooltip = USA_wunderwaffe_tt
 			add_tech_bonus = {
 				category = nuclear 
@@ -2752,7 +2752,7 @@ focus = {
 		}
 		
 		completion_reward = {
-custom_effect_tooltip = USA_papua_tt
+			custom_effect_tooltip = USA_papua_tt
 		}
 	}
 	focus = {
@@ -2785,7 +2785,7 @@ custom_effect_tooltip = USA_papua_tt
 		}
 		
 		completion_reward = {
-custom_effect_tooltip = USA_turkey_shoot_tt
+			custom_effect_tooltip = USA_turkey_shoot_tt
 			hidden_effect = {
 				add_to_variable = {
 					var = USA_popular_support_var
@@ -2835,7 +2835,7 @@ custom_effect_tooltip = USA_turkey_shoot_tt
 		}
 		
 		completion_reward = {
-custom_effect_tooltip = USA_islandhop_philipines_tt
+			custom_effect_tooltip = USA_islandhop_philipines_tt
 			hidden_effect = {
 				add_to_variable = {
 					var = USA_popular_support_var
@@ -2875,7 +2875,7 @@ custom_effect_tooltip = USA_islandhop_philipines_tt
 		}
 		
 		completion_reward = {
-custom_effect_tooltip = USA_islandhop_iceberg_tt
+			custom_effect_tooltip = USA_islandhop_iceberg_tt
 			hidden_effect = {
 				add_to_variable = {
 					var = USA_popular_support_var
@@ -3112,7 +3112,7 @@ custom_effect_tooltip = USA_islandhop_iceberg_tt
 				planning_skill = 4
 				logistics_skill = 4
 			} 
-		custom_effect_tooltip = USA_macarthur3_tt										  
+			custom_effect_tooltip = USA_macarthur3_tt										  
 		}
 	}
 	focus = {
@@ -3170,7 +3170,7 @@ custom_effect_tooltip = USA_islandhop_iceberg_tt
 					}
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = { ROOT = { controls_state = PREV } }
 					prioritize = { 623 }
 					create_unit = {
 						division = "name = \"\" division_template = \"Filipinos\" start_experience_factor = 0.5 start_equipment_factor = 1" 
@@ -3223,7 +3223,7 @@ custom_effect_tooltip = USA_islandhop_iceberg_tt
 					
 				}
 				random_owned_controlled_state = {
-					limit = { ROOT = { has_full_control_of_state = PREV } }
+					limit = { ROOT = { controls_state = PREV } }
 					prioritize = { 327 }
 					create_unit = {
 						division = "name = \"\" division_template = \"Filipinos\" start_experience_factor = 0.5 start_equipment_factor = 1" 
@@ -3391,7 +3391,7 @@ custom_effect_tooltip = USA_islandhop_iceberg_tt
 				var = USA_fuel_gain_factor_var 
 				value = 0.2 
 				tooltip = fuel_gain_tp
-							}
+			}
 		}
 	}
 	focus = {
@@ -3644,9 +3644,10 @@ custom_effect_tooltip = USA_islandhop_iceberg_tt
 				var = USA_max_command_power_var 
 				value = 50
 				tooltip = command_power_tt
-						}
+			}
+
+		}
 	}
-}
 	focus = {
 		id = USA_support_china
 		icon = GFX_USA_support_china
@@ -3928,7 +3929,7 @@ custom_effect_tooltip = USA_islandhop_iceberg_tt
 					add_to_variable = { JAP_needed_manpower = 32000 }
 				}
 			if = {
-                limit = {
+				limit = {
 					NOT = {
 						JAP = {
 							has_war_with = CHI
@@ -4283,7 +4284,7 @@ custom_effect_tooltip = USA_islandhop_iceberg_tt
 				}
 			if = {
                 limit = {
-NOT = {
+					NOT = {
 						JAP = {
 							has_war_with = CHI
 						}
@@ -4841,7 +4842,7 @@ NOT = {
 			}
 			custom_effect_tooltip = USA_5_dock_speed_tt
 			custom_effect_tooltip = USA_enlarge_tt
-						custom_effect_tooltip = USA_command_post_modification_intro
+			custom_effect_tooltip = USA_command_post_modification_intro
 			add_to_variable = { 
 				var = USA_navy_intel_factor_var 
 				value = 0.15
@@ -5144,7 +5145,7 @@ NOT = {
 			}
 			custom_effect_tooltip = USA_5_dock_speed_tt
 			custom_effect_tooltip = USA_enlarge_tt
-						custom_effect_tooltip = USA_command_post_modification_intro
+			custom_effect_tooltip = USA_command_post_modification_intro
 			add_to_variable = { 
 				var = USA_sortie_efficiency_var 
 				value = 0.05
@@ -5192,7 +5193,7 @@ NOT = {
 			}
 			custom_effect_tooltip = USA_5_dock_speed_tt
 			custom_effect_tooltip = USA_enlarge_tt
-					custom_effect_tooltip = USA_command_post_modification_intro
+			custom_effect_tooltip = USA_command_post_modification_intro
 			add_to_variable = { 
 				var = USA_sortie_efficiency_var 
 				value = 0.05

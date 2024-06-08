@@ -112,9 +112,7 @@ technologies = {
 		research_cost = 1.5
 
 		start_year = 1940
-		dependencies = {
-			advanced_machine_tools = 1
-		}
+		
 		folder = {
 			name = mtgnavalfolder
 			position = { x = -5 y = 14 }
@@ -569,9 +567,7 @@ technologies = {
 		research_cost = 1.5
 
 		start_year = 1940
-		dependencies = {
-			advanced_machine_tools = 1
-		}
+		
 		folder = {
 			name = mtgnavalfolder
 			position = {  x = -2 y = @1940 }
@@ -892,6 +888,36 @@ technologies = {
 			bc_tech
 		}
 	}
+		ship_hull_super_heavy = {
+
+		enable_equipments = {
+			ship_hull_super_heavy_1
+		}
+
+		enable_equipment_modules = {
+			ship_armor_shbb
+		}
+
+		research_cost = 1.5
+
+		start_year = 1936
+
+		ai_will_do = {
+			factor = 1
+
+			modifier = {
+				factor = 0
+				tag = JAP
+			}
+		}
+
+		categories = {
+			naval_equipment
+			bb_tech
+			bc_tech
+		}
+	}
+
 
 	improved_ship_hull_heavy = {
 
@@ -909,9 +935,7 @@ technologies = {
 		research_cost = 1.5
 
 		start_year = 1940
-		dependencies = {
-			advanced_machine_tools = 1
-		}
+		
 		folder = {
 			name = mtgnavalfolder
 			position = {  x = 1 y = @1940 }
@@ -1085,9 +1109,7 @@ early_ship_hull_carrier = {
 		research_cost = 1.5
 
 		start_year = 1940
-		dependencies = {
-			advanced_machine_tools = 1
-		}
+		
 		folder = {
 			name = mtgnavalfolder
 			position = {  x = 3 y = @1940 }
@@ -1261,9 +1283,7 @@ early_ship_hull_carrier = {
 		research_cost = 2.0
 
 		start_year = 1940
-		dependencies = {
-			advanced_machine_tools = 1
-		}
+		
 		folder = {
 			name = mtgnavalfolder
 			position = {  x = 5 y = 14 }
@@ -2348,7 +2368,7 @@ early_ship_hull_carrier = {
 		}
 		heavy_cruiser = {
 			naval_torpedo_hit_chance_factor = 0.15
-	}
+		}
 		path = {
 			leads_to_tech = magnetic_detonator
 			research_cost_coeff = 1
@@ -2954,7 +2974,7 @@ early_ship_hull_carrier = {
 	mtg_transport = { #WHEN BALANCING - ALSO FIX REGULAR NAVAL TREE
 
 		transport_capacity = -0.5
-		naval_invasion_capacity = 10
+		naval_invasion_capacity = 12
 
 		path = {
 			leads_to_tech = mtg_landing_craft
@@ -3005,9 +3025,9 @@ early_ship_hull_carrier = {
 
 	mtg_landing_craft = {
 
-		invasion_preparation = -0.9
+		invasion_preparation = -0.6
 		amphibious_invasion_defence = 0.15
-		naval_invasion_capacity = 40
+		naval_invasion_capacity = 42
 
 		path = {
 			leads_to_tech = mtg_tank_landing_craft
@@ -3086,7 +3106,7 @@ early_ship_hull_carrier = {
 		amphibious_invasion = 0.25
 		amphibious_invasion_defence = 0.15
 		naval_invasion_penalty = -0.05
-		naval_invasion_capacity = 100
+		naval_invasion_capacity = 102
 
 		research_cost = 2
 		start_year = 1944

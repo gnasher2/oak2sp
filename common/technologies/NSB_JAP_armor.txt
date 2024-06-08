@@ -342,7 +342,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 1
 		start_year = 1934
 		folder = {
 			name = nsb_jap_armor_folder
@@ -375,7 +375,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 1
 		start_year = 1936
 
 		folder = {
@@ -403,14 +403,12 @@ technologies = {
 			light_tank_artillery_chassis_1940
 			light_tank_aa_chassis_1940
 		}
-		dependencies = {
-			improved_machine_tools = 1
-		}
+		
 		path = {
 			leads_to_tech = jap_1943_light_tank_chassis
 			research_cost_coeff = 1
 		}
-		research_cost = 2
+		research_cost = 1
 		start_year = 1940
 
 		folder = {
@@ -486,10 +484,8 @@ technologies = {
 			tank_light_three_man_tank_turret
 		}
 		
-		dependencies = {
-			improved_machine_tools = 1
-		}
-		research_cost = 2
+		
+		research_cost = 1
 		start_year = 1943
 
 		folder = {
@@ -605,11 +601,9 @@ technologies = {
 			medium_tank_artillery_chassis_1938
 			medium_tank_aa_chassis_1938
 		}
-		dependencies = {
-			improved_machine_tools = 1
-		}
+		
 		path = {
-			leads_to_tech = jap_advanced_turret
+			leads_to_tech = jap_1940_medium_tank_chassis
 			research_cost_coeff = 1
 		}
 
@@ -657,18 +651,20 @@ technologies = {
 			}
 		}
 	}	
-	jap_advanced_turret = { 
+	jap_1940_medium_tank_chassis = {
 
+		enable_equipments = {
+			medium_tank_chassis_1940
+			medium_tank_destroyer_chassis_1940
+			medium_tank_artillery_chassis_1940
+			medium_tank_aa_chassis_1940
+		}
+		
 		path = {
-			leads_to_tech = jap_1942_medium_tank_chassis
+			leads_to_tech = jap_advanced_turret
 			research_cost_coeff = 1
 		}
-	    enable_equipment_modules = {
-			tank_medium_improved_three_man_tank_turret
-		}
-		dependencies = {
-			advanced_machine_tools = 1
-		}
+
 		research_cost = 2
 		start_year = 1940
 
@@ -687,8 +683,62 @@ technologies = {
 		}
     	on_research_complete = {
            	create_equipment_variant = {
+				name = "Type 1 Chi-He"
+				type = medium_tank_chassis_1940
+				parent_version = 0
+				modules = {
+				main_armament_slot = tank_high_velocity_cannon
+				turret_type_slot = tank_medium_two_man_tank_turret
+				suspension_type_slot = tank_bogie_suspension
+				armor_type_slot = tank_welded_armor
+				armor_sloping_slot = unsloped_armor
+				engine_type_slot = tank_diesel_engine
+				radio_slot = tank_radio_1
+				special_type_slot_1 = early_cupola
+				special_type_slot_2 = additional_machine_guns
+				}
+				upgrades = {
+					tank_nsb_engine_upgrade = 5
+					tank_nsb_armor_upgrade = 3
+				}
+				icon = "gfx/interface/technologies/land/jap/chihe.tga"
+				
+			}
+			set_technology = {
+				small_gun3 = 1
+			}
+		}
+	}	
+	jap_advanced_turret = { 
+
+		path = {
+			leads_to_tech = jap_1942_medium_tank_chassis
+			research_cost_coeff = 1
+		}
+	    enable_equipment_modules = {
+			tank_medium_improved_three_man_tank_turret
+		}
+		
+		research_cost = 2
+		start_year = 1941
+
+		folder = {
+			name = nsb_jap_armor_folder
+			position = { x = 2 y = @1941 }
+		}
+		ai_will_do = {
+			factor = 6
+
+		}
+
+		categories = {
+			armor
+			cat_medium_armor
+		}
+    	on_research_complete = {
+           	create_equipment_variant = {
 				name = "Type 3 Chi-Nu"
-				type = medium_tank_chassis_1938
+				type = medium_tank_chassis_1940
 				parent_version = 0
 				modules = {
 				main_armament_slot = tank_medium_cannon_2
@@ -720,9 +770,7 @@ technologies = {
 			medium_tank_artillery_chassis_1942
 			medium_tank_aa_chassis_1942
 		}
-		dependencies = {
-			advanced_machine_tools = 1
-		}
+		
 		path = {
 			leads_to_tech = jap_1944_medium_tank_chassis
 			research_cost_coeff = 1
@@ -893,9 +941,7 @@ technologies = {
 			super_heavy_tank_aa_chassis_1942
 		}
 		
-		dependencies = {
-			assembly_line_production = 1
-		}
+		
 
 		research_cost = 2
 		start_year = 1942

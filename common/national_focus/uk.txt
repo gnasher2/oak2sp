@@ -855,7 +855,7 @@ focus_tree = {
 					instant_build = yes 
 				}
 			}
-		random_owned_state = {
+			random_owned_state = {
 				limit = {
 					is_core_of = ENG  
 				}
@@ -911,7 +911,7 @@ focus_tree = {
 					instant_build = yes 
 				}
 			}
-		random_owned_state = {
+			random_owned_state = {
 				limit = {
 					is_core_of = ENG  
 				}
@@ -934,7 +934,7 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			add_political_power = 100
+			
 			custom_effect_tooltip = ENG_containment_upgrade_3_tt
 
 			add_to_variable = {
@@ -1062,6 +1062,9 @@ focus_tree = {
 			random_owned_state = {
 				limit = {
 					is_core_of = ENG  
+					NOT = {
+						state = 118
+					}
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -1073,6 +1076,9 @@ focus_tree = {
 			random_owned_state = {
 				limit = {
 					is_core_of = ENG  
+					NOT = {
+						state = 118
+					}
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -1099,6 +1105,9 @@ focus_tree = {
 			random_owned_state = {
 				limit = {
 						is_core_of = ENG  
+						NOT = {
+						state = 118
+					}
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -1110,6 +1119,9 @@ focus_tree = {
 			random_owned_state = {
 				limit = {
 					is_core_of = ENG  
+					NOT = {
+						state = 118
+					}
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -1146,10 +1158,12 @@ focus_tree = {
 				ENG_political_power_factor_var = 0.1
 			}
 			
-
 			random_owned_state = {
 				limit = {
 						is_core_of = ENG  
+						NOT = {
+						state = 118
+					}
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -1639,7 +1653,7 @@ focus_tree = {
 		relative_position_id = ENG_amend_factory_acts
 		x = 0
 		y = 1
-		cost = 2
+		cost = 5
 
 		completion_reward = {
 			add_to_variable = {
@@ -1656,7 +1670,7 @@ focus_tree = {
 		x = 0
 		y = 1
 
-		cost = 2
+		cost = 5
 
 		completion_reward = {
 			custom_effect_tooltip = ENG_appeasment_civs_speed
@@ -1674,7 +1688,7 @@ focus_tree = {
 		relative_position_id = ENG_shadow_over_europe
 		x = -16
 		y = 1
-		cost = 2
+		cost = 5
 		completion_reward = {
 			add_war_support = 0.05
 			add_to_variable = {
@@ -1746,7 +1760,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_political_power = 200			
+						
 			add_ideas = {
 				ENG_expand_raf
 			}
@@ -2935,7 +2949,7 @@ focus_tree = {
 		relative_position_id = ENG_crimson_sun
         x = 0
         y = 1
-        cost = 2
+        cost = 5
         ai_will_do = {
             factor = 1
         }

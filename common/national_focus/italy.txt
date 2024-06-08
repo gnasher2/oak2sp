@@ -1383,9 +1383,9 @@ focus_tree = {
 				idea = ITA_afrikakorps_idea
 				days = 60
 			}
-			GER = {
-				unlock_decision_tooltip = GER_send_rommel
-			}
+			#GER = {
+				#unlock_decision_tooltip = GER_send_rommel
+			#}
 			create_corps_commander = {
 				name ="Albert Kesselring"
 				picture = "Portrait_Germany_Albert_Kesselring.dds"
@@ -2984,15 +2984,55 @@ focus_tree = {
 					}
 					add_building_construction = {
 						type = industrial_complex
-						level = 3
+						level = 2
 						instant_build = yes
 					}
-					add_extra_state_shared_building_slots = 10
+					add_extra_state_shared_building_slots = 5
 					add_compliance = 20
-				add_dynamic_modifier = {
-					modifier = ITA_state_development_africa
-					days = 365
-				}
+					add_dynamic_modifier = {
+						modifier = ITA_state_development_africa
+						days = 365
+					}
+				
+				
+			}
+			834 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+						}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 5
+					add_compliance = 20
+					add_dynamic_modifier = {
+						modifier = ITA_state_development_africa
+						days = 365
+					}
+				
+				
+			}
+			835 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+						}
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 5
+					add_compliance = 20
+					add_dynamic_modifier = {
+						modifier = ITA_state_development_africa
+						days = 365
+					}
 				
 				
 			}
@@ -3005,7 +3045,7 @@ focus_tree = {
 
 					add_building_construction = {
 						type = industrial_complex
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 					add_extra_state_shared_building_slots = 5
@@ -3045,16 +3085,16 @@ focus_tree = {
 						}
 					add_building_construction = {
 						type = arms_factory
-						level = 2
+						level = 1
 						instant_build = yes
 					}
 					add_building_construction = {
 						type = industrial_complex
-						level = 4
+						level = 1
 						instant_build = yes
 					}
 					add_extra_state_shared_building_slots = 9
-					add_compliance = 10
+					add_compliance = 5
 				set_state_category = large_town
 				add_dynamic_modifier = {
 					modifier = ITA_state_development_africa
@@ -3074,8 +3114,8 @@ focus_tree = {
 						instant_build = yes
 					}
 					add_extra_state_shared_building_slots = 2
-					add_compliance = 10
-				
+					add_compliance = 5
+				set_state_category = large_town
 				add_dynamic_modifier = {
 					modifier = ITA_state_development_africa
 					days = 365
@@ -3143,6 +3183,12 @@ focus_tree = {
 			559 = {
 				add_compliance = 15
 			}
+			835 = {
+				add_compliance = 15
+			}
+			834 = {
+				add_compliance = 15
+			}
 		}		
 	}
 	focus = {
@@ -3197,6 +3243,12 @@ focus_tree = {
 			559 = {
 				add_compliance = 10
 			}
+			835 = {
+				add_compliance = 10
+			}
+			834 = {
+				add_compliance = 10
+			}
 		}		
 	}
 	focus = {
@@ -3246,7 +3298,13 @@ focus_tree = {
 			}
 			559 = {
 				add_compliance = 20
-			}			
+			}	
+			835 = {
+				add_compliance = 20
+			}
+			834 = {
+				add_compliance = 20
+			}		
 		}		
 	}
 	focus = {
@@ -4897,10 +4955,25 @@ focus_tree = {
 				tooltip = buildings_build_speed_factor_tooltip
 			}
 			add_to_variable = { 
+				var = ITA_global_building_slots_factor_var 
+				value = 0.15
+				tooltip = global_building_slots_factor_tooltip
+			}
+			add_to_variable = { 
 				var = ITA_iri_production_speed_arms_factory_factor 
 				value = -0.15
 				tooltip = arms_factory_build_speed_factor_tooltip
 			}
+			117 = {
+				add_building_construction  = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			
+			
 		}
 	}
 ###cq to import new techs
@@ -5701,6 +5774,15 @@ focus_tree = {
 			}
 			custom_effect_tooltip = available_officer_spirit_of_army
 			show_ideas_tooltip = mussolini_ideological_loyalty_spirit	
+			if = {
+				limit = {
+					has_idea = ideological_loyalty_spirit
+				}
+				swap_ideas = {
+					remove_idea = ideological_loyalty_spirit
+					add_idea = mussolini_ideological_loyalty_spirit
+				}
+			}
 			
 		}
 	}	
@@ -5810,7 +5892,7 @@ focus_tree = {
 		relative_position_id = ITA_question_the_high_command
 		x = -1
 		y = 1
-		cost = 2.9
+		cost = 5.8
 		ai_will_do = {
 			factor = 40
 		}
@@ -5846,7 +5928,7 @@ focus_tree = {
 		relative_position_id = ITA_question_the_high_command
 		x = 1
 		y = 1
-		cost = 5
+		cost = 5.8
 		ai_will_do = {
 			factor = 40
 		}
@@ -5864,8 +5946,8 @@ focus_tree = {
 			}
          	# ITA_bop_low_decrease_effect = yes
 			
-			add_to_variable = { ITA_re_army_attack_factor = 0.07 }
-			add_to_variable = { ITA_re_army_defence_factor = 0.07 }
+			add_to_variable = { ITA_re_army_attack_factor = 0.04 }
+			add_to_variable = { ITA_re_army_defence_factor = 0.04 }
 			custom_effect_tooltip = ITA_fight_corruption_tt
 			
 		}
@@ -5880,7 +5962,7 @@ focus_tree = {
 		relative_position_id = ITA_question_the_high_command
 		x = 0
 		y = 2
-		cost = 10
+		cost = 14.3
 		ai_will_do = {
 			factor = 80
 		}
@@ -5905,6 +5987,8 @@ focus_tree = {
 			custom_effect_tooltip = ITA_fight_corruption_tt2
 			add_to_variable = { ITA_re_max_planning = 0.25 }
 			add_to_variable = { ITA_re_planning_speed = 0.25 }	
+			add_to_variable = { ITA_re_army_attack_factor = 0.04 }
+			add_to_variable = { ITA_re_army_defence_factor = 0.04 }
 		}
 	}
 	
@@ -7053,7 +7137,13 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = ITA_bad_engine_2
 			#custom_effect_tooltip = ITA_engine_tt
-			custom_effect_tooltip = "Gives new models of fighters up to 1942 model"
+			custom_effect_tooltip = "Gives new models of fighters up to 1940 model"
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
 			if = {
 				limit = {
 					NOT = {
@@ -7077,17 +7167,17 @@ focus_tree = {
 					fighter_1940 = 1
 				}
 			}
-			else_if = {
-				limit = {
-			
-					has_tech = fighter_1940
-					
-					
-				}
-				set_technology = {
-					fighter_1942 = 1
-				}
-			}
+
+			 
+   
+							
+	 
+	 
+	 
+					  
+					 
+	 
+	
 			if = {
 				limit = {
 					NOT = {
@@ -7113,20 +7203,20 @@ focus_tree = {
 					heavy_fighter_1940 = 1
 				}
 			}
-			else_if = {
-				limit = {
-			
-					has_tech = heavy_fighter_1940
-					
-					
-				}
-				set_technology = {
-					heavy_fighter_1942 = 1
-				}
-			}
-			
-			
-		
+			  
+			 
+   
+								  
+	 
+	 
+	 
+					  
+						   
+	 
+	
+   
+   
+  
 		}
 	}
 ####add oil development as requirement
@@ -7225,6 +7315,7 @@ focus_tree = {
 			add_tech_bonus = {
 				bonus = 0.75
 				uses = 1
+				category = light_fighter
 				category = cat_heavy_fighter
 			}
 			
@@ -7866,7 +7957,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-		navy_experience = 100
+		navy_experience = 25
 			add_tech_bonus = {
 				bonus = 2.0
 				uses = 1
@@ -7882,10 +7973,10 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = dockyard
-					level = 3
+					level = 2
 					instant_build = yes
 				}
 			}
@@ -8029,14 +8120,14 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			navy_experience = 25
+			navy_experience = 75
 			736 = {
 				add_building_construction = {
 					type = dockyard
-					level = 3
+					level = 4
 					instant_build = yes	
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 4
 			}
 		}
 	}	

@@ -903,6 +903,7 @@ instant_effect = { #player
 		type = infantry_equipment_0
 			amount = 20000
 			producer = GER
+			}
 	add_equipment_to_stockpile = {
 		type = support_equipment_1
 			amount = 1000
@@ -932,6 +933,7 @@ instant_effect = { #player
 		type = heavy_artillery_equipment_1
 			amount = 250
 			producer = GER
+			}
     add_equipment_to_stockpile = {
        type = field_gun_equipment_1
           amount = 600

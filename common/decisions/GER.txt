@@ -517,6 +517,12 @@ GER_operation_barbarossa_category = {
 					}
 				}
 				complete_national_focus = GER_ussr_war_goal
+				GER = {
+					transfer_state = 92
+                    transfer_state = 88
+			        transfer_state = 90
+			        transfer_state = 10
+				} 
 				every_state = {
 					limit = {
 						has_state_flag = SOV_war_zone_flag
@@ -552,7 +558,7 @@ GER_operation_barbarossa_category = {
 							} 
 						}
 					}
-					scoped_sound_effect = "sp_ger_barb_SS"
+					play_song = "sp_ger_barb_SS"
 				}
 				every_country = {
 					limit = { 
@@ -578,7 +584,7 @@ GER_operation_barbarossa_category = {
 							} 
 						}
 					}
-					scoped_sound_effect = "sp_ger_barb_SS"
+					play_song = "sp_ger_barb_SS"
 				}
 				GER = {
 					declare_war_on = {
@@ -1633,7 +1639,7 @@ GER_operation_barbarossa_category = {
 							} 
 						}
 					}
-					scoped_sound_effect = "sp_ger_georges_song"
+					play_song = "sp_ger_georges_song"
 				}
 				
 				
@@ -1711,7 +1717,7 @@ GER_operation_barbarossa_category = {
 							speeches_enabled > 0
 						} 
 					}
-					scoped_sound_effect = "sp_ger_zitadelle"
+					play_song = "sp_ger_zitadelle"
 				}
 				
 			  
@@ -1889,7 +1895,7 @@ GER_operation_barbarossa_category = {
 				}
 				fall_blau_get_summer_offensive = yes 
 			}
-				every_state = {
+			every_state = {
 					limit = {
 						has_state_flag = SOV_war_zone_flag
 					}
@@ -2522,163 +2528,189 @@ GER_fanaticism_category = {
 }
 
 special_projects = {
-	GER_send_rommel = {
+	#GER_send_rommel = {
 
-		icon = generic_political_discourse
+									
 
-		available = {
+		#icon = generic_political_discourse
 
-			has_war = yes
-			ITA = {
-				is_in_faction_with = GER
-				has_completed_focus = ITA_afrikakorps
-			}
-		}
+		#available = {
+		  
+							
+										 
+	
+   
 
-		cost = 0
-		fire_only_once = yes
+		#	has_war = yes
+		#	ITA = {
+			#	is_in_faction_with = GER
+			#	has_completed_focus = ITA_afrikakorps
+			#}
+		#}
 
-		ai_will_do = {
-			factor = 0
-		}
+		#cost = 0
+		#fire_only_once = yes
+   
 
-		visible = {
-			original_tag = GER 
-		}
+		#ai_will_do = {
+		#	factor = 0
+		#}
 
-		complete_effect = {
-			GER = {
-									   
+		#visible = {
+		#	original_tag = GER 
+		#}
+			 
+		  
+			  
+						  
+				
+		
+	  
 													
-				if = {
-					limit = {
-						GER_erwin_rommel = {
-							skill < 7
-						}	
-					}
-					set_country_flag = GER_rommel_replacement1_flag
-					if = {
-						limit = {
-							amount_taken_ideas = {
-								amount < 3
-								slots = {
-									high_command
-								}
-							}
-
-						}
-						add_ideas = GER_erwin_rommel2
-
-					}
-								  
-
-	 
-					else_if ={
-						limit = {
-							amount_taken_ideas = {
-								amount > 2
-								slots = {
-									high_command
-								}
-							}
-						}
-	  
-						add_political_power = 150
-	 
-	 
-		 
-			 
-			
-											
-	  
-		 
 		   
-							   
-						   
-												   
-																					  
 			   
-					  
-					   
-						
-						 
-	  
-	 
+							 
+				  
+				 
+					 
+		 
+		
+
+		#complete_effect = {
+			
+		#	GER = {
+			#	if = {
+			#		limit = {
+			#			GER_erwin_rommel = {
+							#skill < 7
+						#}	
+					#}
+				#	set_country_flag = GER_rommel_replacement1_flag
+				#	if = {
+						#limit = {
+						#	amount_taken_ideas = {
+							#	amount < 3
+							#	slots = {
+							#		high_command
+						#		}
+							#}
+
+						#}
+					#add_ideas = GER_erwin_rommel2
+
+					#}
+					#else_if ={
+					#	limit = {
+						#	amount_taken_ideas = {
+							#	amount > 2
+								#slots = {
+								#	high_command
+								#}
+							#}
+						#}
+   
+					#	add_political_power = 150
+					#}
+				#}
+   
 	
-		 
-			 
-			
-											
-	  
-		 
+   
 		   
-							   
-						   
-												   
-																					  
-			   
-					  
-					   
-						
-						 
-					}
-				}
-				else = {
-					set_country_flag = GER_rommel_replacement2_flag
-			 
-			
-											  
-	  
-		 
-		   
-					if = {
-						limit = {
-							amount_taken_ideas = {
-								amount < 3
-								slots = {
-									high_command
-								}
-							}
-
-						}
-						add_ideas = GER_erwin_rommel3
-
-						 
-					}
+   
+   
 	 
-	
-					else_if ={
-						limit = {
-							amount_taken_ideas = {
-								amount > 2
-								slots = {
-									high_command
-								}
-											  
-							}
-						}
-						add_political_power = 150
-					}
-
-			
-							   
-						   
-												   
-																					  
+		  
+		 
 			   
-					  
 					   
-						
-						 
+	  
 	   
-				}
-				retire_character = GER_erwin_rommel
-				set_country_flag = GER_sent_rommel_to_italy_flag
+		
+	  
+	   
+   
+  
+ 
+   
+	
+   
+		   
+   
+   
+	 
+		  
+		 
+			   
+					   
+	  
+	   
+		
+	  
+	   
+	  
+	 
+				#else = {
+				#	set_country_flag = GER_rommel_replacement2_flag
+	
+   
+			 
+   
+   
+	 
+					#if = {
+						#limit = {
+							#amount_taken_ideas = {
+								##amount < 3
+								#slots = {
+								#	high_command
+								#}
+							#}
+
+						#}
+					#	add_ideas = GER_erwin_rommel3
+
+					#}
+	  
+  
+ 
+					#else_if ={
+						#limit = {
+							#amount_taken_ideas = {
+								#amount > 2
+								#slots = {
+								#	high_command
+								#}
+			 
+		
+						#	}
+						#}
+					#	add_political_power = 150
+				#	}
+
+				#}
+		  
+		 
+			   
+					   
+	  
+	   
+		
+	  
+	   
+	
+	 
+				#retire_character = GER_erwin_rommel
+				#set_country_flag = GER_sent_rommel_to_italy_flag
 				
 				
-			}					
-		}	
-	}
+			#}
+			#ITA = {
+			#	recruit_character = GER_erwin_rommel
+			#}
+								
+			
+		#}
+	#}
 	GER_dismantle_maginot = {
 
 		icon = generic_construction
@@ -3998,7 +4030,7 @@ foreign_politics = {
 			add_political_power = 10
 			hidden_effect = {
 				every_country = {limit = { check_variable= { speeches_enabled > 0}  }
-					scoped_sound_effect = "sp_greater_german_reich"
+					play_song = "sp_greater_german_reich"
 				}
 			}
 		}	
@@ -4241,7 +4273,7 @@ foreign_politics = {
 			hidden_effect = {
 				complete_national_focus = GER_demand_sudetenland
 				every_country = {limit = { check_variable= { speeches_enabled > 0}  }
-					scoped_sound_effect = "sp_ger_sudeten"
+					play_song = "sp_ger_sudeten"
 					}
 				FRA = {
 					complete_national_focus = FRA_sudetenland_question
@@ -4647,7 +4679,7 @@ foreign_politics = {
 			}
 			
 			hidden_effect = {
-			AST = {
+				AST = {
 					set_variable = { AST_experience_gain_army_var = 0.07 }
 				}
 				
@@ -4695,11 +4727,11 @@ foreign_politics = {
 				country_event = { id = germany.88 }
 		  
 													
-						}
+			}
 			
 								
 		}
-	}						   
+	}
 	 
 	GER_weserubung = {
 		icon = ger_reichskommissariats
@@ -5258,7 +5290,7 @@ foreign_politics = {
 		}
 
 		complete_effect = {
-hidden_effect = {
+			hidden_effect = {
 				ITA = {
 					remove_ideas = italy_no_africa_first
 				}
@@ -5398,7 +5430,7 @@ hidden_effect = {
 		complete_effect = {
 			hidden_effect = {
 				complete_national_focus = GER_mol_rib_pact
-		  SOV = {
+				SOV = {
 					complete_national_focus = SOV_molotov_ribbentrop_pact
 				}
 			}
@@ -5575,7 +5607,7 @@ hidden_effect = {
 			GRE = {
 				has_capitulated = yes
 			}
-   }
+		}
 		ai_will_do = {
 			factor = 0
 
@@ -6358,8 +6390,8 @@ GER_endsieg_category = {
 			hidden_effect = {
 				news_event = { id = news.492 hours = 6 }
 				every_country = {limit = { check_variable= { speeches_enabled > 0}  }
-					scoped_sound_effect = "sp_ger_counter"
-					}
+					play_song = "sp_ger_counter"
+				}
 			}
 		}
 	}

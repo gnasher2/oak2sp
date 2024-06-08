@@ -138,7 +138,7 @@ focus_tree = {
 		completion_reward = {
 			activate_mission_tooltip = GER_four_year_plan_schacht
 			custom_effect_tooltip = GER_schacht_attack
-				effect_tooltip = {
+			effect_tooltip = {
 				swap_ideas = {
 					remove_idea = GER_steel_barons_empowered
 					add_idea = GER_steel_barons_empowered2
@@ -1297,7 +1297,7 @@ focus_tree = {
 			hidden_effect = {
 				GER_mefo_bills_level_up = yes
 				every_country = {limit = { check_variable= { speeches_enabled > 0}  }
-					scoped_sound_effect = "sp_ger_siemens"
+					play_song = "sp_ger_siemens"
 				}
 				
 			}
@@ -1467,10 +1467,12 @@ focus_tree = {
 					remove_resource_rights = 141
 					remove_resource_rights = 6
 				}
+				every_country = {limit = { check_variable= { music_enabled > 0}  }
+				play_song = "sp_ger_mobilization"
+				}
 			}
 		}
 	}
-
 	focus = { #Collab Government Western Organization kinda##
 		id = GER_collaborationist_government
 		icon = GFX_GER_establish_collaborationist_government
@@ -4233,7 +4235,7 @@ focus_tree = {
 							} 
 						}
 					}
-					scoped_sound_effect = "sp_ger_goebbels"
+					play_song = "sp_ger_goebbels"
 				}
 				every_country = {
 					limit = { 
@@ -4259,7 +4261,7 @@ focus_tree = {
 							} 
 						}
 					}
-					scoped_sound_effect = "sp_ger_goebbels"
+					play_song = "sp_ger_goebbels"
 				}
 			}	
 		} 
@@ -4658,10 +4660,22 @@ focus_tree = {
 		completion_reward = {
 				every_state = {
 					limit ={
-						is_core_of = GER
-						NOT = {
-							state = 5
+						OR = {
+							state = 64
+							state = 60
+							state = 59
+							state = 65
+							state = 54
+							state = 50
+							state = 52
+							state = 58
+							state = 61
+							state = 62
+							state = 55
+
 						}
+						
+
 					}
 					set_building_level = {
 						type = air_base
@@ -5202,7 +5216,7 @@ focus_tree = {
 		
 			hidden_effect = {
 				every_country = {limit = { check_variable= { speeches_enabled > 0}  }
-					scoped_sound_effect = "sp_ger_volk"
+					play_song = "sp_ger_volk"
  				}
 			}	
 		} 
@@ -6608,6 +6622,19 @@ focus_tree = {
 		completion_reward = {	
 			custom_effect_tooltip = available_officer_spirit_of_army
 			show_ideas_tooltip = schorner_ideological_loyalty_spirit	
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = ideological_loyalty_spirit
+					}
+					swap_ideas = {
+						remove_idea = ideological_loyalty_spirit
+						add_idea = schorner_ideological_loyalty_spirit
+					}
+				}
+
+			}
+			
 
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
@@ -8422,6 +8449,12 @@ focus_tree = {
 	
 		completion_reward = {
 		#air_experience = 50
+			add_tech_bonus = {
+				category = light_fighter
+				uses = 2
+				bonus = 0.75
+				name = GER_fuck_names 
+			}
 		custom_effect_tooltip = GER_plane_tt
 			if = {
 				limit = { 
@@ -8534,20 +8567,31 @@ focus_tree = {
 		available_if_capitulated = yes
 		completion_reward = { 
 			
-			custom_effect_tooltip = GER_luft_expansion_tt
+			#custom_effect_tooltip = GER_luft_expansion_tt
+			add_ideas = GER_luftwaffe_investments_idea
+			#if = {
+				#limit = {
+				#	NOT = { has_war_with = ENG }
+				#	is_ai = no
+				#}
+				#add_timed_idea = {
+				#	idea = GER_rushed_luft_expansion_idea
+				#	days = 180 
+				#}		
+			#}
 			if = {
 				limit = {
-					NOT = { has_war_with = ENG }
-					is_ai = no
-				}
-				add_timed_idea = {
-					idea = GER_rushed_luft_expansion_idea
-					days = 180 
-				}		
-			}
-			
-			if = {
-				limit = {
+								 
+			   
+	 
+					  
+										  
+				
+	   
+	
+   
+		 
+			 
 					has_idea = GER_udets_strike_force_idea 
 				}
 				swap_ideas = {
@@ -8653,23 +8697,23 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			air_experience = 50
-			add_tech_bonus = {
-				category = light_fighter
-				uses = 2
-				bonus = 0.4
-				name = GER_fuck_names 
-			}
-			add_tech_bonus = {
-				technology = ger_fighter_1941
-				uses = 1
-				bonus = 1.4
-				name = GER_fuck_names 
-			}			
+			air_experience = 50	
+					 
+							
+			
+			   
+						  
+	
+					 
+								 
+			
+			   
+						  
+	   
 			add_tech_bonus = {
 				category = cas_bomber
 				uses = 2
-				bonus = 0.5
+				bonus = 1
 				ahead_reduction = 0.5
 				name = GER_fuck_names 
 			}
@@ -8698,16 +8742,17 @@ focus_tree = {
 		
 		completion_reward = {
 			air_experience = 50
+		
 			add_tech_bonus = {
-				category = light_fighter
-				uses = 2
-				bonus = 0.5
-				name = GER_fuck_names 
-			}
-			add_tech_bonus = {
+							
+			
+			   
+						  
+	
+					 
 				technology = ger_fighter_1941
 				uses = 1
-				bonus = 2
+				bonus = 3
 				name = GER_fuck_names 
 			}			
 		}

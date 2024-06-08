@@ -344,7 +344,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 1
 		start_year = 1934
 		folder = {
 			name = nsb_fra_armor_folder
@@ -374,7 +374,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 1
 		start_year = 1936
 
 		folder = {
@@ -402,14 +402,12 @@ technologies = {
 			light_tank_artillery_chassis_1940
 			light_tank_aa_chassis_1940
 		}
-		dependencies = {
-			improved_machine_tools = 1
-		}
+		
 		path = {
 			leads_to_tech = fra_1943_light_tank_chassis
 			research_cost_coeff = 1
 		}
-		research_cost = 2
+		research_cost = 1
 		start_year = 1940
 
 		folder = {
@@ -481,10 +479,8 @@ technologies = {
 			tank_light_three_man_tank_turret
 		}
 		
-		dependencies = {
-			improved_machine_tools = 1
-		}
-		research_cost = 2
+		
+		research_cost = 1
 		start_year = 1943
 
 		folder = {
@@ -604,9 +600,7 @@ technologies = {
 			medium_tank_artillery_chassis_1940
 			medium_tank_aa_chassis_1940
 		}
-		dependencies = {
-			advanced_machine_tools = 1
-		}
+		
 		path = {
 			leads_to_tech = fra_1942_medium_tank_chassis
 			research_cost_coeff = 1
@@ -660,9 +654,7 @@ technologies = {
 			medium_tank_artillery_chassis_1942
 			medium_tank_aa_chassis_1942
 		}
-		dependencies = {
-			advanced_machine_tools = 1
-		}
+		
 		path = {
 			leads_to_tech = fra_1945_medium_tank_chassis
 			research_cost_coeff = 1
@@ -838,9 +830,7 @@ technologies = {
 			heavy_tank_artillery_chassis_1940
 			heavy_tank_aa_chassis_1940
 		}
-		dependencies = {
-			advanced_machine_tools = 1
-		}
+		
 
 		path = {
 			leads_to_tech = fra_1942_heavy_tank_chassis
@@ -898,9 +888,7 @@ technologies = {
 			heavy_tank_artillery_chassis_1942
 			heavy_tank_aa_chassis_1942
 		}
-		dependencies = {
-			assembly_line_production = 1
-		}
+		
 		path = {
 			leads_to_tech = fra_1945_heavy_tank_chassis
 			research_cost_coeff = 1
@@ -1051,9 +1039,7 @@ technologies = {
 			super_heavy_tank_rocket_chassis_1942
 		}
 
-		dependencies = {
-			assembly_line_production = 1
-		}
+		
 
 		research_cost = 2
 		start_year = 1942

@@ -8476,18 +8476,7 @@ SOV_GER_evacuations_category = {
 							level = 1
 						}
 					}
-					if = {
-					limit = {
-						146 = {
-							industrial_complex > 0
-						}
-					}
-					146 = {
-						remove_building = {
-							type = industrial_complex
-							level = 1
-						}
-					}
+				
 					random_state = {
 						limit = {
 							OR = {
@@ -8513,7 +8502,7 @@ SOV_GER_evacuations_category = {
 						}
 					}
 				}
-				}
+				
 			
             }
 		}
@@ -8573,36 +8562,36 @@ SOV_GER_evacuations_category = {
 
 		timeout_effect = {
 			custom_effect_tooltip = SOV_industry_relocation_new_tt 
-			 234 =
-                { #Krasnodar
-                    add_resource =
-                     {
-                        type = oil
-                        amount = -7
-                        state = 234
-                    }
+		 
+			 234 ={ #Krasnodar
+				add_resource = {
+					  
+					type = oil
+					amount = -7
+					state = 234
+				}
 
-                }
-                232 =
-                { #Grozny
-                    add_resource =
-                     {
-                        type = oil
-                        amount = -7
-                        state = 232
-                    }
+			}
+					 
+			232 = { #Grozny
+				add_resource =
+					{
+					type = oil
+					amount = -7
+					state = 232
+				}
 
-                }
-                651 =
-                { #Ufa("Second Baku")
-                    add_resource =
-                     {
-                        type = oil
-                        amount = 14
-                        state = 651
-                    }
+			}
+					 
+			651 = { #Ufa("Second Baku")
+				add_resource = {
+					  
+					type = oil
+					amount = 14
+					state = 651
+				}
 
-                }
+			}
 			
 		
 		
@@ -8664,18 +8653,7 @@ SOV_GER_evacuations_category = {
 							level = 1
 						}
 					}
-					if = {
-					limit = {
-						146 = {
-							industrial_complex > 0
-						}
-					}
-					146 = {
-						remove_building = {
-							type = industrial_complex
-							level = 1
-						}
-					}
+
 					random_state = {
 						limit = {
 							OR = {
@@ -8701,7 +8679,7 @@ SOV_GER_evacuations_category = {
 						}
 					}
 				}
-				}
+				
 			
             }
 		}
@@ -8822,18 +8800,6 @@ SOV_GER_evacuations_category = {
 							level = 1
 						}
 					}
-					if = {
-					limit = {
-						146 = {
-							industrial_complex > 0
-						}
-					}
-					146 = {
-						remove_building = {
-							type = industrial_complex
-							level = 1
-						}
-					}
 					random_state = {
 						limit = {
 							OR = {
@@ -8859,7 +8825,7 @@ SOV_GER_evacuations_category = {
 						}
 					}
 				}
-				}
+				
 			
             }
 		}
@@ -8979,18 +8945,18 @@ SOV_GER_evacuations_category = {
 							level = 1
 						}
 					}
-					if = {
-					limit = {
-						146 = {
-							industrial_complex > 0
-						}
-					}
-					146 = {
-						remove_building = {
-							type = industrial_complex
-							level = 1
-						}
-					}
+		   
+			  
+			 
+							 
+	   
+	  
+			
+						 
+								
+				
+	   
+	  
 					random_state = {
 						limit = {
 							OR = {
@@ -9015,8 +8981,9 @@ SOV_GER_evacuations_category = {
 							instant_build = yes
 						}
 					}
+				
 				}
-				}
+	 
 			
             }
 		}
@@ -9137,18 +9104,18 @@ SOV_GER_evacuations_category = {
 							level = 1
 						}
 					}
-					if = {
-					limit = {
-						146 = {
-							industrial_complex > 0
-						}
-					}
-					146 = {
-						remove_building = {
-							type = industrial_complex
-							level = 1
-						}
-					}
+				
+			  
+			 
+							 
+	   
+	  
+			
+						 
+								
+				
+	   
+	  
 					random_state = {
 						limit = {
 							OR = {
@@ -9173,7 +9140,7 @@ SOV_GER_evacuations_category = {
 							instant_build = yes
 						}
 					}
-				}
+				
 				}
 			
             }
@@ -9294,18 +9261,18 @@ SOV_GER_evacuations_category = {
 							level = 1
 						}
 					}
-					if = {
-					limit = {
-						146 = {
-							industrial_complex > 0
-						}
-					}
-					146 = {
-						remove_building = {
-							type = industrial_complex
-							level = 1
-						}
-					}
+					
+			  
+			 
+							 
+	   
+	  
+			
+						 
+								
+				
+	   
+	  
 					random_state = {
 						limit = {
 							OR = {
@@ -9330,7 +9297,7 @@ SOV_GER_evacuations_category = {
 							instant_build = yes
 						}
 					}
-				}
+				
 				}
 			
             }
@@ -9452,18 +9419,18 @@ SOV_GER_evacuations_category = {
 							level = 1
 						}
 					}
-					if = {
-					limit = {
-						146 = {
-							industrial_complex > 0
-						}
-					}
-					146 = {
-						remove_building = {
-							type = industrial_complex
-							level = 1
-						}
-					}
+					
+			  
+			 
+							 
+	   
+	  
+			
+						 
+								
+				
+	   
+	  
 					random_state = {
 						limit = {
 							OR = {
@@ -9488,7 +9455,7 @@ SOV_GER_evacuations_category = {
 							instant_build = yes
 						}
 					}
-				}
+				
 				}
 			
             }
@@ -9609,18 +9576,18 @@ SOV_GER_evacuations_category = {
 							level = 1
 						}
 					}
-					if = {
-					limit = {
-						146 = {
-							industrial_complex > 0
-						}
-					}
-					146 = {
-						remove_building = {
-							type = industrial_complex
-							level = 1
-						}
-					}
+					
+			  
+			 
+							 
+	   
+	  
+			
+						 
+								
+				
+	   
+	  
 					random_state = {
 						limit = {
 							OR = {
@@ -9645,7 +9612,7 @@ SOV_GER_evacuations_category = {
 							instant_build = yes
 						}
 					}
-				}
+				
 				}
 			
             }
@@ -9767,18 +9734,18 @@ SOV_GER_evacuations_category = {
 							level = 1
 						}
 					}
-					if = {
-					limit = {
-						146 = {
-							industrial_complex > 0
-						}
-					}
-					146 = {
-						remove_building = {
-							type = industrial_complex
-							level = 1
-						}
-					}
+					
+			  
+			 
+							 
+	   
+	  
+			
+						 
+								
+				
+	   
+	  
 					random_state = {
 						limit = {
 							OR = {
@@ -9803,7 +9770,7 @@ SOV_GER_evacuations_category = {
 							instant_build = yes
 						}
 					}
-				}
+				
 				}
 			
             }
@@ -9924,18 +9891,18 @@ SOV_GER_evacuations_category = {
 							level = 1
 						}
 					}
-					if = {
-					limit = {
-						146 = {
-							industrial_complex > 0
-						}
-					}
-					146 = {
-						remove_building = {
-							type = industrial_complex
-							level = 1
-						}
-					}
+					
+			  
+			 
+							 
+	   
+	  
+			
+						 
+								
+				
+	   
+	  
 					random_state = {
 						limit = {
 							OR = {
@@ -9960,7 +9927,7 @@ SOV_GER_evacuations_category = {
 							instant_build = yes
 						}
 					}
-				}
+				
 				}
 			
             }
@@ -10250,18 +10217,18 @@ SOV_GER_evacuations_category = {
 							level = 1
 						}
 					}
-					if = {
-					limit = {
-						146 = {
-							industrial_complex > 0
-						}
-					}
-					146 = {
-						remove_building = {
-							type = industrial_complex
-							level = 1
-						}
-					}
+					
+			  
+			 
+							 
+	   
+	  
+			
+						 
+								
+				
+	   
+	  
 					random_state = {
 						limit = {
 							OR = {
@@ -10286,7 +10253,7 @@ SOV_GER_evacuations_category = {
 							instant_build = yes
 						}
 					}
-				}
+				
 				}
 			
             }
@@ -10407,18 +10374,18 @@ SOV_GER_evacuations_category = {
 							level = 1
 						}
 					}
-					if = {
-					limit = {
-						146 = {
-							industrial_complex > 0
-						}
-					}
-					146 = {
-						remove_building = {
-							type = industrial_complex
-							level = 1
-						}
-					}
+					
+			  
+			 
+							 
+	   
+	  
+			
+						 
+								
+				
+	   
+	  
 					random_state = {
 						limit = {
 							OR = {
@@ -10443,7 +10410,7 @@ SOV_GER_evacuations_category = {
 							instant_build = yes
 						}
 					}
-				}
+				
 				}
 			
             }
@@ -10564,18 +10531,18 @@ SOV_GER_evacuations_category = {
 							level = 1
 						}
 					}
-					if = {
-					limit = {
-						146 = {
-							industrial_complex > 0
-						}
-					}
-					146 = {
-						remove_building = {
-							type = industrial_complex
-							level = 1
-						}
-					}
+					
+			  
+			 
+							 
+	   
+	  
+			
+						 
+								
+				
+	   
+	  
 					random_state = {
 						limit = {
 							OR = {
@@ -10600,7 +10567,7 @@ SOV_GER_evacuations_category = {
 							instant_build = yes
 						}
 					}
-				}
+				
 				}
 			
             }
@@ -15075,21 +15042,127 @@ SOV_great_patriotic_war = {
 		
 		available = {
 			tag = SOV
-			NOT = { has_idea = winter_offensive }
+										
 			has_war_with = GER
-			has_country_flag = SOVwintercounteroffense2
 			
-			or = { AND = { date > 1940.11.29 date < 1941.01.20 } AND = { date > 1941.11.29 date < 1942.01.20} AND = { date > 1942.11.29 date < 1943.01.20} AND = { date > 1943.11.29 date < 1944.01.20 } AND = { date > 1944.11.29 date < 1945.01.20 } }
+			GER = {
+				NOT = { 
+					has_country_flag = summer_offensive_ger_flag
+				}
+			}
 			
-		
+			AND = { 
+				date > 1944.04.1 
+				date < 1944.10.1 
+			} 
+			custom_trigger_tooltip = {
+				tooltip = SOV_special_summer_offensive
+				OR = {
+					OR = {
+						ENG = {
+							controls_state = 16
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_state = 16
+						}
+					}
+					OR = {
+						ENG = {
+							controls_state = 6
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_state = 6
+						}
+					}
+					OR = {
+						ENG = {
+							controls_state = 36
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_state = 36
+						}
+					}
+					OR = {
+						ENG = {
+							controls_state = 58
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_state = 58
+						}
+					}
+					OR = {
+						ENG = {
+							controls_state = 59
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_state = 59
+						}
+					}
+					OR = {
+						ENG = {
+							controls_state = 56
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_state = 56
+						}
+					}
+					OR = {
+						ENG = {
+							controls_state = 20
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_state = 20
+						}
+					}
+					OR = {
+						ENG = {
+							controls_state = 2
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_state = 2
+						}
+					}
+					OR = {
+						ENG = {
+							controls_state = 159
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_state = 159
+						}
+					}
+					OR = {
+						ENG = {
+							controls_state = 48
+						}
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_state = 48
+						}
+					}
+				}
+			}
+			
+  
 		}
 
 		visible = {
 				tag = SOV
-				NOT = { has_idea = winter_offensive }
-				has_country_flag = SOVwintercounteroffense
+										 
+											  
 				has_war_with = GER
-				or = { AND = { date > 1940.9.29 date < 1941.01.20 } AND = { date > 1941.9.29 date < 1942.01.20} AND = { date > 1942.9.29 date < 1943.01.20} AND = { date > 1943.9.29 date < 1944.01.20 } AND = { date > 1944.9.29 date < 1945.01.20 } }
+				AND = { 
+					date > 1944.04.1 
+					date < 1944.10.1 
+				}
 		}
 		
 		
@@ -15111,48 +15184,49 @@ SOV_great_patriotic_war = {
 				complete_national_focus = SOV_drive_out_the_fascists
 			}
 		   	add_timed_idea = {	
-		   		idea = winter_offensive
+		   		idea = bagration_offensive
 		   		days = 70
 		   	}
 		   	hidden_effect = {
-				every_country = {
-					limit = { 
-						AND = {
-							check_variable= { 
-								speeches_enabled > 0
-							} 
-							check_variable= { 
-								music_enabled < 2
-							} 
-						}
+				SOV = {
+					set_country_flag = {
+						flag = summer_offensive_sov_flag
+						days = 90
+						value = 1
+		 
+						 
+						 
+		 
+	   
 					}
-					scoped_sound_effect = "sp_sov_bargration"
+											  
 				}
-				every_country = {
-					limit = { 
-						AND = {
-							check_variable= { 
-								music_enabled > 0
-							} 
-							check_variable= { 
-								speeches_enabled < 2
-							} 
-						}
-					}
-					scoped_sound_effect = "sp_sov_bargration"
+				every_country = {limit = { check_variable= { speeches_enabled > 0}  }
+			   
+			 
+						 
+						 
+		 
+						 
+							
+		 
+	   
+	  
+											  
+	 
+					 
+			   
+			 
+						
+						 
+		 
+						 
+							
+		 
+	   
+	  
+					play_song = "sp_sov_bargration"
 				}
-				every_country = {
-					limit = { 
-						AND = {
-							check_variable= {
-								music_enabled > 0
-							} 
-							check_variable= { 
-								speeches_enabled > 0
-							} 
-						}
-					}
-					scoped_sound_effect = "sp_sov_bargration"
 				}
 				if = {
 					limit = {
@@ -15164,7 +15238,7 @@ SOV_great_patriotic_war = {
 				}
 		   	}	
 			set_country_flag = SOVwintercounteroffense
-			news_event = { hours = 20 id = news.460 }
+			news_event = { hours = 20 id = news.527 }
 		}
 	}
 
@@ -15304,7 +15378,7 @@ SOV_5_year_plan_decisions = {
 				}
 				add_resource = {
 					type = oil
-					amount = 9
+					amount = 10
 				}
 				add_extra_state_shared_building_slots = 1 
 				add_building_construction = {
@@ -15323,7 +15397,7 @@ SOV_5_year_plan_decisions = {
 				}
 				add_resource = {
 					type = oil
-					amount = 5
+					amount = 6
 				}
 			}
  			custom_effect_tooltip = SOV_5_year_plan_tt 
@@ -16183,6 +16257,35 @@ SOV_5_year_plan_decisions = {
 				add_equipment_to_stockpile = { type = fighter_equipment_1934 amount = -400 producer = SOV }
 				add_equipment_to_stockpile = { type = fighter_equipment_1936 amount = -500 producer = SOV }
 				add_equipment_to_stockpile = { type = zveno_equipment_1934 amount = 450 producer = SOV }
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	SOV_5_year_plan_tank_bureaus = {
+
+		icon = generic_tank
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			has_completed_focus = SOV_heavy_state_funding_for_tank_bureaus
+		}
+
+		visible = {
+			has_completed_focus = SOV_heavy_state_funding_for_tank_bureaus
+		}	
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_timed_idea = {
+				idea = SOV_tank_bureaus 
+				days = 180 
 			}
 		}
 

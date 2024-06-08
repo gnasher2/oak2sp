@@ -345,7 +345,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 1
 		start_year = 1934
 		folder = {
 			name = nsb_uk_armor_folder
@@ -378,7 +378,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 1
 		start_year = 1937
 
 		folder = {
@@ -437,10 +437,8 @@ technologies = {
 			leads_to_tech = eng_1940_medium_tank_chassis
 			research_cost_coeff = 1
 		}
-		dependencies = {
-			improved_machine_tools = 1
-		}
-		research_cost = 2
+		
+		research_cost = 1
 		start_year = 1940
 
 		folder = {
@@ -587,9 +585,7 @@ technologies = {
 			medium_tank_rocket_chassis_1946
 			medium_tank_flame_chassis_1946
 		}
-		dependencies = {
-			advanced_machine_tools = 1
-		}
+		
 		path = {
 			leads_to_tech = eng_1942_heavy_tank_chassis
 			research_cost_coeff = 1
@@ -650,9 +646,7 @@ technologies = {
 			medium_tank_rocket_chassis_1940
 			medium_tank_flame_chassis_1940
 		}
-		dependencies = {
-			advanced_machine_tools = 1
-		}
+		
 		path = {
 			leads_to_tech = eng_1942_medium_tank_chassis
 			research_cost_coeff = 1
@@ -714,9 +708,7 @@ technologies = {
 			medium_tank_rocket_chassis_1942
 			medium_tank_flame_chassis_1942
 		}
-		dependencies = {
-			advanced_machine_tools = 1
-		}
+		
 		path = {
 			leads_to_tech = eng_advanced_turret
 			research_cost_coeff = 1
@@ -955,9 +947,7 @@ technologies = {
 			heavy_tank_flame_chassis_1939
 		}
 
-		dependencies = {
-			advanced_machine_tools = 1
-		}
+		
 		path = {
 			leads_to_tech = eng_1942_heavy_tank_chassis
 			research_cost_coeff = 1
@@ -1020,9 +1010,7 @@ technologies = {
 			heavy_tank_rocket_chassis_1942
 			heavy_tank_flame_chassis_1942
 		}
-		dependencies = {
-			assembly_line_production = 1
-		}
+		
 		path = {
 			leads_to_tech = eng_1945_heavy_tank_chassis
 			research_cost_coeff = 1
