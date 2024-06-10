@@ -3999,7 +3999,7 @@ focus_tree = {
 		x = -6
 		y = 1
 		ai_will_do = {
-			factor = 1.5
+			factor = 11
 			modifier = {
 				factor = 2
 				has_war = yes
@@ -4507,7 +4507,7 @@ focus_tree = {
 		x = 6
 		y = 1
 		ai_will_do = {
-			factor = 10
+			factor = 5
 		}
 		relative_position_id = SOV_intervene_in_the_spanish_civil_war
 		completion_reward = {
@@ -5329,7 +5329,7 @@ focus_tree = {
 		y = 1
 
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
 
 		available = {
@@ -5362,9 +5362,11 @@ focus_tree = {
 		relative_position_id = SOV_rehabilitate_the_military
 
 		available = {
-			
+			date > 1940.1.1
 		}
-
+		ai_will_do = {
+			factor = 1
+		}
 		cancel_if_invalid = yes 
 
 		completion_reward = {
@@ -5496,9 +5498,9 @@ focus_tree = {
 		prerequisite = { focus = SOV_rehabilitate_the_military }
 
 		ai_will_do = {
-			factor = 1.5
+			factor = 0
 			modifier = {
-				factor = 2
+				factor = 0
 				has_war = yes
 			}
 		}
@@ -5506,7 +5508,7 @@ focus_tree = {
 		relative_position_id = SOV_rehabilitate_the_military
 
 		available = {
-			
+			date > 1945.1.1
 		}
 
 		cancel_if_invalid = yes 
@@ -6951,9 +6953,9 @@ focus_tree = {
 		relative_position_id = SOV_the_great_patriotic_war
 		cost = 0
 		ai_will_do = {
-			factor = 100
+			factor = 1000
 			modifier = {
-				factor = 20
+				factor = 200
 				has_war = yes
 			}
 		}
@@ -8378,9 +8380,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-				
-			add_political_power = 150
-			custom_effect_tooltip = SOV_unlocks_chelyabinsk_stuff_tt
+			add_equipment_to_stockpile = { type = medium_tank_chassis_1941 amount = 2000 producer = SOV }	
+			
 		}
 	}
 
@@ -8860,7 +8861,7 @@ focus_tree = {
 		}		
 
 		ai_will_do = {
-			factor = 8
+			factor = 10
 		}
 
 		completion_reward = {
@@ -8892,7 +8893,7 @@ focus_tree = {
 		}		
 
 		ai_will_do = {
-			factor = 8
+			factor = 10
 		}
 
 		completion_reward = {
@@ -8962,7 +8963,7 @@ focus_tree = {
 		}		
 
 		ai_will_do = {
-			factor = 8
+			factor = 10
 		}
 
 		completion_reward = {

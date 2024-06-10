@@ -418,7 +418,7 @@ technologies = {
 				}
 				upgrades = {
 					tank_nsb_engine_upgrade = 6
-					tank_nsb_armor_upgrade = 0
+					tank_nsb_armor_upgrade = 1
 				}
 				icon = "gfx/interface/technologies/land/sov/A20.tga"
 				
@@ -484,7 +484,7 @@ technologies = {
 				}
 				upgrades = {
 					tank_nsb_engine_upgrade = 7
-					tank_nsb_armor_upgrade = 0
+					tank_nsb_armor_upgrade = 1
 				}
 				icon = "gfx/interface/technologies/land/sov/t3440.tga"
 				
@@ -588,7 +588,7 @@ technologies = {
 				}
 				upgrades = {
 					tank_nsb_engine_upgrade = 7
-					tank_nsb_armor_upgrade = 0
+					tank_nsb_armor_upgrade = 6
 				}
 				icon = "gfx/interface/technologies/land/sov/T43.tga"
 				
@@ -641,7 +641,7 @@ technologies = {
 				}
 				upgrades = {
 					tank_nsb_engine_upgrade = 8
-					tank_nsb_armor_upgrade = 0
+					tank_nsb_armor_upgrade = 1
 				}
 				icon = "gfx/interface/technologies/land/sov/SOV_medium_tank_4.tga"
 				
@@ -713,7 +713,7 @@ technologies = {
 				}
 				upgrades = {
 					tank_nsb_engine_upgrade = 9
-					tank_nsb_armor_upgrade = 0
+					tank_nsb_armor_upgrade = 1
 				}
 				icon = "gfx/interface/technologies/land/sov/t44.tga"
 				
@@ -823,7 +823,7 @@ technologies = {
 				}
 				upgrades = {
 					tank_nsb_engine_upgrade = 9
-					tank_nsb_armor_upgrade = 0
+					tank_nsb_armor_upgrade = 1
 				}
 				icon = "gfx/interface/technologies/land/sov/SOV_heavy_tank_2.tga"
 				
@@ -881,7 +881,7 @@ technologies = {
 				}
 				upgrades = {
 					tank_nsb_engine_upgrade = 10
-					tank_nsb_armor_upgrade = 0
+					tank_nsb_armor_upgrade = 1
 				}
 				icon = "gfx/interface/technologies/land/sov/kv_1b.tga"
 				

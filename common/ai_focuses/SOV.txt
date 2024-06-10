@@ -103,7 +103,7 @@ ai_historical_focus_list_SOV = {
 		SOV_cult_of_stalin
 		
 		SOV_lessons_of_the_winter_war
-
+		SOV_order_270
 		SOV_infantry_development
 		SOV_logistical_corps_expansion
 		SOV_the_katyusha

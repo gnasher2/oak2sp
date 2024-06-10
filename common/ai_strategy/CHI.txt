@@ -149,11 +149,11 @@ CHI_scripted_war_no_battleplan = {
 	ai_strategy = {
 		type = front_control
 		tag = JAP
-		priority = 4
+		priority = 8
 		ordertype = front
-		execution_type = careful
+		execution_type = rush
 		manual_attack = yes
-		execute_order = no
+		execute_order = yes
 	}
 }
 CHI_scripted_war_careful_battleplan = {
@@ -185,9 +185,9 @@ CHI_scripted_war_careful_battleplan = {
 	ai_strategy = {
 		type = front_control
 		tag = JAP
-		priority = 4
+		priority = 7
 		ordertype = front
-		execution_type = careful
+		execution_type = rush
 		manual_attack = yes 
 		execute_order = yes
 }
