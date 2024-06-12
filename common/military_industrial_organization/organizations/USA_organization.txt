@@ -125,7 +125,7 @@ USA_Chrysler_Corporation = {
 
 
 		production_bonus = {
-			production_efficiency_cap_factor = 0.09
+			production_efficiency_cap_factor = 0.05
 		}
 	}
 ###tank stats
@@ -142,7 +142,7 @@ USA_Chrysler_Corporation = {
 		}
 		
 		production_bonus = {
-			production_efficiency_cap_factor = 0.09
+			production_efficiency_cap_factor = 0.05
 		}
 	}
 	trait = {

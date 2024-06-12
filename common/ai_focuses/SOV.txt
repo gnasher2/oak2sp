@@ -109,6 +109,10 @@ ai_historical_focus_list_SOV = {
 		SOV_the_katyusha
 		SOV_motorized_rifle_corps
 		SOV_3_5_plan_phase_2_MIC
+		SOV_dual_command
+		SOV_positive_heroism 
+		SOV_for_motherland_and_for_stalin
+		SOV_red_army_reborn
 		SOV_a_gun_for_every_hand
 		
 		SOV_good_quality_equipment

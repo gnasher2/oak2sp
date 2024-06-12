@@ -5602,11 +5602,8 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			custom_effect_tooltip = available_mio_tt
-			show_mio_tooltip = USA_army_ordnance_department_organization
-			mio:USA_army_ordnance_department_organization = {
-				add_mio_funds = 1800
-			}
+			
+			
 			USA_armor_industry_level_up = yes 
 			add_tech_bonus = {
 				category = cat_medium_armor
@@ -5638,11 +5635,7 @@ focus_tree = {
 		}
 		
 		completion_reward = {
-			custom_effect_tooltip = available_mio_tt
-			show_mio_tooltip = USA_Fisher_armaments
-			mio:USA_Fisher_armaments = {
-				add_mio_funds = 800
-			}	
+			
 			USA_armor_industry_level_up = yes 
 			add_tech_bonus = {
 				category = cat_heavy_armor
