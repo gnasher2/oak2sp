@@ -4149,7 +4149,7 @@
 		}
 		
 		ai_will_do = {
-			factor = 5 
+			factor = 0
 		}
 	}
 	

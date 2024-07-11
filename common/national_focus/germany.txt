@@ -1717,15 +1717,15 @@ focus_tree = {
 						is_controlled_by = NOR 
 					}
 				}
-				AND = {
-					date > 1941.1.1
-					SWE = {
-						has_opinion = {
-							target = GER
-							value > 10
-						}
-					}
-				}
+		   
+				date > 1941.1.1
+			
+					 
+				   
+				 
+	   
+	  
+	 
 			}
 		}
 		ai_will_do = {
@@ -2544,7 +2544,6 @@ focus_tree = {
 
 				85 = { set_state_name = "Gotenhafen" }
 				86 = { set_state_name = "Posen" }
-				828 = { set_state_name = "Hela" }
 				98 = { set_state_name = "Schröttersburg" }
 				87 = { set_state_name = "Litzmannstadt" }
 				762 = { set_state_name = "Kattowitz" }
@@ -5287,7 +5286,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -5310,7 +5309,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -5332,7 +5331,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -5355,7 +5354,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no  
 		}
 
 		available_if_capitulated = yes
@@ -5378,7 +5377,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -5401,7 +5400,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -5424,7 +5423,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -5470,7 +5469,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -5492,7 +5491,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no  
 		}
 		bypass = {
 		
@@ -5518,7 +5517,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no  
 		}
 
 		available_if_capitulated = yes
@@ -5541,7 +5540,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -5564,7 +5563,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -5588,7 +5587,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -5610,7 +5609,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes
@@ -5632,7 +5631,7 @@ focus_tree = {
 		}
 
 		available = {
-			always = NO 
+			always = no 
 		}
 
 		available_if_capitulated = yes

@@ -1,5 +1,53 @@
 
 PAR_instant_effect_decisions = {
+	PAR_remove_usa_bonus_when_it_owns_the_island = {
+		allowed = { tag = PAR }
+		ai_will_do = {
+			base = 10000			
+		}
+		available = {
+			any_state = {
+				has_dynamic_modifier = {
+					modifier = USA_bombardment
+				}
+				is_controlled_by = USA
+
+			}
+		}	
+		fire_only_once = no
+
+		complete_effect = {
+			every_state = {
+				limit = {
+					OR = {
+						has_dynamic_modifier = {
+							modifier = USA_bombardment
+						}
+						has_dynamic_modifier = {
+							modifier = USA_bombardment2
+						}
+
+					}
+					
+					is_controlled_by = USA
+				}
+				remove_dynamic_modifier = { modifier = USA_bombardment  }
+				remove_dynamic_modifier = { modifier = USA_bombardment2  }
+				remove_province_modifier = {
+					static_modifiers = { USA_bombardment_static_one }
+					province = {
+						all_provinces = yes
+					}
+				}
+				remove_province_modifier = {
+					static_modifiers = { USA_bombardment2_static_one }
+					province = {
+						all_provinces = yes
+					}
+				}
+			}
+		}	
+	}
 	PAR_paulus_defected = {
 		allowed = { tag = PAR }
 		ai_will_do = {
@@ -322,99 +370,99 @@ PAR_instant_effect_decisions = {
 						}
 					}
 					OR = {
-						OR = {
-							ENG = {
-								controls_province = 11531
-							}
-							any_other_country = {
-								is_in_faction_with = ENG
-								controls_province = 11531
-							}
+			
+						ENG = {
+								 
+		
+							
+								
+							controls_province = 11531
+		
 						}
-						OR = {
-							ENG = {
-								controls_province = 11547
-							}
-							any_other_country = {
-								is_in_faction_with = ENG
-								controls_province = 11547
-							}
-						}
-	  
-						OR = {
-							ENG = {
-								controls_province = 3423
-							}
-							any_other_country = {
-								is_in_faction_with = ENG
-								controls_province = 3423
-							}
+			
+			  
+								 
+		
+						any_other_country = {
+							is_in_faction_with = ENG
+								 
+		
+	   
+   
+			
+			  
+							controls_province = 11531
+		
+							
+								
+								
+		
 						}
 
-							   
-							   
-	   
+		  
+		  
+	
 					}
-					
-			 
-								
-	   
-						   
-							   
-								
-	   
-	  
+	 
+	
+		
+	
+		 
+		  
+		
+	
+   
+  
   
 	 
-		   
-			 
-							   
-	   
-						   
-							   
-							   
-	   
-	  
-		   
-			 
-							   
-	   
-						   
-							   
-							   
-	   
-	  
+	
+		  
+	
+		 
+		  
+		  
+	
+   
+	 
+	
+		  
+	
+		 
+		  
+		  
+	
+   
+  
   
 	 
-		   
-			 
-							   
-	   
-						   
-							   
-							   
-	   
-	  
-		   
-			 
-								
-	   
-						   
-							   
-								
-	   
-	  
+	
+		  
+	
+		 
+		  
+		  
+	
+   
+	 
+	
+		
+	
+		 
+		  
+		
+	
+   
+  
   
 	 
-		   
-			 
-							   
-	   
-						   
-							   
-							   
-	   
-	  
+	
+		  
+	
+		 
+		  
+		  
+	
+   
 				}
 				AND = {
 					GER = {
@@ -425,35 +473,23 @@ PAR_instant_effect_decisions = {
 					}
 					date > 1940.2.1
 					OR = {
-						OR = {
-							ENG = {
-								controls_province = 11531
-							}
-							any_other_country = {
-								is_in_faction_with = ENG
-								controls_province = 11531
-							}
+			
+						ENG = {
+								 
+		
+							
+								
+							controls_province = 11531
+		
 						}
-						OR = {
-							ENG = {
-								controls_province = 11547
-							}
-							any_other_country = {
-								is_in_faction_with = ENG
-								controls_province = 11547
-							}
-						}
-	  
-  
-	 
-						OR = {
-							ENG = {
-								controls_province = 3423
-							}
-							any_other_country = {
-								is_in_faction_with = ENG
-								controls_province = 3423
-							}
+			
+			  
+								 
+		
+						any_other_country = {
+							is_in_faction_with = ENG
+							controls_province = 11531
+		
 						}
 
 							   
@@ -1346,7 +1382,7 @@ PAR_instant_effect_decisions = {
 			base = 9000			
 		}
 		available = {
-			date > 1938.6.1
+			date > 1939.5.1
 		}
 		fire_only_once = yes
 
@@ -1408,24 +1444,7 @@ PAR_instant_effect_decisions = {
 					}
 				}
 			}
-			834 = {
-				OR = {
-					NOT = {
-						is_controlled_by = ITA 
-						is_controlled_by = ETH 
 
-					}
-				}
-			}
-			835 = {
-				OR = {
-					NOT = {
-						is_controlled_by = ITA 
-						is_controlled_by = ETH 
-
-					}
-				}
-			}
 		}
 		cost = 0
 		fire_only_once = yes
@@ -1926,10 +1945,15 @@ PAR_instant_effect_decisions = {
 						set_rule = {
 							can_access_market = yes
 						}
-						annex_country = { target = SPN transfer_troops = yes }
+						annex_country = { target = SPN transfer_troops = no }
 						add_ideas = SPA_recovering_from_civil_war
+						remove_ideas = SPR_death_before_surrender
 						delete_unit_template_and_units = {
 							division_template = "Guarnición Republicana"
+							disband = yes
+						}
+						delete_unit_template_and_units = {
+							division_template = "Northern Garrison"
 							disband = yes
 						}
 						delete_unit_template_and_units = {
@@ -2092,8 +2116,13 @@ PAR_instant_effect_decisions = {
 					set_rule = {
 						can_access_market = yes
 					}
-					annex_country = { target = SPN transfer_troops = yes }
+					annex_country = { target = SPN transfer_troops = no }
 					add_ideas = SPA_recovering_from_civil_war
+					remove_ideas = SPR_death_before_surrender
+					delete_unit_template_and_units = {
+						division_template = "Northern Garrison"
+						disband = yes
+					}
 					delete_unit_template_and_units = {
 						division_template = "Guarnición Republicana"
 						disband = yes
@@ -2165,6 +2194,8 @@ PAR_instant_effect_decisions = {
 		available = {
 			NOT = {
 				has_country_leader_with_trait = bidding_time_trait
+			
+
 
 			}
 			date > 1942.1.1
@@ -2271,7 +2302,6 @@ PAR_instant_effect_decisions = {
 		available = {
 			NOT = {
 				has_country_leader_with_trait = bidding_time_trait
-
 			}
 			date > 1942.1.1
 			NOT = {
@@ -5650,30 +5680,7 @@ PAR_instant_effect_decisions = {
 					scoped_sound_effect = "se_nuclear_siren"
 				}
 			}
-		}	
-	}
-	PAR_jap_focus_dec = {
-		allowed = { tag = PAR }
-		ai_will_do = {
-			base = 1000			
-		}
-		available = {
-			date > 1941.1.1
-			JAP = {
-				AND = {
-					has_completed_focus = JAP_challenge_the_zaibatsus
-					NOT = {
-						has_completed_focus = JAP_material_mobilization_plan
-					}
-				}
-			}
-		}
-		fire_only_once = yes
 
-		complete_effect = {
-			JAP = {
-				complete_national_focus = JAP_material_mobilization_plan	
-			}
 		}	
 	}
 	PAR_usa_focus_dec = {
@@ -8003,33 +8010,6 @@ PAR_instant_effect_decisions = {
 		}
 	}
 
-	JAP_zaibatsus_golden_bat_cigarettes = {
-		icon = generic_megaphone
-   
-		allowed = {
-		   tag = PAR
-		}
-
-		fire_only_once = yes
-
-		available = {
-			JAP = {
-				has_completed_focus = JAP_zaibatsus_dominance
-			}
-		}
-
-		cost = 0
-		
-		days_remove = 90
-		
-		remove_effect = {
-           JAP = { country_event = { id = japan.24 } }
-		}
-
-		ai_will_do = {
-			base = 1000			
-		}
-	}
 
 	USA_killer_tornado = {
 		icon = generic_megaphone
@@ -8998,7 +8978,7 @@ PAR_instant_effect_decisions = {
 			
 		}
 	}
-	
+
 	POL_nine = {
 		fire_only_once = yes
 		

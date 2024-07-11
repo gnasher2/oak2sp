@@ -333,6 +333,8 @@ technologies = {
 			tank_light_two_man_tank_turret
 			tank_light_opentop_turret
 			tank_light_casemate_turret
+			tank_medium_cannon_2_for_lights
+			tank_medium_close_support_gun_for_lights
 		}
 	
 		enable_subunits = {
@@ -521,7 +523,7 @@ technologies = {
 				type = light_tank_chassis_1943
 				parent_version = 0
 				modules = {
-				main_armament_slot = tank_medium_cannon_2
+				main_armament_slot = tank_high_velocity_cannon
 				turret_type_slot = tank_light_three_man_tank_turret
 				suspension_type_slot = tank_torsion_bar_suspension
 				armor_type_slot = tank_welded_armor
@@ -1070,7 +1072,7 @@ technologies = {
 				armor_sloping_slot = rounded_armor
 				engine_type_slot = tank_gasoline_engine
 				radio_slot = tank_radio_1
-				special_type_slot_1 = secondary_turret_small_cannon
+				special_type_slot_1 = secondary_turret_small_cannon_big
 				special_type_slot_2 = early_cupola
 				special_type_slot_3 = additional_machine_guns
 				}

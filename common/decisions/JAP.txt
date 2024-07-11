@@ -1,5 +1,6 @@
 #Category allowed for JAP
 ########################### Japanese Decisions During Sino-Japanese War #################
+
 JAP_pacific_war_explanation_category = {
 	JAP_operation_t = {
 
@@ -81,7 +82,7 @@ JAP_pacific_war_explanation_category = {
 					}
 
 					support = {
-						pack_artillery = { x = 0 y = 0 }
+						artillery = { x = 0 y = 0 }
 						engineer = { x = 0 y = 1 }
 						field_gun_support = { x = 0 y = 2 }
 						military_police = { x = 1 y = 0 }
@@ -252,7 +253,7 @@ JAP_pacific_war_explanation_category = {
 						}
 
 						support = {
-							pack_artillery = { x = 0 y = 0 }
+							artillery = { x = 0 y = 0 }
 							engineer = { x = 0 y = 1 }
 							field_gun_support = { x = 0 y = 2 }
 							military_police = { x = 1 y = 0 }
@@ -263,14 +264,54 @@ JAP_pacific_war_explanation_category = {
 						create_unit = {
 							division = "division_template = \"Indochina\" start_experience_factor = 0.4" 
 							owner = JAP
-							count = 5
+							prioritize_location = 12065
+						}
+						create_unit = {
+							division = "division_template = \"Indochina\" start_experience_factor = 0.4" 
+							owner = JAP
+							prioritize_location = 7518
+						}
+						create_unit = {
+							division = "division_template = \"Indochina\" start_experience_factor = 0.4" 
+							owner = JAP
+							prioritize_location = 12008
+						}
+						create_unit = {
+							division = "division_template = \"Indochina\" start_experience_factor = 0.4" 
+							owner = JAP
+							prioritize_location = 12319
+						}
+						create_unit = {
+							division = "division_template = \"Indochina\" start_experience_factor = 0.4" 
+							owner = JAP
+							prioritize_location = 12008
+						}
+						create_unit = {
+							division = "division_template = \"Indochina\" start_experience_factor = 0.4" 
+							owner = JAP
+							prioritize_location = 12065
 						}
 					}
 					670 = {
 						create_unit = {
 							division = "division_template = \"Indochina\" start_experience_factor = 0.4" 
 							owner = JAP
-							count = 5
+							prioritize_location = 12392
+						}
+						create_unit = {
+							division = "division_template = \"Indochina\" start_experience_factor = 0.4" 
+							owner = JAP
+							prioritize_location = 12433
+						}
+						create_unit = {
+							division = "division_template = \"Indochina\" start_experience_factor = 0.4" 
+							owner = JAP
+							prioritize_location = 4568
+						}
+						create_unit = {
+							division = "division_template = \"Indochina\" start_experience_factor = 0.4" 
+							owner = JAP
+							prioritize_location = 12392
 						}
 					}
 					CHI = {
@@ -320,6 +361,7 @@ JAP_pacific_war_explanation_category = {
 		}
 
 		available = {
+			num_of_civilian_factories_available_for_projects > 19
 			has_full_control_of_state = 646
 			has_full_control_of_state = 648
 			has_full_control_of_state = 684
@@ -333,36 +375,66 @@ JAP_pacific_war_explanation_category = {
 		remove_effect = {
 			custom_effect_tooltip = JAP_buildup_islands_tt
 			hidden_effect = {
-				every_state = {
+				if = {
 					limit = {
-						OR = {
-							state = 646
-							state = 648
-							state = 684
-							state = 633
-							state = 645
-							state = 526
-							state = 524
-							state = 647
-
+						NOT = {
+							has_completed_focus = JAP_superiority_of_firepower
 						}
 					}
-					set_building_level = {
-						type = air_base
-						level = 6
-						instant_build = yes
-					}
-					set_building_level = {
-						type = anti_air_building
-						level = 4
-						instant_build = yes
-					}
-					set_building_level = {
-						type = radar_station
-						level = 4
-						instant_build = yes
+					every_state = {
+						limit = {
+							OR = {
+								state = 646
+								state = 648
+								state = 684
+								state = 633
+								state = 645
+								state = 526
+								state = 524
+								state = 647
+
+							}
+						}
+						set_building_level = {
+							type = air_base
+							level = 6
+							instant_build = yes
+						}
+						set_building_level = {
+							type = anti_air_building
+							level = 4
+							instant_build = yes
+						}
 					}
 				}
+				else = {
+					every_state = {
+						limit = {
+							OR = {
+								state = 646
+								state = 648
+								state = 684
+								state = 633
+								state = 645
+								state = 526
+								state = 524
+								state = 647
+
+							}
+						}
+						set_building_level = {
+							type = air_base
+							level = 7
+							instant_build = yes
+						}
+						set_building_level = {
+							type = anti_air_building
+							level = 4
+							instant_build = yes
+						}
+					}
+				}
+				
 				524 = {
 					set_building_level = {
 						type = air_base
@@ -596,177 +668,6 @@ JAP_pacific_war_explanation_category = {
 		}		
 	}
 
-	JAP_seize_the_indies = {
-
-		icon = generic_army_support
-
-		allowed = {
-			tag = JAP			
-		}
-
-		available = {
-			has_full_control_of_state = 335
-			has_full_control_of_state = 334
-			has_full_control_of_state = 672
-		}
-		
-		visible = {
-		
-		}
-		
-		days_remove = 35
-		
-		fire_only_once = yes
-		
-		ai_will_do = {
-			factor = 100
-		}
-
-		modifier = {
-			civilian_factory_use = 10	
-		}
-		
-		remove_effect = {
-			335 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-				set_compliance = 1
-				set_resistance = 5				
-			}
-			334 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-				set_compliance = 1
-				set_resistance = 5				
-			}
-			672 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-				set_compliance = 1
-				set_resistance = 5				
-			}			
-			every_state = {
-				limit = {
-					is_core_of = INS
-					is_controlled_by = JAP
-				}
-				set_compliance = 1
-				set_resistance = 5		
-			}		
-		}		
-	}
-
-	JAP_exploit_the_southern_resource_area = {
-
-		icon = category_generic_prospect_for_resources
-
-		allowed = {
-			tag = JAP			
-		}
-
-		available = {
-			OR = {
-				has_full_control_of_state = 333
-				has_full_control_of_state = 672
-				has_full_control_of_state = 334
-			}
-			has_full_control_of_state = 336
-			has_full_control_of_state = 671
-		}
-		
-		visible = {
-		
-		}
-		
-		days_remove = 35
-		
-		fire_only_once = yes
-		
-		ai_will_do = {
-			factor = 100
-		}
-
-		modifier = {
-			civilian_factory_use = 10	
-		}
-		
-		remove_effect = {
-			725 = {
-				add_resource = {
-					type = tungsten
-					amount = 4
-				}
-				set_state_flag = nauru_tungsten_developed
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}				
-			}		
-			336 = {
-				add_resource = {
-					type = aluminium
-					amount = 12
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-				set_compliance = 1
-				set_resistance = 5
-			}
-			333 = {
-				if = {
-					limit = { is_fully_controlled_by = ROOT }
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-					set_compliance = 1
-					set_resistance = 5
-				}
-			}
-			672 = {	
-				if = {
-					limit = { is_fully_controlled_by = ROOT }
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			334 = {
-				if = {
-					limit = { is_fully_controlled_by = ROOT }
-					add_building_construction = {
-						type = infrastructure
-						level = 1
-						instant_build = yes
-					}
-				}
-			}
-			671 = {
-				add_resource = {
-					type = aluminium
-					amount = 6
-				}
-			}	
-			
-		}		
-	}
-
 	JAP_betray_the_soviets = {
 
 		icon = category_border_conflicts
@@ -803,42 +704,6 @@ JAP_pacific_war_explanation_category = {
 		complete_effect = {
 			hidden_effect = {
 				every_country = {
-			   
-			 
-						 
-							
-		 
-						 
-						 
-		 
-	   
-	  
-											   
-	 
-					 
-			   
-			 
-						 
-						 
-		 
-						 
-							
-		 
-	   
-	  
-											   
-	 
-					 
-			   
-			 
-						
-						 
-		 
-						 
-							
-		 
-	   
-	  
 					play_song = "sp_jap_sov_prelude"
 				}	
 			}
@@ -873,43 +738,7 @@ JAP_pacific_war_explanation_category = {
 			}
 			hidden_effect = {
 				every_country = {
-			   
-			 
-						 
-							
-		 
-						 
-						 
-		 
-	   
-	  
-									   
-	 
-					 
-			   
-			 
-						 
-						 
-		 
-						 
-							
-		 
-	   
-	  
 					play_song = "sp_jap_sov"
-	 
-					 
-			   
-			 
-						
-						 
-		 
-						 
-							
-		 
-	   
-	  
-									   
 				}
 				set_global_flag = jap_sov_war
 			}
@@ -929,7 +758,7 @@ JAP_pacific_war_explanation_category = {
 				limit = {
 					JAP = {	is_ai = yes }
 				}
-				date > 1941.7.1
+				date > 1941.8.8
 			}
 			if = {
 				limit = {
@@ -937,16 +766,9 @@ JAP_pacific_war_explanation_category = {
 						is_ai = no
 					}
 				}
-				OR = {
-					AND = {
-						has_war_with = CHI
-						USA = {
-							has_completed_focus = USA_embargo_japan
-						}
-					}
-					
-					date > 1941.6.1
-				}
+				has_war_with = CHI
+			    has_completed_focus = JAP_umi_yukaba
+
 			}
 		}
 		
@@ -955,7 +777,7 @@ JAP_pacific_war_explanation_category = {
 			NOT = { has_war_with = ENG }
 		}
 		
-		days_remove = 14
+		days_remove = 0
 		
 		fire_only_once = yes
 		
@@ -966,6 +788,12 @@ JAP_pacific_war_explanation_category = {
 		remove_effect = {
 			
 			hidden_effect = {
+				every_country = {
+					limit = {
+						tag = RAJ 
+					}
+					give_military_access = CHI
+				}
 				
 				every_country = {
 					set_variable = { var = super_event value = 11 }
@@ -982,7 +810,7 @@ JAP_pacific_war_explanation_category = {
 							} 
 						}
 					}
-					scoped_sound_effect = "sp_jap_allies"
+					play_song = "sp_jap_allies"
 				}
 				every_country = {
 					limit = { 
@@ -1014,8 +842,6 @@ JAP_pacific_war_explanation_category = {
 		
 				
 			}
-
-			remove_ideas = JAP_prepare_southern_expansion
 		
 			custom_effect_tooltip = JAP_tora_tora_tora_tt
 			add_to_variable = {
@@ -1023,6 +849,7 @@ JAP_pacific_war_explanation_category = {
 				tooltip = JAP_max_cp_nerf
 			}
 			
+		
 			if = {	
 				limit = {
 					date < 1940.2.1
@@ -1145,7 +972,7 @@ JAP_pacific_war_explanation_category = {
 			}
 			else_if = {
 				limit = {
-					date > 1941.2.1
+					date < 1941.2.1
 				}			
 				add_timed_idea = {
 					idea = JAP_tora_tora_tora_idea
@@ -1154,102 +981,102 @@ JAP_pacific_war_explanation_category = {
 			}	
 			else_if = {
 				limit = {
-					date > 1941.3.1
+					date < 1941.3.1
 				}			
 				add_timed_idea = {
 					idea = JAP_tora_tora_tora_idea
-					days = 140
+					days = 14
 				}
 			}
 			else_if = {
 				limit = {
-					date > 1941.4.1
+					date < 1941.4.1
 				}			
 				add_timed_idea = {
 					idea = JAP_tora_tora_tora_idea
-					days = 150
+					days = 15
 				}
 			}
 			else_if = {
 				limit = {
-					date > 1941.5.1
+					date < 1941.5.1
 				}			
 				add_timed_idea = {
 					idea = JAP_tora_tora_tora_idea
-					days = 160
+					days = 16
 				}
 			}		
 			else_if = {
 				limit = {
-					date > 1941.6.1
+					date < 1941.6.1
 				}			
 				add_timed_idea = {
 					idea = JAP_tora_tora_tora_idea
-					days = 170
+					days = 17
 				}
 			}
 			else_if = {
 				limit = {
-					date > 1941.7.1
+					date < 1941.7.1
 				}			
 				add_timed_idea = {
 					idea = JAP_tora_tora_tora_idea
-					days = 180
+					days = 18
 				}
 			}
 			else_if = {
 				limit = {
-					date > 1941.8.1
+					date < 1941.8.1
 				}			
 				add_timed_idea = {
 					idea = JAP_tora_tora_tora_idea
-					days = 190
+					days = 19
 				}
 			}
 			else_if = {
 				limit = {
-					date > 1941.9.1
+					date < 1941.9.1
 				}			
 				add_timed_idea = {
 					idea = JAP_tora_tora_tora_idea
-					days = 200
+					days = 20
 				}
 			}
 			else_if = {
 				limit = {
-					date > 1941.10.1
+					date < 1941.10.1
 				}			
 				add_timed_idea = {
 					idea = JAP_tora_tora_tora_idea
-					days = 210
+					days = 21
 				}
 			}
 
 			else_if = {
 				limit = {
-					date > 1941.11.1
+					date < 1941.11.1
 				}			
 				add_timed_idea = {
 					idea = JAP_tora_tora_tora_idea
-					days = 220
+					days = 22
 				}
 			}
 			else_if = {
 				limit = {
-					date > 1941.12.1
+					date < 1941.12.1
 				}			
 				add_timed_idea = {
 					idea = JAP_tora_tora_tora_idea
-					days = 230
+					days = 23
 				}
 			}
 			else_if = {
 				limit = {
-					date > 1942.1.1
+					date < 1942.1.1
 				}			
 				add_timed_idea = {
 					idea = JAP_tora_tora_tora_idea
-					days = 240
+					days = 24
 				}
 			}
 			
@@ -1367,19 +1194,7 @@ JAP_pacific_war_explanation_category = {
 						enemy = JAP
 					}
 				}
-				every_country = {
-					limit = {
-						is_in_faction_with = ENG
-					}
-					give_military_access = CHI
-				}
-				CHI = {
-
-					give_military_access = RAJ
-					give_military_access = AST
-					give_military_access = NZL
-
-				}
+				
 				if = {
 					limit = {
 						country_exists = NZL
@@ -1495,7 +1310,7 @@ JAP_pacific_war_explanation_category = {
 							}
 							remove_ideas = JAP_no_grinding
 						}
-					
+						
 						add_to_war = { 
 							targeted_alliance = JAP
 							enemy = ENG
@@ -2832,9 +2647,9 @@ JAP_intervene_in_china_decision = {
 					remove_ideas = developing_country_chi
 					remove_ideas = no_spies_idea
 
-					set_variable = { CHI_army_defence_factor_var = 0.1 }
+					set_variable = { CHI_army_defence_factor_var = 0 }
 					set_variable = { CHI_army_strength_factor  = 0.8 }
-					set_variable = { CHI_dig_in_speed_factor_var = 0.3 }
+					set_variable = { CHI_org_var = 0.1 }
 
 
 					add_dynamic_modifier = {
@@ -2844,6 +2659,8 @@ JAP_intervene_in_china_decision = {
 						pocket_defence = 1
 						defence_in_depth = 1
 						large_front_operations = 1 
+						peoples_army = 1 
+						human_infantry_offensive = 1
 					}
 					add_war_support = 2
 					add_stability = 2 
@@ -2861,6 +2678,11 @@ JAP_intervene_in_china_decision = {
 					}
 					add_equipment_to_stockpile = {
 						type = pack_artillery_equipment_1
+							amount = 1000
+							producer = CHI
+					}
+					add_equipment_to_stockpile = {
+						type = anti_tank_equipment_1
 							amount = 1000
 							producer = CHI
 					}
@@ -3057,7 +2879,7 @@ JAP_intervene_in_china_decision = {
 							} 
 						}
 					}
-					scoped_sound_effect = "sp_jap_ichi_go"
+					play_song = "sp_jap_ichi_go"
 				}
 				every_country = {
 					limit = { 
@@ -3083,7 +2905,7 @@ JAP_intervene_in_china_decision = {
 							} 
 						}
 					}
-					scoped_sound_effect = "sp_jap_ichi_go"
+					play_song = "sp_jap_ichi_go"
 				}
 			}
 			
@@ -3102,8 +2924,6 @@ JAP_intervene_in_china_decision = {
 						target = CHI 
 						type = annex_everything
 					}
-					
-					
 				
 				}
 			}
@@ -3139,52 +2959,85 @@ JAP_intervene_in_china_decision = {
 		remove_effect = {
 			set_global_flag = JAP_china_war_over_flag
 			#custom_effect_tooltip = JAP_peaceout_tt
-			every_state = {
-				limit = {
-					OR = {
-						is_core_of = CHI
-						state = 745
-						state = 527
-						state = 525
-					}
-					NOT =  {
-						is_core_of = MAN
-						state = 524
-					}
-				}
-				transfer_state_to = CHI
-			}
-			hidden_effect = {
-				745 = {
-					transfer_state_to = CHI
-				}
-			}
 			CHI = {
-				annex_country = { target = MAN transfer_troops = no }
+				transfer_state = 621
+				transfer_state = 746
+				transfer_state = 622
+				transfer_state = 615
+				transfer_state = 614
+				transfer_state = 608
+				transfer_state = 609
+				transfer_state = 597
+				transfer_state = 743
+				transfer_state = 598
+				transfer_state = 613
+				transfer_state = 606
+				transfer_state = 607
+				transfer_state = 744
+				transfer_state = 821
+				transfer_state = 820
+				transfer_state = 620
+				transfer_state = 602
+				transfer_state = 600
+				transfer_state = 749
+				transfer_state = 596
+				transfer_state = 595
+				transfer_state = 822
+				transfer_state = 593
+				transfer_state = 592
+				transfer_state = 594
+				transfer_state = 591
+				transfer_state = 605
+				transfer_state = 750
+				transfer_state = 599
+				transfer_state = 603
+				transfer_state = 748
 			}
-			white_peace = CHI
+			SOV = {
+				transfer_state = 745
+				transfer_state = 527
+				transfer_state = 611
+				transfer_state = 612
+				transfer_state = 716
+				transfer_state = 610
+				transfer_state = 715
+				transfer_state = 761
+				transfer_state = 714
+				transfer_state = 328
+				transfer_state = 717
+			}
+			USA = {
+				transfer_state = 525
+			}
+			SIA = {
+				transfer_state = 724
+				transfer_state = 289
+			}
+			FRA = {
+				transfer_state = 728
+			}
 			remove_ideas = JAP_no_grinding
 	
 			JAP = {
 				every_army_leader = {
 					remove_unit_leader_trait = jap_kwantung_veto
 				}
-				hidden_effect = {
-					set_technology = { JAP_china_armor_tech_remove = 1 }
-				}
+				
 			}
 			MAN = {
 				every_army_leader = {
 					remove_unit_leader_trait = jap_kwantung_veto
 				}
-				hidden_effect = {
-					set_technology = { JAP_china_armor_tech_remove = 1 }
-				}
+				
 			}
 			MAN = {
 				remove_ideas = JAP_no_grinding
 			}
 			JAP = { change_tag_from = MAN }
+			CHI = {
+				add_ideas = neutrality_idea
+				add_ideas = developing_country
+			}
 
 			
 		}
@@ -3200,7 +3053,7 @@ JAP_interservice_rivalry = {
 		}
 
 		visible = {
-			has_completed_focus = JAP_the_ultimate_battleship
+			has_completed_focus = JAP_strike_south_battleline
 		}
 		cost = 0
 		
@@ -3221,7 +3074,7 @@ JAP_interservice_rivalry = {
 					fixed_ship_battery_slot = ship_super_heavy_battery_1
 					fixed_ship_anti_air_slot = ship_anti_air_2
 					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
-					fixed_ship_radar_slot = ship_radar_2
+					fixed_ship_radar_slot = ship_radar_1
 					fixed_ship_engine_slot = heavy_ship_engine_2
 					fixed_ship_secondaries_slot = ship_secondaries_2
 					fixed_ship_armor_slot = ship_armor_shbb
@@ -3462,7 +3315,7 @@ JAP_interservice_rivalry = {
 				count = 6
 			}
 			random_core_state   = {
-				add_extra_state_shared_building_slots = 6
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = arms_factory
 					level = 1
@@ -3470,7 +3323,7 @@ JAP_interservice_rivalry = {
 				}
 			}
 			random_core_state  = {
-				add_extra_state_shared_building_slots = 6
+				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = arms_factory
 					level = 1

@@ -211,45 +211,10 @@ operations = {
 					target = ENG
 				}
 			}
-		}
-	}
-	ENG_saf_resources = {
-		fire_only_once = yes
-		icon = generic_operation
 
-		allowed = {
-			tag =  ENG
+			
 		}
 
-		visible = {
-		}
-		available = {
-			SAF = {
-				has_completed_focus = SAF_secure_interests_in_africa
-			}	
-		}
-		ai_will_do = {
-			factor = 0
-
-			modifier = {
-				add = 100
-				SAF = { is_ai = yes }
-			}
-		}
-		complete_effect = {
-		  
-			SAF = { remove_resource_rights = 542 }
-			SAF = { remove_resource_rights = 771 }
-				
-	 
-	
-		  
-			SAF = { remove_resource_rights = 546 }
-				   
-				
-	 
-	
-		}
 	}
 }
 ENG_budget_decisions = {
@@ -3249,7 +3214,7 @@ operations = {
 				NOT = { IRQ = { has_full_control_of_state = 291 } } # Baghdad
 				NOT = { IRQ = { has_full_control_of_state = 676 } } # Mosul
 			}
-				}
+		}
 		complete_effect = {
 			hidden_effect = {
 				ENG = {

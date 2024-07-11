@@ -414,7 +414,7 @@ focus_tree = {
 				limit = {
 					has_completed_focus = USA_6
 				}
-				custom_effect_tooltip = USA_43_bbusiness_tt
+				custom_effect_tooltip = USA_43_bbusiness_tt2
 				add_to_variable = {
 					var = USA_industrial_capacity_factory_var
 					value = 0.05
@@ -608,7 +608,7 @@ focus_tree = {
 			add_to_variable = {
 				var = USA_production_speed_arms_factory_factor_var
 				value = 0.1
-				}
+			}
 			add_to_variable = {
 				var = USA_research_speed_factor_var
 				value = 0.05
@@ -1400,6 +1400,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			hidden_effect = {
+				add_to_variable = {
+					var = USA_lend_lease_tension_var
+					value = -1
+				}
 				add_to_variable = {
 					var = USA_popular_support_var
 					value = 0.3
@@ -2447,9 +2451,18 @@ focus_tree = {
 			
 			custom_effect_tooltip = USA_japan_is_enraged_tt
 		
+		
 			JAP = {
-				unlock_decision_tooltip  = JAP_strike_on_the_southern_resource_area
+
 				add_ideas = USA_embargo
+				if = {
+					limit = {
+						NOT = {
+							has_completed_focus = JAP_umi_yukaba
+						}
+					}
+					complete_national_focus = JAP_umi_yukaba
+				}
 			}
 			
 			
@@ -4345,7 +4358,7 @@ focus_tree = {
 				}
 	}
 			}
-			}
+}
 	focus = { 
 		id = USA_X_force
 		icon = GFX_USA_X_force

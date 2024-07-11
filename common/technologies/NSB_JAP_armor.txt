@@ -331,6 +331,8 @@ technologies = {
 			tank_light_two_man_tank_turret
 			tank_light_opentop_turret
 			tank_light_casemate_turret
+			tank_medium_cannon_2_for_lights
+			tank_medium_close_support_gun_for_lights
 		}
 	
 		enable_subunits = {
@@ -634,7 +636,7 @@ technologies = {
 				suspension_type_slot = tank_bogie_suspension
 				armor_type_slot = tank_riveted_armor
 				armor_sloping_slot = unsloped_armor
-				engine_type_slot = tank_gasoline_engine
+				engine_type_slot = tank_diesel_engine
 				radio_slot = tank_radio_1
 				special_type_slot_1 = additional_machine_guns
 				special_type_slot_2 = early_cupola
@@ -746,7 +748,7 @@ technologies = {
 				suspension_type_slot = tank_bogie_suspension
 				armor_type_slot = tank_welded_armor
 				armor_sloping_slot = unsloped_armor
-				engine_type_slot = tank_gasoline_engine
+				engine_type_slot = tank_diesel_engine
 				radio_slot = tank_radio_1
 				special_type_slot_1 = early_cupola
 				}
@@ -803,7 +805,7 @@ technologies = {
 				suspension_type_slot = tank_bogie_suspension
 				armor_type_slot = tank_welded_armor
 				armor_sloping_slot = unsloped_armor
-				engine_type_slot = tank_gasoline_engine
+				engine_type_slot = tank_diesel_engine
 				radio_slot = tank_radio_1
 				special_type_slot_1 = cupola
 				}
@@ -872,7 +874,7 @@ technologies = {
 				suspension_type_slot = tank_bogie_suspension
 				armor_type_slot = tank_welded_armor
 				armor_sloping_slot = unsloped_armor
-				engine_type_slot = tank_gasoline_engine
+				engine_type_slot = tank_diesel_engine
 				radio_slot = tank_radio_1
 				special_type_slot_1 = basket
 				special_type_slot_2 = cupola
@@ -972,9 +974,8 @@ technologies = {
 				armor_sloping_slot = rounded_armor
 				engine_type_slot = tank_gasoline_engine
 				radio_slot = tank_radio_1
-				special_type_slot_1 = secondary_turret_small_cannon
-				special_type_slot_2 = secondary_turret_small_cannon
-				special_type_slot_3 = early_cupola
+				special_type_slot_1 = secondary_turret_small_cannon_big
+				special_type_slot_2 = early_cupola
 				}
 				upgrades = {
 					tank_nsb_engine_upgrade = 10

@@ -477,12 +477,12 @@ GER_wants_civ = {
 		has_war = no
 	}
 	abort = {
-		date > 1936.9.1
+		date > 1936.7.1
 	}
 	ai_strategy = {
 		type = building_target
 		id = industrial_complex
-		value = 400
+		value = 90
 	}
 }
 
@@ -493,7 +493,7 @@ GER_wants_mils = {
 	enable = {
 		tag = GER
 		has_government = fascism
-		date > 1936.9.2
+		date > 1936.7.2
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
@@ -745,7 +745,7 @@ GER_industry_we_are_the_baddies = {
 	enable = {
 		tag = GER
 		date < 1940.1.1
-		date > 1937.1.1
+		date > 1936.5.5
 	}
 	abort = {
 		date > 1940.1.1
@@ -763,7 +763,7 @@ GER_wants_synth = {
 	}
 	enable = {
 		tag = GER
-		date > 1938.1.1
+		date > 1939.1.1
 	}
 	abort_when_not_enabled = yes
 	ai_strategy = {
@@ -944,8 +944,8 @@ GER_unit_production = {
 	ai_strategy = { type = role_ratio id = infantry 							value =	230	 	}	
 	ai_strategy = { type = role_ratio id = mountaineers 						value = -25		}	
 	ai_strategy = { type = role_ratio id = marines 								value = -25		}	
-	ai_strategy = { type = role_ratio id = paratroopers 						value = 15		}	
-	ai_strategy = { type = role_ratio id = jagers 								value = 15		}	
+	ai_strategy = { type = role_ratio id = paratroopers 						value = -25		}	
+	ai_strategy = { type = role_ratio id = jagers 								value = -25		}	
 	ai_strategy = { type = role_ratio id = motorized 							value = 0		}	
 	ai_strategy = { type = role_ratio id = cavalry 								value = -25		}	
 	ai_strategy = { type = role_ratio id = armor 								value = 140		}	

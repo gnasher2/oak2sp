@@ -13,6 +13,7 @@ NGame = {
 	EVENT_TIMEOUT_DEFAULT = 13,						-- Default days before an event times out if not scripted
 	MISSION_REMOVE_FROM_INTERFACE_DEFAULT = 13,		-- Default days before a mission is removed from the interface after having failed or completed
 	DECISION_ALERT_TIMEOUT_DAYS = 30,				-- Days left when player will be alerted about timing out events or decisions
+	INFO_MESSAGE_TIMEOUT_DAYS = 2,					-- Same but for unimportant messages.
     FUEL_RESOURCE = "oil",							-- resource that will give country fuel
 	MAX_EFFECT_ITERATION = 1000,					-- maximum allowed iteration for loop effects																			   
 	MAX_SCRIPTED_LOC_RECURSION = 30,				-- max recursion for scripted localizations																				
@@ -324,7 +325,7 @@ NCountry = {
 	RESOURCE_ORIGIN_PRIORITY = 1,					-- Default convoy priority for resources shipped internally
 	RESOURCE_EXPORT_PRIORITY = 3,					-- Default convoy priority for export trade
 	RESOURCE_LENDLEASE_PRIORITY = 0.2,				-- Default convoy priority for export lend lease
-	SUPPLY_CONVOY_FACTOR = 0.5,					-- How many convoys each supply needs
+	SUPPLY_CONVOY_FACTOR = 0.2,					-- How many convoys each supply needs
 	CONVOY_RANGE_FACTOR = 1,                        -- how much range affects convoy need
 	LOCAL_MANPOWER_ACCESSIBLE_FACTOR = 0.4,         -- accessible recruitable factor base
 	LOCAL_MANPOWER_ACCESSIBLE_NON_CORE_FACTOR = 0.02,  -- accessible recruitable factor base
@@ -435,7 +436,7 @@ NCountry = {
 	DAYS_OF_WAR_BEFORE_SURRENDER = 7,				-- Number of days a war has to have existed before anyone can surrender in it
 	BASE_FUEL_LAND_LEASE_SPEED = 50,				-- base value for maximum fuel that can be land leased per hour
 	FUEL_LAND_LEASE_RATIO = 1.0,					-- multiplier for guel gain that is added to maximum fuel that can be land leased per hour
-	FUEL_LEASE_CONVOY_RATIO = 0.002,				-- num convoys needed per fuel land lease 
+	FUEL_LEASE_CONVOY_RATIO = 0.0008,				-- num convoys needed per fuel land lease 
 	
 	STARTING_FUEL_RATIO = 0.25,						-- starting fuel ratio compared to max fuel for countries
 	BASE_FUEL_GAIN_PER_OIL = 0.075,						-- base amount of fuel gained hourly per excess oil
@@ -631,7 +632,8 @@ NIndustrialOrganisation = {
 
 NProduction = {
 	--AAT
-	CIC_BANK_SPEED_BOOST_FACTOR = 0.25,                 -- The CIC bank can boost production speed with this factor (0.5 means 50 %)
+	INITIAL_ALLOWED_FACTORY_RATIO_FOR_REPAIRS = 1.0,					-- max % of factories allowed on autorepairs
+	CIC_BANK_SPEED_BOOST_FACTOR = 0.3,                 -- The CIC bank can boost production speed with this factor (0.5 means 50 %)
 	MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_VALUE = 0,		-- The minimum number of factories we have to put on consumer goods, by value.
 	MINIMUM_NUMBER_OF_FACTORIES_TAKEN_BY_CONSUMER_GOODS_PERCENT = 0,	-- The minimum number of factories we have to put on consumer goods, in percent.
 	--BBA
@@ -662,11 +664,11 @@ NProduction = {
 	BASE_FACTORY_EFFICIENCY_BALANCE_FACTOR = 0.1, 			-- Factory efficiency balancing factor
 	BASE_FACTORY_EFFICIENCY_VARIANT_CHANGE_FACTOR = 90,		-- Base factor for changing production variants in %.
 	BASE_FACTORY_EFFICIENCY_PARENT_CHANGE_FACTOR = 50,		-- Base factor for changing production parent<->children in %.
-	BASE_FACTORY_EFFICIENCY_FAMILY_CHANGE_FACTOR = 70,		-- Base factor for changing production with same family in %.
+	BASE_FACTORY_EFFICIENCY_FAMILY_CHANGE_FACTOR = 100,		-- Base factor for changing production with same family in %.
 	BASE_FACTORY_EFFICIENCY_ARCHETYPE_CHANGE_FACTOR = 35, 	-- Base factor for changing production with same archetype in %.
 	BASE_CONSUMER_GOODS_NEED_FACTOR = 50,  -- Base factor for the consumer goods need of civilian factories in %.
 	EQUIPMENT_BASE_LEND_LEASE_WEIGHT = 1.0, -- Base equipment lend lease weight
-	EQUIPMENT_LEND_LEASE_WEIGHT_FACTOR = 0.01, -- Base equipment lend lease factor
+	EQUIPMENT_LEND_LEASE_WEIGHT_FACTOR = 0.004, -- Base equipment lend lease factor
 	ANNEX_STOCKPILES_RATIO = 0.9,		-- How much stockpiled equipment will be transferred on annexation
 	ANNEX_FIELD_EQUIPMENT_RATIO = 0.25,	-- How much equipment from deployed divisions will be transferred on annexation
 	ANNEX_FUEL_RATIO = 0.25,	-- How much fuel will be transferred on annexation																			
@@ -706,8 +708,8 @@ NTechnology = {
 	DEFAULT_XP_BOOST_RESEARCH_BONUS = 0,			-- default boost research bonus gained when xp is used to research an item
 	MAX_SUBTECHS = 3,					    -- Max number of sub technologies a technology can have.
 	BASE_RESEARCH_POINTS_SAVED = 25.0,		-- Base amount of research points a country can save per slot.
-	BASE_YEAR_AHEAD_PENALTY_FACTOR = 4,		-- 3 Base year ahead penalty
-	BASE_TECH_COST = 80,					-- base cost for a tech. multiplied with tech cost and ahead of time penalties
+	BASE_YEAR_AHEAD_PENALTY_FACTOR = 3.5,		-- 3 Base year ahead penalty
+	BASE_TECH_COST = 80,						-- base cost for a tech. multiplied with tech cost and ahead of time penalties
 	MAX_TECH_SHARING_BONUS = 0.5, 			-- Max technology sharing bonus that can be applied instantly
 	LICENSE_PRODUCTION_TECH_BONUS = 0.15,	-- License production tech bonus
  
@@ -1290,6 +1292,7 @@ NMilitary = {
 
 
 NAir = {
+	ACCIDENT_CHANCE_RELIABILITY_MULT = 1.5,				-- Multiplier to accident chance per point of missing reliability.
 	--AAT
 	THRUST_WEIGHT_AGILITY_FACTOR = 0.5,								-- For plane designs, additive agility bonus per point of thrust exceeding weight
 
@@ -1875,7 +1878,7 @@ NNavy = {
 	EXPERIENCE_LOSS_FACTOR = 1.00,                 					-- percentage of experienced solders who die when manpower is removed
 	NAVY_EXPENSIVE_IC = 7000,										-- How much IC is considering the fleet to be expensive. Those expensive will triger the alert, when are on low STR.
 	MISSION_MAX_REGIONS = 0,										-- Limit of the regions that can be assigned to naval mission. Set to 0 for unlimited.
-	CONVOY_EFFICIENCY_LOSS_MODIFIER = 0.25,							-- How much efficiency drops when losing convoys. If modifier is 0.5, then losing 100% of convoys in short period, the efficiency will drop by 50%.
+	CONVOY_EFFICIENCY_LOSS_MODIFIER = 0.26,							-- How much efficiency drops when losing convoys. If modifier is 0.5, then losing 100% of convoys in short period, the efficiency will drop by 50%.
 	CONVOY_EFFICIENCY_REGAIN_AFTER_DAYS = 7,						-- Convoy starts regaining it's efficiency after X days without any convoys being sink.
 	CONVOY_EFFICIENCY_REGAIN_BASE_SPEED = 0.03,						-- How much efficiency regains every day.
 	CONVOY_EFFICIENCY_MIN_VALUE = 0.65,								-- To avoid complete 0% efficiency, set the lower limit.
@@ -1905,7 +1908,7 @@ NNavy = {
 	CONVOY_ATTACK_BASE_FACTOR = 0.15,                               -- base % of convoys that get intercepted
 	NAVAL_SPEED_MODIFIER = 0.1,	                    				-- basic speed control
 	NAVAL_RANGE_TO_INGAME_DISTANCE = 0.12,							-- Scale the ship stats "naval_range" to the ingame distance
-	NAVAL_INVASION_PREPARE_HOURS = 168,								-- base hours needed to prepare an invasion
+	NAVAL_INVASION_PREPARE_HOURS = 24,								-- base hours needed to prepare an invasion
 	NAVAL_COMBAT_RESULT_TIMEOUT_YEARS = 2,							-- after that many years, we clear the naval combat results, so they don't get stuck forever in the memory.
 	CONVOY_LOSS_HISTORY_TIMEOUT_MONTHS = 12,						-- after this many months remove the history of lost convoys to not bloat savegames and memory since there is no way to see them anyway
 	NAVAL_TRANSFER_BASE_SPEED = 12,                                  -- base speed of units on water being transported
@@ -3441,7 +3444,7 @@ NAI = {
 
     GIE_EXILE_AIR_MANPOWER_USAGE_RATIO = 0.2, -- AI will not deploy new exile wings when this percentage of available exile manpower is already used for wing recruitment.
 
-	CARRIER_TASKFORCE_MAX_CARRIER_COUNT = 8, 		-- optimum carrier count for carrier taskforces
+	CARRIER_TASKFORCE_MAX_CARRIER_COUNT = 4, 		-- optimum carrier count for carrier taskforces
 	CAPITAL_TASKFORCE_MAX_CAPITAL_COUNT = 16, 		-- optimum capital count for capital taskforces
 	SCREEN_TASKFORCE_MAX_SHIP_COUNT = 60,			-- optimum screen count for screen taskforces
 	SUB_TASKFORCE_MAX_SHIP_COUNT = 10 ,				-- optimum sub count for sub taskforces

@@ -4274,7 +4274,8 @@ foreign_politics = {
 				complete_national_focus = GER_demand_sudetenland
 				every_country = {limit = { check_variable= { speeches_enabled > 0}  }
 					play_song = "sp_ger_sudeten"
-					}
+				}
+			set_global_flag = sudetenland_taken
 				FRA = {
 					complete_national_focus = FRA_sudetenland_question
 				}
@@ -4510,7 +4511,7 @@ foreign_politics = {
 				limit = { NOT = { country_exists = CZE } }
 				country_event = { id = germany.55 hours = 6 }
 			}
-			add_named_threat = { threat = 5 name = GER_end_of_czechoslovakia }
+			add_named_threat = { threat = 30 name = GER_end_of_czechoslovakia }
 			country_event = { days = 7 id = germany.2280 }
 		}
 	}
@@ -5432,6 +5433,11 @@ foreign_politics = {
 				complete_national_focus = GER_mol_rib_pact
 				SOV = {
 					complete_national_focus = SOV_molotov_ribbentrop_pact
+				}
+			}
+			hidden_effect = {
+               JAP = { 
+                country_event = { id = japan.31 days = 7 }	
 				}
 			}
 			SOV = {
@@ -7206,7 +7212,7 @@ GER_military_buildup = {
 				uses = 1 
 				bonus = 1 
 			}
-			add_offsite_building = { type = arms_factory level = 7 }
+			add_offsite_building = { type = arms_factory level = 10 }
 			add_stability = 0.1
 			add_political_power = 200
 		}	

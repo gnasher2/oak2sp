@@ -165,12 +165,7 @@ ITA_iri_projects = {
 			consumer_goods_expected_value = 0.05
 		}
 		remove_effect = {
-			custom_effect_tooltip = ITA_modify_military_industry_dynamic_modifier_ns_intro
-			add_to_variable = { 
-				var = ITA_military_industry_dm_industrial_capacity_factory 
-				value = 0.05
-				tooltip = industrial_capacity_factory_tooltip
-			}
+
             159 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction  = {
@@ -222,7 +217,7 @@ ITA_iri_projects = {
 			}
 			add_resource = {
 				type = steel 
-				amount = 10 
+				amount = 5
 				state = 117
 			}
 			add_equipment_to_stockpile = { type = support_equipment_1 amount = 600 producer = ITA }
@@ -538,7 +533,7 @@ ITA_iri_projects = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction  = {
 					type = arms_factory
-					level = 2
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -1814,6 +1809,237 @@ political_actions = {
 	}
 }
 operations = {
+
+	ITA_advance_into_egypt = {
+	
+		icon = generic_operation
+		priority = 10
+		allowed = {
+			original_tag = ITA
+		}
+
+		#Fail trigger
+		available = {
+			controls_province = 7079
+		}
+
+		days_mission_timeout = 120
+
+		fire_only_once = yes
+
+		is_good = no
+
+		activation = {
+			has_completed_focus = ITA_by_blood_alone
+		}
+
+		modifier = {
+		}
+		cancel_trigger = {
+			FRA = {
+				has_capitulated = yes
+			}
+
+ 		}
+
+		timeout_effect = {
+
+			
+			
+		}
+	
+		complete_effect = {
+
+			54 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					instant_build = yes
+					level = 2
+				}
+			}
+			59 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					instant_build = yes
+					level = 2
+				}
+			}
+
+			
+		}
+
+	}
+	ITA_supply_hub_tripoli = {
+		name = "Tripoli Counter Attack"
+	
+		icon = generic_construction
+		priority = 4
+		allowed = {
+			original_tag = ITA
+		}
+
+		available = {
+			GER = {
+				NOT = {
+					has_war_with = SOV
+				}
+			}
+			controls_state = 448
+		}
+
+		
+		visible = {
+			has_war_with = ENG 
+			GER = {
+				NOT = {
+					has_war_with = SOV
+				}
+			}
+		}
+
+		
+		fire_only_once = yes
+
+		complete_effect = {
+			661 = {
+				add_building_construction = {
+					type = supply_node
+					province = 7154
+					level = 1
+					instant_build = yes
+				}
+			
+			
+				add_building_construction = {
+					type = supply_node
+					province = 13288
+					level = 1
+					instant_build = yes
+				}
+				}
+		  662 = {
+				add_building_construction = {
+					type = supply_node
+					province = 8069
+					level = 1
+					instant_build = yes
+				}
+				}
+			449 = {
+				add_building_construction = {
+					type = supply_node
+					province = 10046
+					level = 1
+					instant_build = yes
+				}
+			}
+			448 = {
+				add_building_construction = {
+					type = supply_node
+					province = 1118
+					level = 1
+					instant_build = yes
+				}
+			
+			
+				set_building_level = {
+					type = air_base
+					level = 14
+					instant_build = yes
+				}
+			}	
+		}
+	}
+	ITA_airfield_agheila_tripoli = {
+		name = "El Agheila Counter Attack"
+	
+		icon = generic_construction
+		priority = 4
+		allowed = {
+			original_tag = ITA
+		}
+		available = {
+			GER = {
+				NOT = {
+					has_war_with = SOV
+				}
+			}
+			controls_state = 449
+		}
+
+		
+		visible = {
+			has_war_with = ENG 
+			GER = {
+				NOT = {
+					has_war_with = SOV
+				}
+			}
+		}
+
+		
+		fire_only_once = yes
+
+		complete_effect = {
+			449 = {
+				set_building_level = {
+					type = air_base
+					level = 14
+					instant_build = yes
+				}
+			}
+		}
+	}
+	ITA_claim_tunisia = {
+		name = "Take Control of Tunisia"
+	
+		icon = generic_construction
+		priority = 4
+		allowed = {
+			original_tag = ITA
+		}
+		available = {
+			EFR = {
+				controls_state = 458
+			}
+		}
+
+		
+		visible = {
+			has_war_with = ENG 
+			GER = {
+				NOT = {
+					has_war_with = SOV
+				}
+			}
+		}
+
+		
+		fire_only_once = yes
+
+		complete_effect = {
+			458 = {
+				set_building_level = {
+					type = air_base
+					level = 14
+					instant_build = yes
+				}
+			}
+			665 = {
+				set_building_level = {
+					type = air_base
+					level = 14
+					instant_build = yes
+				}
+			}
+			ITA = {
+				transfer_state = 458
+				transfer_state = 665
+			}
+		}
+	}
 	GER_vichy_is_not_player = {
 		name = "Annex Vichy"
 		fire_only_once = yes
@@ -1996,545 +2222,7 @@ ITA_declarewar_cathegory = {
 	}
 }	
 
-ITA_hold_land_category = { 	
-	#controls_province = 1239
-	ITA_advance_into_egypt = {
-	
-		icon = generic_operation
-		priority = 10
-		allowed = {
-			original_tag = ITA
-		}
 
-		#Fail trigger
-		available = {
-			controls_province = 7079
-		}
-
-		days_mission_timeout = 120
-
-		fire_only_once = yes
-
-		is_good = no
-
-		activation = {
-			has_completed_focus = ITA_by_blood_alone
-		}
-
-		modifier = {
-		}
-		cancel_trigger = {
-			FRA = {
-				has_capitulated = yes
-			}
-
- 		}
-		#Success
-		timeout_effect = {
-			
-			
-		}
-		#Fail
-		complete_effect = {
-		
-			54 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					instant_build = yes
-					level = 2
-				}
-			}
-			59 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					instant_build = yes
-					level = 2
-				}
-			}
-			
-			
-		}
-	}
-
-	ITA_hold_libya = {
-	
-		icon = generic_operation
-
-		allowed = {
-			original_tag = ITA
-		}
-		priority = 9
-		#Fail trigger
-		available = {
-			NOT = { controls_state = 451 }
-			FRA = {
-				has_capitulated = yes
-			}
-		}
-
-		days_mission_timeout = 120
-
-		fire_only_once = yes
-
-		is_good = yes
-
-		activation = {
-			has_completed_focus = ITA_by_blood_alone
-		}
-
-		modifier = {
-		}
-		cancel_trigger = {
-			FRA = {
-				has_capitulated = yes
-			}
-			controls_state = 451
- 		}
-		
-		timeout_effect = {
-			custom_effect_tooltip = "If the mission is aborted it will be completed automatically."
-			51 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					instant_build = yes
-					level = 2
-				}
-			}
-			64 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					instant_build = yes
-					level = 2
-				}
-			}
-			
-			
-		}
-	
-		complete_effect = {
-
-			
-		}
-	}
-	ITA_hold_cyrenaica = {
-	
-		icon = generic_operation
-
-		allowed = {
-			original_tag = ITA
-			
-		}
-		priority = 8
-		#Fail trigger
-		available = {
-			NOT = { controls_state = 663 }
-			FRA = {
-				has_capitulated = yes
-			}
-		}
-
-		days_mission_timeout = 120
-
-		fire_only_once = yes
-
-		is_good = yes
-
-		activation = {
-			has_completed_focus = ITA_by_blood_alone
-		}
-
-		modifier = {
-		}
-		cancel_trigger = {
-			FRA = {
-				has_capitulated = yes
-			}
-			controls_state = 663
- 		}
-		#Success
-		timeout_effect = {
-			custom_effect_tooltip = "If the mission is aborted it will be completed automatically."
-		
-			54 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					instant_build = yes
-					level = 2
-				}
-			}
-			59 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					instant_build = yes
-					level = 2
-				}
-			}
-		}
-		#Fail
-		complete_effect = {
-			
-		}
-	}
-	ITA_hold_benghazi = {
-		priority = 7
-		icon = generic_operation
-
-		allowed = {
-			original_tag = ITA
-		}
-
-		#Fail trigger
-		available = {
-			FRA = {
-				has_capitulated = yes
-			}
-			NOT = { controls_state = 450 }
-		}
-
-		days_mission_timeout = 120
-
-		fire_only_once = yes
-
-		is_good = yes
-
-		activation = {
-			has_completed_focus = ITA_by_blood_alone
-		}
-
-		modifier = {
-		}
-		cancel_trigger = {
-			FRA = {
-				has_capitulated = yes
-			}
-			controls_state = 450
- 		}
-		#Success
-		timeout_effect = {
-			custom_effect_tooltip = "If the mission is aborted it will be completed automatically."
-			51 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					instant_build = yes
-					level = 2
-				}
-			}
-			64 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					instant_build = yes
-					level = 2
-				}
-			}
-		
-		}
-		#Fail
-		complete_effect = {
-			
-		}
-	}
-	ITA_hold_aghelia = {
-	
-		icon = generic_operation
-		priority = 6
-		allowed = {
-			original_tag = ITA
-		}
-
-		#Fail trigger
-		available = {
-			FRA = {
-				has_capitulated = yes
-			}
-			NOT = { controls_state = 449 }
-		}
-
-		days_mission_timeout = 120
-
-		fire_only_once = yes
-
-		is_good = yes
-
-		activation = {
-			has_completed_focus = ITA_by_blood_alone
-		}
-
-		modifier = {
-		}
-		cancel_trigger = {
-			FRA = {
-				has_capitulated = yes
-			}
-			controls_state = 449
- 		}
-		#Success
-		timeout_effect = {
-			custom_effect_tooltip = "If the mission is aborted it will be completed automatically."
-		
-			54 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					instant_build = yes
-					level = 2
-				}
-			}
-			59 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					instant_build = yes
-					level = 2
-				}
-			}
-		}
-		#Fail
-		complete_effect = {
-			
-		}
-	}
-	ITA_hold_tripoli = {
-	
-		icon = generic_operation
-		priority = 5
-		allowed = {
-			original_tag = ITA
-		}
-		
-
-		#Fail trigger
-		available = {
-			FRA = {
-				has_capitulated = yes
-			}
-			NOT = { controls_state = 448 }
-		}
-
-		days_mission_timeout = 120
-
-		fire_only_once = yes
-
-		is_good = yes
-
-		activation = {
-			has_completed_focus = ITA_by_blood_alone
-		}
-
-		modifier = {
-			
-		}
-		cancel_trigger = {
-			FRA = {
-				has_capitulated = yes
-			}
-			controls_state = 448
- 		}
-		#Success
-		timeout_effect = {
-			custom_effect_tooltip = "If the mission is aborted it will be completed automatically."
-			51 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					instant_build = yes
-					level = 2
-				}
-			}
-			64 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					instant_build = yes
-					level = 2
-				}
-			}
-			
-
-			
-		}
-		#Fail
-		complete_effect = {
-			
-		}
-	}
-	ITA_supply_hub_tripoli = {
-		name = "Tripoli Counter Attack"
-	
-		icon = generic_construction
-		priority = 4
-		allowed = {
-			original_tag = ITA
-		}
-
-		available = {
-			GER = {
-				NOT = {
-					has_war_with = SOV
-				}
-			}
-			controls_state = 448
-		}
-
-		
-		visible = {
-			has_war_with = ENG 
-			GER = {
-				NOT = {
-					has_war_with = SOV
-				}
-			}
-		}
-
-		
-		fire_only_once = yes
-
-		complete_effect = {
-			661 = {
-				add_building_construction = {
-					type = supply_node
-					province = 7154
-					level = 1
-					instant_build = yes
-				}
-			
-			
-				add_building_construction = {
-					type = supply_node
-					province = 13288
-					level = 1
-					instant_build = yes
-				}
-				}
-		  662 = {
-				add_building_construction = {
-					type = supply_node
-					province = 8069
-					level = 1
-					instant_build = yes
-				}
-				}
-			449 = {
-				add_building_construction = {
-					type = supply_node
-					province = 10046
-					level = 1
-					instant_build = yes
-				}
-			}
-			448 = {
-				add_building_construction = {
-					type = supply_node
-					province = 1118
-					level = 1
-					instant_build = yes
-				}
-			
-			
-				set_building_level = {
-					type = air_base
-					level = 14
-					instant_build = yes
-				}
-			}	
-		}
-	}
-	ITA_airfield_agheila_tripoli = {
-		name = "El Agheila Counter Attack"
-	
-		icon = generic_construction
-		priority = 4
-		allowed = {
-			original_tag = ITA
-		}
-		available = {
-			GER = {
-				NOT = {
-					has_war_with = SOV
-				}
-			}
-			controls_state = 449
-		}
-
-		
-		visible = {
-			has_war_with = ENG 
-			GER = {
-				NOT = {
-					has_war_with = SOV
-				}
-			}
-		}
-
-		
-		fire_only_once = yes
-
-		complete_effect = {
-			449 = {
-				set_building_level = {
-					type = air_base
-					level = 14
-					instant_build = yes
-				}
-			}
-		}
-	}
-	ITA_claim_tunisia = {
-		name = "Take Control of Tunisia"
-	
-		icon = generic_construction
-		priority = 4
-		allowed = {
-			original_tag = ITA
-		}
-		available = {
-			EFR = {
-				controls_state = 458
-			}
-		}
-
-		
-		visible = {
-			has_war_with = ENG 
-			GER = {
-				NOT = {
-					has_war_with = SOV
-				}
-			}
-		}
-
-		
-		fire_only_once = yes
-
-		complete_effect = {
-			458 = {
-				set_building_level = {
-					type = air_base
-					level = 14
-					instant_build = yes
-				}
-			}
-			665 = {
-				set_building_level = {
-					type = air_base
-					level = 14
-					instant_build = yes
-				}
-			}
-			ITA = {
-				transfer_state = 458
-				transfer_state = 665
-			}
-		}
-	}
-}
 ITA_albania_war_goal_category = { 
 	ITA_albania_war_goal = { 
 		icon = generic_operation
