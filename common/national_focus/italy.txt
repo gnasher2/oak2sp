@@ -5211,8 +5211,7 @@ focus_tree = {
 
 		completion_reward = {
 			
-			custom_effect_tooltip = available_mio_tt
-			show_mio_tooltip = ITA_alfa_romeo
+
 
 			if = {
 				limit = {

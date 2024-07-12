@@ -14985,45 +14985,45 @@ SOV_great_patriotic_war = {
 		   		days = 70
 		   	}
 		   	hidden_effect = {
-				every_country = {
-					limit = { 
-						AND = {
-							check_variable= { 
-								speeches_enabled > 0
-							} 
-							check_variable= { 
-								music_enabled < 2
-							} 
-						}
-					}
-					scoped_sound_effect = "sp_sov_anthem"
+				every_country = {limit = { check_variable= { speeches_enabled > 0}  }
+			   
+			 
+						 
+							
+		 
+						 
+						 
+		 
+	   
+	  
+					play_song = "sp_sov_anthem"
 				}
-				every_country = {
-					limit = { 
-						AND = {
-							check_variable= { 
-								music_enabled > 0
-							} 
-							check_variable= { 
-								speeches_enabled < 2
-							} 
-						}
-					}
-					scoped_sound_effect = "sp_sov_anthem"
-				}
-				every_country = {
-					limit = { 
-						AND = {
-							check_variable= {
-								music_enabled > 0
-							} 
-							check_variable= { 
-								speeches_enabled > 0
-							} 
-						}
-					}
-					scoped_sound_effect = "sp_sov_anthem"
-				}
+					 
+			   
+			 
+						 
+						 
+		 
+						 
+							
+		 
+	   
+	  
+										  
+	 
+					 
+			   
+			 
+						
+						 
+		 
+						 
+							
+		 
+	   
+	  
+										  
+	 
 				set_country_flag = SOVwintercounteroffense2
 				 if = {
 					limit = {
@@ -15227,7 +15227,7 @@ SOV_great_patriotic_war = {
 	  
 					play_song = "sp_sov_bargration"
 				}
-				}
+				
 				if = {
 					limit = {
 						any_state = {
@@ -15236,9 +15236,11 @@ SOV_great_patriotic_war = {
 					}
 					remove_dynamic_modifier = { modifier = GER_war_zone_modifier }
 				}
-		   	}	
+			}
 			set_country_flag = SOVwintercounteroffense
 			news_event = { hours = 20 id = news.527 }
+		   	
+			
 		}
 	}
 
@@ -15304,6 +15306,7 @@ SOV_great_patriotic_war = {
 		}
 	}
 }
+
 
 operations = {
 }

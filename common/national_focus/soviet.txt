@@ -4608,40 +4608,21 @@ focus_tree = {
 			factor = 10
 		}
 		available = {
-		          NOT = {
-			         has_tech = siege_artillery4_1
-			}
+		    
 		}
 
 		relative_position_id = SOV_artillery_development
-		completion_reward = {
-   
-					 
-			   
+		completion_reward = {				  
 			
-						 
-								 
-				set_technology = {
-					siege_artillery3 = 1
-					siege_artillery4_2 = 1
-								   
-								 
-						   
-							  
-					siege_artillery5_2 = 1
-				
-							  
-
-			}
-			custom_effect_tooltip = SOV_stalins_hammer_tt
 			hidden_effect = {
 			add_equipment_to_stockpile = {
-				type = siege_artillery_equipment_2 
-				amount = 200
-				}
+				type = radio_equipment_1 
+				amount = 300
 			}
+			
 		}
 	}
+}
 
 	focus = {
 		id = SOV_logistical_corps_expansion

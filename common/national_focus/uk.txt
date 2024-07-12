@@ -2172,13 +2172,7 @@ focus_tree = {
 			}
 			add_tech_bonus = {
 				name = fighter_command_focus
-				bonus = 0.5
-				uses = 1
-				category = light_fighter
-			}
-			add_tech_bonus = {
-				name = fighter_command_focus
-				bonus = 0.5
+				bonus = 0.75
 				uses = 1
 				category = light_fighter
 			}
@@ -2226,7 +2220,7 @@ focus_tree = {
 		}
 		x = -2
 		y = 1
-		cost = 5
+		cost = 1
 		ai_will_do = {
 			factor = 10
 		}
@@ -2250,8 +2244,13 @@ focus_tree = {
 			add_tech_bonus = {
 				bonus = 0.95
 				uses = 2
-				
-				category = fighter
+				category = all_air 		
+			}
+			
+			add_tech_bonus = {
+				bonus = 0.75
+				uses = 1
+				category = heavy_air
 			}
 			custom_effect_tooltip = ENG_plane_2_tt	
 			if = {
