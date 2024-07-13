@@ -1064,6 +1064,11 @@ focus_tree = {
 					level = 5
 					instant_build = yes
 				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 			66 = {
 				add_extra_state_shared_building_slots = 2
@@ -1080,6 +1085,11 @@ focus_tree = {
 				add_building_construction = {
 					type = anti_air_building
 					level = 5
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -8264,7 +8274,7 @@ focus_tree = {
 		completion_reward = {
 			#air_experience = 50
 			mio:GER_focke_wulf_organization = {
-				add_mio_funds = 600
+				add_mio_funds = 2000
 			}
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
@@ -9232,7 +9242,7 @@ focus_tree = {
 		}
 
 		available = {
-			has_tech = trade_interdiction
+			
 		}
 
 		available_if_capitulated = yes
